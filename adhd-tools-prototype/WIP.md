@@ -20,6 +20,12 @@ I want to learn
 - Haskell
 - Elm
 
+## Requirements
+
+Interview people with ADHD (including myself) and see what problems they face.
+Maybe it can be helped with tooling or automation.
+
+
 ## Features
 
 1. 
