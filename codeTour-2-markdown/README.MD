@@ -63,4 +63,4 @@ When generated, you can see the html here : `http://localhost:8080/posts/tours/m
 npx @11ty/eleventy
 ```
 
-- TODO : make it collapsible (https://www.digitalocean.com/community/tutorials/css-collapsible)
+- TODO : make it a github action or gitlab equivalent
