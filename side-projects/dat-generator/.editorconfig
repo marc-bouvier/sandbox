@@ -1,0 +1,40 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
+continuation_indent_size = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.ts]
+indent_style = tab
+
+[{*.json,*.md,*.yml}]
+indent_style = space
+indent_size = 2
+
+[*.{gradle,groovy,java}]
+indent_size = 2
+continuation_indent_size = 2
+
+# Ignore paths
+[/src/test/resources/**]
+charset = unset
+end_of_line = unset
+insert_final_newline = unset
+trim_trailing_whitespace = unset
+indent_style = unset
+indent_size = unset
+
+[/src/main/resources/templates/**]
+charset = unset
+end_of_line = unset
+insert_final_newline = unset
+trim_trailing_whitespace = unset
+indent_style = unset
+indent_size = unset

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>dat-generator - 1.0.0-SNAPSHOT</title>
+    <link href="style.css" rel="stylesheet" media="all">
+</head>
+
+<body>
+
+    <div class="banner lead">
+        Générateur de document d'architecture technique
+    </div>
+
+    <div class="container">
+        <div class="left-column">
+            <form action="/technical-architecture-document" method="POST" enctype="multipart/form-data">
+                <input type="submit" />
+                <p class="lead">Générer un DAT</p>
+
+                <h2>Format de sortie</h2>
+                <select name="outputType">
+                    <option value="markdown" selected="true">Markdown</option>
+                </select>
+
+                <h2>What can I do from here?</h2>
+
+                <h2>Do you like Quarkus?</h2>
+
+                <h2>How do I get rid of this page?</h2>
+
+                <input type="submit" />
+            </form>
+        </div>
+        <div class="right-column">
+            <div class="right-section">
+                <h3>Application</h3>
+                <ul>
+                    <li>GroupId: fr.baldir.architecture</li>
+                    <li>ArtifactId: dat-generator</li>
+                    <li>Version: 1.0.0-SNAPSHOT</li>
+                    <li>Quarkus Version: 1.6.1.Final</li>
+                </ul>
+            </div>
+            <div class="right-section">
+                <h3>Next steps</h3>
+                <ul>
+                    <li><a href="https://quarkus.io/guides/maven-tooling.html" target="_blank">Setup your IDE</a></li>
+                    <li><a href="https://quarkus.io/guides/getting-started.html" target="_blank">Getting started</a>
+                    </li>
+                    <li><a href="https://quarkus.io" target="_blank">Quarkus Web Site</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
