@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+youtube-dl --write-info-json --skip-download "$@" && \
+find . -iname '*.info.json' -exec java -jar target/devtube-dl-1-jar-with-dependencies.jar {} \; && \
+rm -rvf *.info.json
