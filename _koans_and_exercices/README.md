@@ -1,0 +1,5 @@
+- https://exercism.org/
+- https://www.rosettacode.org/
+- https://www.codewars.com/
+- https://vim-adventures.com/
+- https://www.typingstudy.com/fr-french-3/lesson/1
