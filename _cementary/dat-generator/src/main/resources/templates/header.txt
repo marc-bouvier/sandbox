@@ -1,3 +1,0 @@
-# Document d'architecture technique
-
-Auteur : {author}
