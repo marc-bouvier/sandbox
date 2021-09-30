@@ -47,3 +47,15 @@ public class MyJavaFile {
 ```
 
 <sourceListingEnd/>
+
+## Contribute
+
+```
+sudo apt-get install python-pytest
+```
+
+## Usage
+
+```
+python3 baldir_markdown.py markdown-sample-without-snippet.md
+```

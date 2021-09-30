@@ -1,0 +1,4 @@
+{
+  "test_baldir_markdown_lib.py::test_pre_process_markdown_file_in_place": true, 
+  "test_baldir_markdown_lib.py::test_pre_process_markdown_file_to_string": true
+}
