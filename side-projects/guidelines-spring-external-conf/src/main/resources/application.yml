@@ -1,0 +1,12 @@
+# Application related configuration
+my-app-name:
+  emailing:
+    enabled: true
+    default-sender: noreply@example.org
+    provider: some-vendor
+    some-vendor:
+      api-key: truc
+
+# Framework related configuration
+server:
+  port: 8080

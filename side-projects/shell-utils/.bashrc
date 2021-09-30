@@ -1,0 +1,7 @@
+alias mci="mvn clean install"
+alias mcis="mvn clean install -Dmaven.test.skip=true"
+alias mdt="mvn dependency:tree > deptree.txt"
+alias mliqstatus="mvn clean resources:resources liquibase:status -s settings.xml"
+alias mliqupdate="mvn clean resources:resources liquibase:update -s settings.xml"
+alias mver="~/bin/mver.sh"
+alias aliases="cat ~/.bashrc | grep alias"

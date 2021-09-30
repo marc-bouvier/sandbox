@@ -1,0 +1,15 @@
+= Pomodoro technique
+
+1. Choose a task to do
+2. Set timer (pomodoro) to 25 min
+3. Work on the task until the timer stops and mark it done
+4. Take a short break (5min)
+5. Every 4 pomodori, take a larger break (15 min)
+
+== Along the day
+
+- Plan : at the beginning of the day, choose tasks to do for the day
+- Monitor : during the day, collect raw data about effort taken to do tasks and other useful data
+- Compile : end of the day, compile day observations
+- Transform : end of the day, transform raw data into useful informations
+- Layout : end of the day, layout informations to enhance lisibility and allow to find ways to make progress

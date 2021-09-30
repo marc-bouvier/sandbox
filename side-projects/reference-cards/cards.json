@@ -1,0 +1,36 @@
+{
+    "cards": [{
+        "id": "DomainDrivenDesign",
+        "tags": ["patterns", "philosophy", "discipline"],
+        "difficulty": "hard",
+        "links": [{
+                "href": "https://domainlanguage.com/",
+                "label": "Domain Language, Eric Evan's company"
+            },
+            {
+                "href": "https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon",
+                "label": "Domain-Driven Design Distilled",
+                "comments": ["Best way to begin to learn"]
+            },
+            {
+                "href": "https://leanpub.com/anatomy-of-DDD",
+                "label": "The Anatomy Of Domain-Driven Design",
+                "comments": ["Visual and infographics approach to diffuse DDD ideas"]
+            },
+            {
+                "href": "https://www.amazon.com/Patterns-Principles-Practices-Domain-Driven-Design",
+                "label": "Patterns, Principles, and Practices of Domain-Driven Design",
+                "comments": ["Nice intro providing examples and implementation suggestions in C#"]
+            },
+            {
+                "href": "https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software",
+                "label": "Domain-Driven Design: Tackling Complexity in the Heart of Software",
+                "comments": ["The orignal book exposing patterns and philosophy of DDD. By Eric Evans."]
+            }, {
+                "href": "https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon",
+                "label": "Implementing Domain-Driven Design",
+                "comments": "More accessible than the Blue Book, more up to date in technology. Java samples."
+            }
+        ]
+    }]
+}

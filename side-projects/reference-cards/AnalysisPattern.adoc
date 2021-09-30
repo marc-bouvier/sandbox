@@ -1,0 +1,19 @@
+= Analysis Pattern
+
+[quote, Martin Fowler, Analysis Patterns : Reusable Object Models (1996)]
+____
+Idea that has been useful in one practical context and will probably be 
+useful in others.
+____
+
+== Purpose
+
+Martin Fowler shared a part of his modeling experience from several business domains (financial 
+trading ,health care, corporate finance...). From those real world projects emerged repeating 
+problems that could be transformable into reusable models <<Bibliography.adoc#user-content-ap,[ap]>>.
+
+== See also
+- Martin Fowler
+- Kent Beck
+- Ward Cunnhingham
+- Christopher Alexander

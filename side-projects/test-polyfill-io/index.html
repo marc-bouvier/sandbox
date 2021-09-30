@@ -1,0 +1,28 @@
+<html>
+<head>
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+  <title>Bug in polyfill.io in Internet Explorer 11 when in "Local intranet" Security Zone</title>
+</head>
+<body>
+  <h1>Bug in polyfill.io in Internet Explorer 11 when in "Local intranet" Security Zone</h1>
+  <h2>Problem</h2>
+  <p>In Internet Explorer 11, When a site is in "Local intranet" security zone, and using cdn.polyfill.io, ie/7.0.0 is detected instead of ie/11.0.0</p>
+  <h2>Reproduce</h2>
+    <ol>
+      <li>On Windows 7, Internet Explorer 11 (<a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/">Free images from Microsoft available here</a>)</li>
+      <li>Open this page on Internet Explorer 11 : <a href="https://marc-bouvier.github.io/test-polyfill-io/index.html">https://marc-bouvier.github.io/test-polyfill-io/index.html</a></li>
+      <li>Then, on internet explorer "internet options" <br/><img src="01_internet_options.JPG"/></li>
+      <li>add this domain to "Local intranet" sites.<br/>
+        <img src="02_Advanced.JPG" /> <br/>
+        <img src="03_add.JPG" /><br/>
+        <img src="04_added.JPG"/>
+      </li>
+      <li>Open page inspection (F12) and reload the page<br/>
+      <img src="05_javascript_console_error.JPG" /><br/>
+      Error : HierarchyRequestError</li>
+      <li>Open Debugger tab and look at the comment section of "polyfill.js" file<br/>
+      <img src="06_polyfill-detects-wrong-IE-_version.JPG"/><br/>
+      ie/7.0.0 is detected instead of ie/11.0.0</li>
+    </ol>
+</body>
+</html>

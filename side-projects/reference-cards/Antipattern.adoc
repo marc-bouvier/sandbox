@@ -1,0 +1,4 @@
+= Antipattern
+
+TODO
+https://sourcemaking.com/antipatterns

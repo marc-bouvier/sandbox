@@ -1,0 +1,5 @@
+= XUnit patterns
+
+Patterns and antipatterns for unit tests.
+
+http://xunitpatterns.com

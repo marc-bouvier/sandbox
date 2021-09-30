@@ -1,0 +1,6 @@
+Complete bibliography
+--------------------
+All bibliography references from any cards.
+
+[bibliography]
+- [[[ap]]] Martin Fowler. 'Analysis Patterns: Reusable Object Models'. Addison-Wesley. 1997. ISBN 0-20-189542-0.

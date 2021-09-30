@@ -1,0 +1,27 @@
+= JUnit Best Practices
+
+- extremely fast - milliseconds fast
+- extremely reliable - tests should fail if and only if production code is broken
+- ensure that unit tests run completely in-memory
+- do not skip unit tests
+- aim for each unit test method to perform exactly one assertion. test one logical CONCEPT per test (if multiples assertions cover the same unit concept it is fine)
+- use the strongest assertions possible - return of function is stronger thant correct interaction with mock objects
+- use the most appropriate assertion methods
+- put assertion parameters in the proper order - expected , actual
+- use exact matching when using a mocking framework - avoid any() with mockito
+- name unit tests using a convention that includes the method and condition being tested. ( ex.  encode_nullBytes, encode_emptyBytes, encode_tooFewBytes, encode_tooManyBytes, encode_rightNumBytes or encode_validBytes)
+- ensure that test classes exist in the same Java package as the production class under test. In order to use package scoped classes and methods. Though don't abuse package scope for test.
+- ensure that test code is separated from production code
+- do not print anything out in unit tests
+- do not initialize in a unit test class constructor; use an @Before method instead
+- do not use static members in a test class
+- do not write your own catch blocks that exist only to pass a test
+- do not write your own catch blocks that exist only to print a stack trace
+- in test classes, do not declare that methods throw any particular type of exception
+- do not use Thread.sleep in unit tests
+- do not attempt to test the timing of production methods that directly or indirectly call Thread.sleep
+- test classes directly; do not rely on indirect testing. Indirect testing occurs when a class is tested only because it is a dependency of another class
+
+== See also
+
+http://www.kyleblaney.com/junit-best-practices/

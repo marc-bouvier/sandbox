@@ -1,0 +1,27 @@
+= Kotlin
+
+TODO
+
+== Not null by default
+
+Null values becomes a smell and is raised by compiler. Stil possible to use it when doing interop with java libs.
+
+== Extension functions
+
+Allow to have more expressive code.
+
+Java
+
+  if(StringUtils.isNotBlank(string)){
+    //...
+  }
+
+Kotlin (reads like a sentence)
+
+  if(string.isNotBlank){
+  //...
+  }
+
+_Compromis_ : TODO
+_Avantages_ : TODO
+_Inconvenients_ : TODO

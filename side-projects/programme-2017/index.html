@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Load JsRender latest version, from www.jsviews.com: -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsrender/0.9.84/jsrender.min.js"></script>
+    <script src=" data_2017.js"></script>
+    <style>
+        .badge.selected {
+            background-color: darkgreen !important;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!-- templates -->
+    <script id="template-mesure" type="text/x-jsrender">
+        <table class="table table-stripped">
+            <thead>
+                <tr>
+                    {{for table itemVar="~tableHeader"}}
+
+                    <th>{{:~tableHeader}}</th>
+                    {{/for}}
+                </tr>
+            </thead>
+            <tbody>
+                {{for data}}
+                <tr id="{{:anchor}}">
+                    <th colspan="4">
+                        <h2>{{:titre}}</h2>
+                    </th>
+                </tr>
+                {{for mesures}}
+                <tr id="{{:anchor}}">
+                    <td>{{:title}}</td>
+                    <td>{{:description}}</td>
+                    <td>{{for sources}} {{if #index > 0}}, {{/if}}<a href="{{:href}}">{{:label}}</a> {{/for}}
+                    </td>
+                    <td>{{if tenu}}✔{{else}}✗{{/if}}</td>
+                    <td>{{for sources_tenu}} {{if #index > 0}}, {{/if}}<a href="{{:href}}">{{:label}}</a> {{/for}}
+                    </td>
+                    <td>{{:remarques}}</td>
+                    <td>{{for tags itemVar="~tag"}}<span class="badge">{{:~tag}}</span>{{/for}}</td>
+                </tr>
+                {{/for}} {{/for}}
+            </tbody>
+        </table>
+    </script>
+    <!-- fin templates -->
+
+    <h1>Promesses tenues?</h1>
+    <div id="tags"></div>
+    <div id="mesure"></div>
+    <script>
+        function getAllTags(data_2017) {
+            var tags = new Array();
+            $.each(data_2017.data, function() {
+                $.each(this.mesures, function() {
+                    $.each(this.tags, function() {
+                        if ($.inArray(this.toString(), tags) == -1) {
+                            tags.push(this.toString());
+                        }
+                    })
+
+                })
+            });
+            //suppression des doublons
+            tags.sort();
+            return tags;
+        }
+
+
+        function toggleFilterTag(tagElement) {
+            var tagValue = $(tagElement).text();
+            tagFilter.toggleFilterData(tagValue);
+        }
+
+        function init2(data, taFilter) {
+            initAllTags(data);
+            var filteredData = filter(data, tagFilter);
+            var contentTemplate = $.templates("#template-mesure");
+            var htmlContent = contentTemplate.render(filteredData);
+            $("#mesure").html(htmlContent);
+
+        }
+
+        function initAllTags(data) {
+            $("#tags").children().remove();
+            $.each(getAllTags(data_2017), function() {
+                var selected = tagFilter.isFiltered(this.toString()) ? " selected" : "";
+                $("#tags").append("<span class='badge" + selected + "' onclick='toggleFilterTag(this); init2(filter(data_2017, tagFilter))'>" + this + "</span>");
+            })
+        }
+
+        var tagFilter = {
+            filterFunction: function(mesure, filterData) {
+                var found = false;
+                if (filterData.length == 0) {
+                    return true
+                }
+                if (mesure.tags !== undefined) {
+                    var tags = mesure.tags;
+
+                    for (var tag of tags) {
+                        for (var tag2 of filterData) {
+                            if (tag === tag2) {
+                                found = true;
+                            }
+                        }
+                    }
+                }
+                return found;
+            },
+            toggleFilterData: function(data) {
+                if (this.isFiltered(data)) {
+                    this.filterData = this.filterData.filter((e) => e !== data);
+                } else {
+                    this.filterData.push(data);
+                }
+            },
+            isFiltered: function(tag) {
+                return $.inArray(tag, this.filterData) >= 0;
+            },
+            filterData: []
+        };
+
+        function filter(data, tagFilter) {
+            var filteredData2017 = JSON.parse(JSON.stringify(data))
+
+            $.each(filteredData2017.data, function() {
+                var newMesures = this.mesures.filter((mesure) => tagFilter.filterFunction(mesure, tagFilter.filterData));
+                this.mesures = newMesures;
+
+            })
+            return filteredData2017;
+        }
+
+        $(function() {
+            init2(data_2017, tagFilter);
+        });
+    </script>
+</body>

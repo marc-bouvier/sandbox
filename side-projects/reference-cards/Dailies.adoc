@@ -1,0 +1,22 @@
+= Les Dailies une nouvelle façon agile d'apprendre en entreprise
+TODO : à synthétiser en anglais;
+
+En seulement 6 mois, 1000 heures de formation internes ont été reçues à Murex, 
+sans infrastructure dédiée en partant simplement d'une initiative individuelle.
+
+Les Dailies sont un format agile de transmission de connaissances que l'on a 
+mis en place à Murex qui rencontre un succès grandissant: 15 sessions de 10 
+minutes sur un même thème, données quotidiennement à votre bureau et dont 
+les videos sont immédiatement mises à disposition.
+
+Venez découvrir ce format qui permet de transmettre une grande quantité de 
+connaissances à de nombreux collaborateurs avec un impact quasi nul sur leur 
+temps de travail.
+
+Après le succès rencontré par ces formations à Murex, nous voulons partager 
+cette méthode avec tous les développeurs de Devoxx !
+
+== See also
+
+- https://www.youtube.com/watch?v=FQXclEf_pHE
+- Jonathan Boccara

@@ -1,0 +1,7 @@
+= Clean code
+
+== See also
+
+- Software Craftsmanship
+- Uncle Bob
+- The Pragmatic Programmer
