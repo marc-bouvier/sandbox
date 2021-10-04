@@ -1,0 +1,15 @@
+{
+  "name": "github-stars-to-page",
+  "version": "1.0.0",
+  "description": "- Fetch starred repositories from a github account - Layout as web page - Layout as markdown page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1"
+  }
+}
