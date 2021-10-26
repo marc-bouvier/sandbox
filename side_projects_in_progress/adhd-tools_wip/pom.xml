@@ -14,7 +14,7 @@
     <description>Tools for people with ADHD</description>
     <modules>
         <module>adhd-tools-domain</module>
-        
+
         <!-- Before creating infra modules, first bootstrap & test domain module -->
 
         <!-- backend Spring boot Bindings + infra -->
@@ -23,12 +23,13 @@
         <!-- <module>adhd-tools-infra-cli</module> -->
     </modules>
     <properties>
-        <kotlin.version>1.5.0</kotlin.version>
+        <kotlin.version>1.5.10</kotlin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <kotlin.compiler.incremental>true</kotlin.compiler.incremental>
         <java.version>11</java.version>
-        <junit-jupiter.version>5.7.1</junit-jupiter.version>
+        <junit-jupiter.version>5.8.1</junit-jupiter.version>
         <junit-platform.version>1.7.1</junit-platform.version>
+        <assertj-core.version>3.21.0</assertj-core.version>
     </properties>
     <build>
         <sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
@@ -168,18 +169,22 @@
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-reflect</artifactId>
+            <version>${kotlin.version}</version>
         </dependency>
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-stdlib-jdk8</artifactId>
+            <version>${kotlin.version}</version>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
+            <version>${junit-jupiter.version}</version>
         </dependency>
         <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
+            <version>${assertj-core.version}</version>
         </dependency>
     </dependencies>
     <dependencyManagement>
