@@ -12,3 +12,5 @@
 hs_err_pid*
 .idea/codeStyleSettings.xml
 .idea/workspace.xml
+
+**/node_modules
