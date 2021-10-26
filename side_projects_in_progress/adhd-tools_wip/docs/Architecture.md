@@ -28,6 +28,21 @@ Il y a deux faits importants ici :
     - https://youtu.be/v--zkIEciq4?t=1335
     - https://gitlab.com/crafts-records/talkadvisor/talkadvisor-back
 
+## Dépendences
+    
+- Kotlin
+- Junit.jupiter
+- AssertJ
+- Junit4
+
+Plugins
+
+- Maven Enforcer
+  - Permet de vérifier
+    - La cohérence des dépendences tierces
+    - Que le domaine ne doit pas dépendre de l'infra
+- Kotlin Maven - all-open
+  - Pour ouvrir les annotations notamment
 
 ## Ressources connexes
 
