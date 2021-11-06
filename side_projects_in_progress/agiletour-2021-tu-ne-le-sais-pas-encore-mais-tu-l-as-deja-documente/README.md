@@ -7,7 +7,7 @@ Au sujet de la documentation vivante.
 
 ```
 # Convert slide deck into HTML
-npx @marp-team/marp-cli@latest slides.md -o dist/index.html
+npx @marp-team/marp-cli@latest slides.md -o index.html
 
 # Convert slide deck into PDF
 npx @marp-team/marp-cli@latest slides.md -o dist/index.pdf --pdf
@@ -16,6 +16,6 @@ npx @marp-team/marp-cli@latest slides.md -o dist/index.pdf --pdf
 npx @marp-team/marp-cli@latest slides.md -o dist/index.pptx --pptx
 
 # Watch mode
-npx @marp-team/marp-cli@latest -w slides.md -o dist/index.html
+npx @marp-team/marp-cli@latest -w slides.md -o index.html
 
 ```
