@@ -7,21 +7,15 @@ Au sujet de la documentation vivante.
 
 ```
 # Convert slide deck into HTML
-npx @marp-team/marp-cli@latest slides.md
-npx @marp-team/marp-cli@latest slides.md -o output.html
+npx @marp-team/marp-cli@latest slides.md -o dist/index.html
 
 # Convert slide deck into PDF
-npx @marp-team/marp-cli@latest slides.md --pdf
-npx @marp-team/marp-cli@latest slides.md -o output.pdf
+npx @marp-team/marp-cli@latest slides.md -o dist/index.pdf --pdf
 
 # Convert slide deck into PowerPoint document (PPTX)
-npx @marp-team/marp-cli@latest slides.md --pptx
-npx @marp-team/marp-cli@latest slides.md -o output.pptx
+npx @marp-team/marp-cli@latest slides.md -o dist/index.pptx --pptx
 
 # Watch mode
-npx @marp-team/marp-cli@latest -w slides.md
-
-# Server mode (Pass directory to serve)
-npx @marp-team/marp-cli@latest -s ./slides
+npx @marp-team/marp-cli@latest -w slides.md -o dist/index.html
 
 ```
