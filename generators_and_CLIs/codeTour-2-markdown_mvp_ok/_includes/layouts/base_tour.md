@@ -5,7 +5,8 @@ repoFileBrowseUrl: CHANGE_ME_WITH_REPO_BROWSE_URL
 ---
 # {{title}}
 
-Git repo that reference the code tour : [{{ repoUrl }}]({{ repoUrl }})
+Git repo that reference the code tour : [{{ repoUrl }}]({{ repoUrl }}).
+On branch or commit ["{{ref}}"]({{repoFileBrowseUrl}}/{{ref}}).
 
 {% for step in steps %}
 
