@@ -28,6 +28,8 @@ paginate: true
 
 ![bg 80%](assets/hoken-landing.png)
 
+***
+
 ## Qui suis-je?
 
 Marc Bouvier
