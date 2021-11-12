@@ -4,6 +4,11 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
+- type: directory
+  path: side_projects_in_progress/agiletour-2021-tu-ne-le-sais-pas-encore-mais-tu-l-as-deja-documente/assets
+  label: Assets slides agile tour 2021
+  create: none
+  match: "**/*"
 - type: document
   path: side_projects_in_progress/agiletour-2021-tu-ne-le-sais-pas-encore-mais-tu-l-as-deja-documente/slides.md
   label: Slides Agile tour 2021
