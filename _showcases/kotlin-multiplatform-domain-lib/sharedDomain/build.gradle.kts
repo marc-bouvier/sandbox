@@ -9,9 +9,20 @@ repositories {
     mavenCentral()
 }
 
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+    kotlinOptions {
+        jvmTarget = "11"
+    }
+}
+
 kotlin {
 
     jvm {
+        val main by compilations.getting{
+            kotlinOptions{
+                jvmTarget = "16"
+            }
+        }
         testRuns["test"].executionTask.configure {
             useJUnitPlatform()
         }
@@ -53,16 +64,5 @@ kotlin {
                 implementation(kotlin("test-annotations-common"))
             }
         }
-//        val jvmTest by getting {
-//            dependencies{
-//                implementation(kotlin("kotlin-test-junit"))
-//            }
-//        }
-//        val jsTest by getting {
-//            dependencies{
-//                implementation(kotlin("kotlin-test-js"))
-//            }
-//        }
-
     }
 }

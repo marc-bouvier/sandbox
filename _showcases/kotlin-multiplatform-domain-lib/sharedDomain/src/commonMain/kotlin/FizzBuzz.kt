@@ -1,0 +1,1 @@
+fun fizzbuzz(i: Int): String = i.toString()

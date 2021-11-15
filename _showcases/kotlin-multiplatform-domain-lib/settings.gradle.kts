@@ -1,2 +1,3 @@
 rootProject.name = "kotlin-multiplatform-domain-lib"
-include(":shared")
+include(":sharedDomain")
+include(":jvmCliApp")
