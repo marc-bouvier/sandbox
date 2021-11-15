@@ -36,16 +36,15 @@ kotlin {
 //                    useChromeHeadless()
                     useFirefox()
                     useFirefoxHeadless()
+                    usePhantomJS()
 //                    useOpera()
                 }
             }
         }
         nodejs {
             testRuns["test"].executionTask.configure {
-                useKarma{
-                    useFirefox()
-                    useFirefoxHeadless()
-                }
+                // Only running in nodejs without browser (faster)
+                useMocha()
             }
         }
     }
