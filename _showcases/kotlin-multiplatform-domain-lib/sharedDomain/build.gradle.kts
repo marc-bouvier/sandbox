@@ -1,14 +1,13 @@
 plugins {
-    kotlin("multiplatform") version "1.5.31"
+    kotlin("multiplatform")
 }
-
 group = "fr.baldir.showcase"
 version = "1.0-SNAPSHOT"
-
 repositories {
+    google()
     mavenCentral()
+    mavenLocal()
 }
-
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
     kotlinOptions {
         jvmTarget = "11"
@@ -20,7 +19,7 @@ kotlin {
     jvm {
         val main by compilations.getting{
             kotlinOptions{
-                jvmTarget = "16"
+                jvmTarget = "11"
             }
         }
         testRuns["test"].executionTask.configure {

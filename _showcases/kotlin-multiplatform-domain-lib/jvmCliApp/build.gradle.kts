@@ -1,17 +1,12 @@
-import org.jetbrains.kotlin.ir.backend.js.compile
-
+plugins {
+    kotlin("jvm")
+}
 group = "fr.baldir.showcase"
 version = "1.0-SNAPSHOT"
-
-plugins {
-    kotlin("jvm") version "1.5.30"
-}
-
-
 repositories {
-    mavenCentral()
-    gradlePluginPortal()
     google()
+    mavenCentral()
+    mavenLocal()
 }
 
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
