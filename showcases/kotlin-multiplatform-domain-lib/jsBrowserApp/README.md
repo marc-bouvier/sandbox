@@ -2,6 +2,7 @@
 
 A javascript Broswser app that relies on the shared core domain
 
+[See it live](dist)
 
 ## Architecture
 
