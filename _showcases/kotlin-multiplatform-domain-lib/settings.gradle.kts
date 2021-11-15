@@ -11,5 +11,5 @@ pluginManagement {
 
 include(":sharedDomain")
 include(":jvmCliApp")
-include(":jsCliApp")
+include(":jsBrowserApp")
 

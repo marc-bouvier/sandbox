@@ -1,14 +1,13 @@
-package fr.baldir.fizzbuzz.unit
+package fr.baldir.fizbuzz.app.unit
 
-import fr.baldir.fizzbuzz.fr.baldir.fizzbuzz.CliApp
+import fr.baldir.fizzbuzz.app.FizzBuzzApp
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
-// Testing Cli interactions
-class CliAppTest {
+// Test Application behaviour = domain logic orchestration
+// given user's interactions
+class FizzBuzzAppTest {
 
-
-    // Test CLI behaviour
     // IO is mocked
     @Test
     fun shouldPromptForNumberWhenAppIsLaunched() {
@@ -16,8 +15,13 @@ class CliAppTest {
         // Test dependencies
         val stdOutContent = mutableListOf<String>()
         val printOutput: (text: Any) -> Unit = { stdOutContent.add(it.toString()) }
+        val stdIntInputs = mutableListOf("q")
+        val promptInput: (message: String) -> String = { message ->
+            printOutput(message)
+            stdIntInputs.removeLast()
+        }
 
-        val app = CliApp(printOutput, { "q" })
+        val app = FizzBuzzApp(printOutput, promptInput)
         app.launch()
 
         // Should prompt for a number
@@ -32,9 +36,12 @@ class CliAppTest {
         val stdOutContent = mutableListOf<String>()
         val printOutput: (text: Any) -> Unit = { stdOutContent.add(it.toString()) }
         val stdIntInputs = mutableListOf("1")
-        val readInput: () -> String = { stdIntInputs.removeLast() }
+        val promptInput: (message: String) -> String = { message ->
+            printOutput(message)
+            stdIntInputs.removeLast()
+        }
 
-        val app = CliApp(printOutput, readInput)
+        val app = FizzBuzzApp(printOutput, promptInput)
         app.launch()
 
         // Should prompt for a number
@@ -54,9 +61,12 @@ class CliAppTest {
         val stdOutContent = mutableListOf<String>()
         val printOutput: (text: Any) -> Unit = { stdOutContent.add(it.toString()) }
         val stdIntInputs = mutableListOf("2")
-        val readInput: () -> String = { stdIntInputs.removeLast() }
+        val promptInput: (message: String) -> String = { message ->
+            printOutput(message)
+            stdIntInputs.removeLast()
+        }
 
-        val app = CliApp(printOutput, readInput)
+        val app = FizzBuzzApp(printOutput, promptInput)
         app.launch()
 
         // Should prompt for a number

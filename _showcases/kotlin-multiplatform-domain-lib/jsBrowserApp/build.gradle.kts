@@ -10,22 +10,18 @@ repositories {
 }
 kotlin {
     js {
-        nodejs {
+        browser {
             testRuns["test"].executionTask.configure {
-                useKarma{
-                    useFirefox()
-//                    useFirefoxHeadless()
-
-                }
+                useMocha()
             }
         }
-
         binaries.executable()
     }
     sourceSets {
         val jsMain by getting {
             dependencies {
                 implementation(project(":sharedDomain"))
+                implementation(kotlin("stdlib-common"))
             }
         }
         val jsTest by getting {
