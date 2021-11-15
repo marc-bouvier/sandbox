@@ -10,10 +10,35 @@ repositories {
 }
 
 kotlin {
-    /* Targets configuration omitted. 
-    *  To find out how to configure the targets, please follow the link:
-    *  https://kotlinlang.org/docs/reference/building-mpp-with-gradle.html#setting-up-targets */
-    jvm()
+
+    jvm {
+        testRuns["test"].executionTask.configure {
+            useJUnitPlatform()
+        }
+    }
+    js {
+        browser {
+            testRuns["test"].executionTask.configure {
+                useKarma {
+                    // Note : to be used, browsers have to be installed on the machine
+//                    useChrome()
+//                    useChromeCanary()
+//                    useChromeHeadless()
+                    useFirefox()
+                    useFirefoxHeadless()
+//                    useOpera()
+                }
+            }
+        }
+        nodejs {
+            testRuns["test"].executionTask.configure {
+                useKarma{
+                    useFirefox()
+                    useFirefoxHeadless()
+                }
+            }
+        }
+    }
 
     sourceSets {
         val commonMain by getting {
@@ -23,9 +48,21 @@ kotlin {
         }
         val commonTest by getting {
             dependencies {
+                implementation(kotlin("test"))
                 implementation(kotlin("test-common"))
                 implementation(kotlin("test-annotations-common"))
             }
         }
+//        val jvmTest by getting {
+//            dependencies{
+//                implementation(kotlin("kotlin-test-junit"))
+//            }
+//        }
+//        val jsTest by getting {
+//            dependencies{
+//                implementation(kotlin("kotlin-test-js"))
+//            }
+//        }
+
     }
 }
