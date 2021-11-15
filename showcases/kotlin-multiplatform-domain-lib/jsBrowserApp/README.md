@@ -1,6 +1,6 @@
 # jsBrowserApp
 
-A javascript Broswser app that relies on the shared core domain
+A javascript Browser app that relies on the shared core domain
 
 [See it live](dist)
 
