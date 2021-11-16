@@ -42,12 +42,6 @@ Marc Bouvier
 
 <!-- _backgroundColor: "#170e21" -->
 
-![bg w:200 right](assets/marc-bouvier-rnd-25.png)
-![bg w:200 ](assets/marc-bouvier-rnd-25.png)
-![bg w:200 right](assets/marc-bouvier-rnd-25.png)
-![bg w:200 ](assets/marc-bouvier-rnd-25.png)
-![bg w:200 right](assets/marc-bouvier-rnd-25.png)
-![bg w:200 ](assets/marc-bouvier-rnd-25.png)
 ***
 
 ## La documentation c'est quoi pour vous?
