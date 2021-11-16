@@ -38,6 +38,8 @@ Marc Bouvier
 
 ## Living Documentation
 
+![bg right 50%](assets/qrcode_u.baldir.fr_AT2021LD.png)
+
 ***
 
 ## La documentation c'est quoi pour vous?
