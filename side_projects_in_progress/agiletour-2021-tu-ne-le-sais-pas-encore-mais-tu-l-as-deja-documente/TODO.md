@@ -22,6 +22,10 @@
 13. 
 14. 
 
+**Backups**
+
+- Gifs
+
 **Sur le sujet**
 - [Documentation as code (expliqué à mon père) — Hubert Sablonnière](https://www.youtube.com/watch?v=1rKgVF5CEEY)
 

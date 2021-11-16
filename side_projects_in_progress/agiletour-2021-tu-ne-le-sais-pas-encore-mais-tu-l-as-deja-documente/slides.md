@@ -26,7 +26,7 @@ paginate: true
 
 ***
 
-![bg 80%](assets/hoken-landing.png)
+![bg 80% ](assets/hoken-landing.png)
 
 ***
 
@@ -34,21 +34,33 @@ paginate: true
 
 Marc Bouvier
 
+![bg w:200 right](assets/marc-bouvier-rnd-25.png)
+
 ***
 
 ## Living Documentation
 
-![bg right 50%](assets/qrcode_u.baldir.fr_AT2021LD.png)
+<!-- _backgroundColor: "#170e21" -->
 
+![bg w:200 right](assets/marc-bouvier-rnd-25.png)
+![bg w:200 ](assets/marc-bouvier-rnd-25.png)
+![bg w:200 right](assets/marc-bouvier-rnd-25.png)
+![bg w:200 ](assets/marc-bouvier-rnd-25.png)
+![bg w:200 right](assets/marc-bouvier-rnd-25.png)
+![bg w:200 ](assets/marc-bouvier-rnd-25.png)
 ***
 
 ## La documentation c'est quoi pour vous?
+
+<!-- _backgroundColor: "#1e0e21" -->
 
 <div style="display: flex;"> <div style="margin: auto;display: flex;flex-flow: column;width: auto;flex-grow: 0.5;"> <textarea id="what_is_doc_1a" style="font-size: 1rem;height: 16rem;"></textarea> <div style="display: flex;"> <button onclick="localStorage.setItem('what_is_doc_1', document.getElementById('what_is_doc_1a').value)" style="width: 100%;">Save</button> <button onclick="document.getElementById('what_is_doc_1a').value = localStorage.getItem('what_is_doc_1')" style="width: 100%;">Load</button> </div> </div> </div>
 
 ***
 
 ## Antipatterns
+
+<!-- _backgroundColor: "#210e19" -->
 
 > Like cheap wine, paper documentation ages rapidly and leaves you with bad headache.
 
@@ -58,6 +70,8 @@ Marc Bouvier
 
 ### Activités séparées
 
+<!-- _backgroundColor: "#210e0e" -->
+
 TODO trouver GIF
 
 ***
@@ -65,6 +79,8 @@ TODO trouver GIF
 ***
 
 ### Mais au fait, elle fait quoi notre application?
+
+<!-- _backgroundColor: "#0e211f" -->
 
 * Manuel utilisateur
 * OpenApi / Swagger
@@ -77,6 +93,8 @@ TODO trouver GIF
 
 ### Pour qui?
 
+<!-- _backgroundColor: "#11210e" -->
+
 ```kotlin
 public class Test{
     fun test(): String = tetdsfg
@@ -87,6 +105,8 @@ public class Test{
 
 ### Pourquoi?
 
+<!-- _backgroundColor: "#211e0e" -->
+
 * Onboarding
   * Readme
   * Contribute
@@ -95,6 +115,8 @@ public class Test{
 ***
 
 ### Comment?
+
+<!-- _backgroundColor: "#21130e" -->
 
 * Ecrit? Non écrit?
 * Conversations (ex. pour onboarding)
@@ -203,6 +225,10 @@ Wiki as code
 ***
 
 ## Conclusion
+
+Les slides
+
+![bg left 50%](assets/qrcode_u.baldir.fr_AT2021LD.png)
 
 ### La documentation c'est quoi pour vous?
 
