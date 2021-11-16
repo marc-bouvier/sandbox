@@ -76,8 +76,6 @@ TODO trouver GIF
 
 ***
 
-***
-
 ### Mais au fait, elle fait quoi notre application?
 
 <!-- _backgroundColor: "#0e211f" -->
