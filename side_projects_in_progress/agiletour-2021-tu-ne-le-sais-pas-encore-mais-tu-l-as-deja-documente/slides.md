@@ -38,9 +38,15 @@ Marc Bouvier
 
 ***
 
-## Living Documentation
+## <!-- fit-->Living Documentation
 
 <!-- _backgroundColor: "#170e21" -->
+
+![right w:300](assets/qrcode_u.baldir.fr_AT2021LD.png)
+
+u.baldir.fr/at-2021-ld
+
+Ce QR code pointe vers cette présentation
 
 ***
 
