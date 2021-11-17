@@ -144,6 +144,19 @@ public class Test{
 
 ***
 
+## Doctest
+Python
+Elixir
+
+***
+
+## import in markup
+
+- AsciiDoc
+- LateX
+
+La doc s'appuie sur votre code (ex. .env sample)
+
 ***
 
 ### Différentes caractéristiques
