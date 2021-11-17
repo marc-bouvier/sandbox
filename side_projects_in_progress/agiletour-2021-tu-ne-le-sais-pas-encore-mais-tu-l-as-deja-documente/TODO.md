@@ -36,3 +36,26 @@
   - [L'art du Story Telling par Cyrille Dupuydauby](https://www.youtube.com/watch?v=aNfYcXTpV1c)
   - [Donner sa première conférence, de l'idée à la réalisation par Estelle Landry](https://www.youtube.com/watch?v=15LSass6j9A)
   - Mettre un hashtag sur le début
+- https://docs.asciidoctor.org/reveal.js-converter/latest/
+
+```asciidoc
+[background-image="manuscript.jpg"]
+== [tldr]#`tl;dr`#
+
+// Bild: "fine print"
+
+[.refs]
+--
+* Photo by https://de.freeimages.com/photographer/bjearwicke-46112[Benjamin Earwicker]
+* Another photo
+* lorem
+  --
+
+[.notes]
+--
+* Motivation: Too long – didn't read – Eine komprimierte Zusammenfassung aller wichtigen Änderungen.
+* Challenge, denn
+  ** High-level Überblick vs.
+  ** Viele wertvolle API-Details und damit Anschauungsmaterial / Codebeispiele
+  --
+```

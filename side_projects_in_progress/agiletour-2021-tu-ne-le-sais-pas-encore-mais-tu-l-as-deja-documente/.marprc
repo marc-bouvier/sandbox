@@ -1,9 +1,0 @@
-allowLocalFiles: true
-options:
-  looseYAML: false
-  markdown:
-    breaks: false
-pdf: false
-html: true
-author: Marc Bouvier
-lang: FR

@@ -5,17 +5,18 @@ Au sujet de la documentation vivante.
 
 ## Generation des slides
 
+### Asciidoctor-revealjs
+
+Install : https://docs.asciidoctor.org/reveal.js-converter/latest/setup/node-js-setup/
+
+```bash
+npm install
+# Test Cli is available
+npx asciidoctor-revealjs --version
 ```
-# Convert slide deck into HTML
-npx @marp-team/marp-cli@latest slides.md -o index.html
 
-# Convert slide deck into PDF
-npx @marp-team/marp-cli@latest slides.md -o dist/index.pdf --pdf
+Génération
 
-# Convert slide deck into PowerPoint document (PPTX)
-npx @marp-team/marp-cli@latest slides.md -o dist/index.pptx --pptx
-
-# Watch mode
-npx @marp-team/marp-cli@latest -w slides.md -o index.html
-
+```bash
+npx asciidoctor-revealjs slides.adoc -o index.html
 ```
