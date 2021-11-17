@@ -3,6 +3,8 @@
 :date: 2021-12-10
 :customcss: css/presentation.css
 
+Idée : frein à l'outillage : mais parfois aller au plus simple (ex. tableau blanc physique, texte simple) agile 
+
 [background-image="assets/hoken-landing.png"]
 == Tu ne le sais pas encore, mais tu l'as deja documenté !
 
