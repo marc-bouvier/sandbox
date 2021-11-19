@@ -20,3 +20,7 @@ Génération
 ```bash
 npx asciidoctor-revealjs slides.adoc -o index.html
 ```
+
+```pwsh
+.\node_modules\.bin\asciidoctor-revealjs.cmd slides.adoc -o index.html
+```

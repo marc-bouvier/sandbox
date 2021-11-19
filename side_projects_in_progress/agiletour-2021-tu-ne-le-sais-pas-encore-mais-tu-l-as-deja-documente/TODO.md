@@ -27,6 +27,9 @@
 - Gifs
 
 **Sur le sujet**
+
+Idée : frein à l'outillage : mais parfois aller au plus simple (ex. tableau blanc physique, texte simple) agile
+
 - [Documentation as code (expliqué à mon père) — Hubert Sablonnière](https://www.youtube.com/watch?v=1rKgVF5CEEY)
 
 **Ressources**
@@ -39,6 +42,11 @@
 - https://docs.asciidoctor.org/reveal.js-converter/latest/
 
 ```asciidoc
+
+ifdef::extended-presentation[== Additional slide]
+
+<<<
+
 [background-image="manuscript.jpg"]
 == [tldr]#`tl;dr`#
 
