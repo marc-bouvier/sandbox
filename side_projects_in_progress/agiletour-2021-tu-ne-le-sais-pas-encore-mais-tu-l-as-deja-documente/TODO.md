@@ -36,6 +36,7 @@ Idée : frein à l'outillage : mais parfois aller au plus simple (ex. tableau bl
 
 - [https://www.youtube.com/watch?v=LG4SADs2nf8]([SC] Living Documentation - Sébastien Fauvel)
   - https://github.com/sfauvel/livingdocumentation
+- [BDX I/O 2016 : [Boite à outils pour une Living Documentation] ([Prioux Benoit])](https://www.youtube.com/watch?v=xbcFyYIKZ_M)
 - https://craftsrecords.org/
   - [Slides: Do's and Don'ts](https://www.youtube.com/watch?v=onfaLYecMlQ)
   - [L'art du Story Telling par Cyrille Dupuydauby](https://www.youtube.com/watch?v=aNfYcXTpV1c)
