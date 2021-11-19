@@ -76,13 +76,6 @@ TODO trouver GIF
 
 === Pour qui ?
 
-[source,kotlin]
-----
-class Test{
-    fun test(): String = tetdsfg
-}
-----
-
 === Pourquoi?
 
 * Onboarding
@@ -197,9 +190,42 @@ Automatisation : ça tourne mal
 
 == Des nouvelles façons de documenter
 
-'''
 
-=== Contributif
+== Tests as documentation
+
+=== Elixir Doctest
+
+=== Rust Documentation tests
+
+
+https://doc.rust-lang.org/rustdoc/documentation-tests.html
+
+=== Java 18 Javadoc Code Snippets
+
+https://openjdk.java.net/jeps/413:[JEP 413 : Code Snippets in Java API Documentation]
+
+https://www.morling.dev/blog/executable-javadoc-code-snippets/
+
+
+=== !
+
+[source,java]
+----
+include::exemples/executable-javadoc-code-snippets/src/main/java/fr/baldir/samples/hello/Hello.java[]
+----
+
+=== !
+
+[source,java]
+----
+include::exemples/executable-javadoc-code-snippets/src/test/java/snippets/SnippetTest.java[]
+----
+
+=== !
+
+image::exemples/executable-javadoc-code-snippets/docs/assets/101_generated_javadoc_result.png[]
+
+== Contributif
 
 Wiki as code
 

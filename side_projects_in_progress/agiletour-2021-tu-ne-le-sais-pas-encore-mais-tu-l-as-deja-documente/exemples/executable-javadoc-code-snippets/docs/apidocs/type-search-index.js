@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"fr.baldir.samples.hello","l":"Hello"}];updateSearchResults();
