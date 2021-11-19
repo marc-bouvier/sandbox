@@ -3,9 +3,16 @@
 :date: {localdate}
 :customcss: css/presentation.css
 :source-highlighter: highlightjs
+:docinfo: private
 
 [background-image="assets/hoken-landing.png"]
 == Tu ne le sais pas encore, mais tu l'as deja documenté !
+
+[.notes]
+--
+* aaa
+* bbb
+--
 
 [.columns]
 == Qui suis-je ?
