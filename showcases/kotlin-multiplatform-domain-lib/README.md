@@ -5,3 +5,12 @@
     - unit tests are run against various targets (jvm, js : multiple browsers)
 - [jsBrowserApp](jsBrowserApp/README.md) : browser application based on shared domain
 - [jvmCliApp](jvmCliApp/README.md) : jvm CLI app based on shared domain
+
+## To-do
+
+- [ ] Compile to Wasm and consume from
+  - C#
+  - Js
+  - Rust
+  - Swift
+
