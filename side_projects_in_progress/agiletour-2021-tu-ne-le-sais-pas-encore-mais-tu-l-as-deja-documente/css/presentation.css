@@ -1,0 +1,58 @@
+.reveal .slides section .attribution {
+    font-size: 1.25rem;
+}
+.reveal blockquote {
+    font-family: serif;
+}
+
+/* ------------------------------------------------------ The refs section */
+/* stolen from https://github.com/bentolor/java9to13/blob/11e0acc5e453bb8215bededfa27539adaabbdaeb/docs/css/presentation.css */
+/* Ref is fixed at the bottom of the screen at the controls level*/
+DIV.refs {
+    filter: invert(100%);
+    border-top: 1px solid rgba(0,0,0,.2);
+    padding: 2px 0 0 0;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 41rem;
+    text-align: right;
+    font-family: "Open Sans", "DejaVu Sans", sans-serif
+}
+
+DIV.refs P, DIV.refs P A {
+    color: rgba(0,0,0,.4);
+    margin: 0;
+}
+
+DIV.refs DIV.ulist {
+    margin: 0; padding: 0;
+    font-size: 1.3rem;
+    line-height: 0.9;
+
+}
+
+DIV.refs DIV.ulist UL {
+    list-style-type: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+DIV.refs DIV.ulist UL LI {
+    width: 50%;
+    float: right;
+    text-align: center;
+}
+
+/* hovering effects */
+DIV.refs:hover {
+    background-color: #745d4860;
+    cursor: pointer;
+}
+DIV.refs:hover LI P {
+    color: black;
+}
+DIV.refs LI:hover P A {
+    text-decoration: underline;
+    color: blue;
+}

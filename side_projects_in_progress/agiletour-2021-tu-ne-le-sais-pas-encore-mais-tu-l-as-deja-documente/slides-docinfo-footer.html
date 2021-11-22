@@ -1,0 +1,25 @@
+<script src="revealjs-plugins/menu/menu.js"></script>
+<link rel="stylesheet" href="revealjs-plugins/chalkboard/style.css">
+<script src="revealjs-plugins/chalkboard/plugin.js"></script>
+<script>
+    Reveal.configure({
+        menu: {
+            side: 'right',
+            openButton: true
+        },
+        keyboard: {
+            67: function () {
+                RevealChalkboard.toggleNotesCanvas()
+            },
+            66: function () {
+                RevealChalkboard.toggleChalkboard()
+            }
+        }
+    })
+
+    // https://github.com/denehyg/reveal.js-menu
+    Reveal.registerPlugin(RevealMenu)
+    // https://github.com/rajgoel/reveal.js-plugins/tree/master/chalkboard
+    Reveal.registerPlugin(RevealChalkboard)
+
+</script>

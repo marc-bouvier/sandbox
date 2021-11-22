@@ -1,0 +1,13 @@
+fr.baldir.adhdtools.domain.spaceport.SpacePortParameterResolver
+fr.baldir.adhdtools.domain.search.criteria.JourneyParameterResolver
+fr.baldir.adhdtools.domain.sharedkernel.PriceParameterResolver
+fr.baldir.adhdtools.domain.search.SpaceTrainParameterResolver
+fr.baldir.adhdtools.domain.booking.SpaceTrainParameterResolver
+fr.baldir.adhdtools.domain.search.criteria.CriteriaParameterResolver
+fr.baldir.adhdtools.domain.search.SearchParameterResolver
+fr.baldir.adhdtools.domain.search.criteria.JourneysParameterResolver
+fr.baldir.adhdtools.domain.search.LinkedJourneyAndSpaceTrainParameterResolver
+fr.baldir.adhdtools.domain.search.selection.SelectedSpaceTrainParameterResolver
+fr.baldir.adhdtools.domain.search.selection.SelectionParameterResolver
+fr.baldir.adhdtools.domain.sharedkernel.ScheduleParameterResolver
+fr.baldir.adhdtools.domain.booking.BookingParameterResolver

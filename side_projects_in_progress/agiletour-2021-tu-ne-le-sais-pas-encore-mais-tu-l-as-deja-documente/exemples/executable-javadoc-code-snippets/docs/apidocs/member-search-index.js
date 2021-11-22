@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"fr.baldir.samples.hello","c":"Hello","l":"Hello()","u":"%3Cinit%3E()"},{"p":"fr.baldir.samples.hello","c":"Hello","l":"sayHello(String)","u":"sayHello(java.lang.String)"}];updateSearchResults();

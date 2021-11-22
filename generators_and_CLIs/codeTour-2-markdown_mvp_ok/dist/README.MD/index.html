@@ -1,0 +1,41 @@
+<h2>Core concept</h2>
+<p>Convert <a href="https://aka.ms/codetour-schema"><code>.tour</code></a> json description file to an html file that can be published as a blog post.</p>
+<p>This way, I can at the same time document some codebase for onboarding and also publish it as a blog post.</p>
+<h2>Generate site</h2>
+<p>Only once</p>
+<pre><code>npm install @11ty/eleventy-plugin-syntaxhighlight --save-dev
+</code></pre>
+<p>Then when you want to generate</p>
+<pre><code>npx @11ty/eleventy --output=dist
+</code></pre>
+<h2>How to add a code tour</h2>
+<ul>
+<li>In <code>posts/tours</code>, add an exported code tour file. Renamed the following way.
+<ul>
+<li><code>my-tour-name.tour</code> becomes <code>my-tour-name.tour.22tydata.json</code></li>
+</ul>
+</li>
+<li>create a markdown file following the convention : <code>my-tour-name.tour.md</code></li>
+</ul>
+<p>Ex.</p>
+<pre><code>posts/tours
+   mobilizon-frontend.tour.11tydata.json
+   mobilizon-frontend.tour.md
+</code></pre>
+<p>You don't need to change the content of the code tour file except for its name</p>
+<p>In the markdown file, you must set variables for the repository url and for the file browsing URL of the repo.</p>
+<p>in <code>mobilizon-frontend.tour.md</code> it is done the following way :</p>
+<pre class="language-md"><code class="language-md"><span class="token front-matter-block"><span class="token punctuation">---</span><br><span class="token font-matter yaml language-yaml">repoUrl: https://framagit.org/framasoft/mobilizon<br>repoFileBrowseUrl: https://framagit.org/framasoft/mobilizon/-/blob</span><br><span class="token punctuation">---</span></span></code></pre>
+<p>When generated, you can see the html here : <code>http://localhost:8080/posts/tours/mobilizon-frontend.tour/</code></p>
+<h2>Considered technologies</h2>
+<ul>
+<li><a href="https://www.11ty.dev/">11ty</a> for fast and easy file generation</li>
+</ul>
+<h2>Ideas &amp; notes</h2>
+<ul>
+<li>Url of the git repo is not present in the tour file. This information should be added independently.</li>
+</ul>
+<pre class="language-bash"><code class="language-bash">npx @11ty/eleventy</code></pre>
+<ul>
+<li>TODO : make it a github action or gitlab equivalent</li>
+</ul>
