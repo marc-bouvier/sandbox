@@ -1,6 +1,7 @@
 = Living Documentation
 :author: Marc Bouvier @marcbouvier_ <m.bouvier.dev@gmail.com>
 :date: {localdate}
+:revealjsdir: reveal.js
 :customcss: css/presentation.css
 :source-highlighter: highlightjs
 :docinfo: private
