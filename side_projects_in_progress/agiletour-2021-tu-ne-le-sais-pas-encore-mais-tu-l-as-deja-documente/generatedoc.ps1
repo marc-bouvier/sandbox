@@ -1,0 +1,1 @@
+npx asciidoctor-revealjs slides.adoc -o index.html

@@ -34,6 +34,7 @@ Idée : frein à l'outillage : mais parfois aller au plus simple (ex. tableau bl
 
 **Ressources**
 
+- https://github.com/zenika/adoc-presentation-model
 - [https://www.youtube.com/watch?v=LG4SADs2nf8]([SC] Living Documentation - Sébastien Fauvel)
   - https://github.com/sfauvel/livingdocumentation
 - [BDX I/O 2016 : [Boite à outils pour une Living Documentation] ([Prioux Benoit])](https://www.youtube.com/watch?v=xbcFyYIKZ_M)

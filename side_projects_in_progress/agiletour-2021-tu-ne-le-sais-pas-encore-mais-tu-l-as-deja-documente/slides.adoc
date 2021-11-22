@@ -63,12 +63,15 @@ image::assets/qrcode_u.baldir.fr_AT2021LD.png[QR Code vers le lien de la présen
     <div style="margin: auto;display: flex;flex-flow: column;width: auto;flex-grow: 0.5;">
         <textarea id="what_is_doc_1a" style="font-size: 1rem;height: 16rem;"></textarea>
         <div style="display: flex;">
-            <button onclick="localStorage.setItem('what_is_doc_1', document.getElementById('what_is_doc_1a').value)" style="width: 100%;">Save</button>
+            <button onclick="localStorage.setItem('what_is_doc_1', document.getElementById('what_is_doc_1a').value);generate_what_is_doc_1_cloud()" style="width: 100%;">Save</button>
             <button onclick="document.getElementById('what_is_doc_1a').value = localStorage.getItem('what_is_doc_1')" style="width: 100%;">Load</button>
         </div>
     </div>
 </div>
 +++
+
+[#what_is_doc_1_cloud,%notitle]
+=== Word Cloud
 
 == Antipatterns
 
