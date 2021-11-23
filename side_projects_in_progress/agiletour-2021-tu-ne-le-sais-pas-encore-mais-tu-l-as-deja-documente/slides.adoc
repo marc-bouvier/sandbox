@@ -95,6 +95,12 @@ TODO trouver GIF
 
 === Pour qui ?
 
+* Métier
+* Utilisateurs (embedded tooltip)
+* Développeurs (internes)
+* Développeurs (externes) 
+* Régulateur
+
 === Pourquoi?
 
 * Onboarding
