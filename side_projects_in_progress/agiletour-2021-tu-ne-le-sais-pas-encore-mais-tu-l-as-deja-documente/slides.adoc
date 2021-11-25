@@ -40,6 +40,22 @@ include::13_tests_as_documentation.adoc[]
 
 include::14_automated_release_notes.adoc[]
 
+include::15_specifications_as_code.adoc[]
+
+include::16_strategy_for_devops.adoc[]
+
+[.notes]
+--
+* First write it as text when you repeat it
+* Then automate parts of it when it's repetitive
+* Fill the gaps between inner scripts
+* next steps might be spzcialized tooling such as Ansible......
+--
+
+
+include::17_notebooks.adoc[]
+
+
 == Mais au fait, elle fait quoi notre application?
 
 * Manuel utilisateur
