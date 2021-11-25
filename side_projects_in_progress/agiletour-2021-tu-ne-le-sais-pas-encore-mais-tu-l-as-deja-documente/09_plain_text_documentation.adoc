@@ -70,7 +70,7 @@ Pros
 * AsciidoctorJ (Java)
 * migration from markdown
 * [some of markdown syntax is compatible](https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/#markdown-compatibility)
-
+* migrate form/to ms word with pandoc (https://docs.asciidoctor.org/asciidoctor/latest/migrate/ms-word/)
 Cons
 
 * much more syntax to learn (but you don't need to learn everything for simple document)

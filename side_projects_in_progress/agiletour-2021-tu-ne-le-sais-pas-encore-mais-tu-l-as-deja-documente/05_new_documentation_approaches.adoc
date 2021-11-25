@@ -1,6 +1,9 @@
 == De nouvelles approches de la documentation
 
-
+[.notes]
+--
+TODO : fancy D3 graph for categories?
+--
 
 === En bref
 
