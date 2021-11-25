@@ -1,0 +1,7 @@
+== Living glossary
+
+[.notes]
+--
+Use code to generate a glossary that can be read by business people.
+They can say if a word is not exactly good. It can be changed from the code.
+--

@@ -17,7 +17,8 @@ DIV.refs {
     width: 100%;
     top: 41rem;
     text-align: right;
-    font-family: "Open Sans", "DejaVu Sans", sans-serif
+    font-family: "Open Sans", "DejaVu Sans", sans-serif;
+    font-size: 1rem;
 }
 
 DIV.refs P, DIV.refs P A {

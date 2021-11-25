@@ -1,0 +1,18 @@
+[.columns]
+== About this presentation
+
+[.column]
+--
+* Présentation et sources en ligne
+--
+
+[.column]
+--
+image::assets/qrcode_u.baldir.fr_AT2021LD.png[QR Code vers le lien de la présentation : u.baldir.fr/at-2021-ld]
+--
+
+[.refs]
+--
+* link:u.baldir.fr/at-2021-ld[]
+* Lien vers cette présentation
+--

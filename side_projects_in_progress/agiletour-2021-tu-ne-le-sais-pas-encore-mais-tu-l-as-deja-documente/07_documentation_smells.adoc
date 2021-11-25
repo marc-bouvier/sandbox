@@ -1,0 +1,9 @@
+
+== Documentation Smells
+
+[quote,Gojko Adzic,Specification by Example: How Successful Teams Deliver the Right Software]
+Like cheap wine, paper documentation ages rapidly and leaves you with bad headache.
+
+=== Activités séparées
+
+TODO trouver GIF

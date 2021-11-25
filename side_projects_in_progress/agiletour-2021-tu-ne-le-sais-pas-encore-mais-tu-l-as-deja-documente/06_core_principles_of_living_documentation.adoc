@@ -1,0 +1,4 @@
+== Core Principles of Living Documentation
+
+* Reliable
+*

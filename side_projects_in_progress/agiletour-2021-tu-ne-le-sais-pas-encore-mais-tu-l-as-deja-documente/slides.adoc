@@ -6,85 +6,35 @@
 :source-highlighter: highlightjs
 :docinfo: private
 
-[background-image="assets/hoken-landing.png"]
-== Tu ne le sais pas encore, mais tu l'as deja documenté !
+include::00_front_page.adoc[]
 
-[.notes]
---
-* aaa
-* bbb
---
+include::01_who_am_i.adoc[]
 
-[.columns]
-== Qui suis-je ?
+include::02_toc.adoc[]
 
-[.column]
---
-Marc Bouvier
---
+include::03_about_the_presentation.adoc[]
 
-[.column]
---
-image::assets/marc-bouvier-rnd-25.png[]
---
+include::04_deconstruct_documentation.adoc[]
 
-[%notitle]
-== Table of Contents
+include::05_new_documentation_approaches.adoc[]
 
-toc::[]
+include::06_core_principles_of_living_documentation.adoc[]
 
-<<<
+include::07_documentation_smells.adoc[]
 
-[.columns]
-== Living Documentation
+include::08_javadoc_code_snippets.adoc[]
 
-[.column]
---
-* TODO
-* TODO
-* TODO
---
+include::09_plain_text_documentation.adoc[]
 
-[.column]
---
-image::assets/qrcode_u.baldir.fr_AT2021LD.png[QR Code vers le lien de la présentation : u.baldir.fr/at-2021-ld]
---
+include::10_living_diagram.adoc[]
 
-[.refs]
---
-* link:u.baldir.fr/at-2021-ld[]
-* Lien vers cette présentation
---
+include::11_living_glossary.adoc[]
 
-== La documentation, c'est quoi pour vous ?
+include::12_living_onboarding.adoc[]
 
-+++
-<div style="display: flex;">
-    <div style="margin: auto;display: flex;flex-flow: column;width: auto;flex-grow: 0.5;">
-        <textarea id="what_is_doc_1a" style="font-size: 1rem;height: 16rem;"></textarea>
-        <div style="display: flex;">
-            <button onclick="localStorage.setItem('what_is_doc_1', document.getElementById('what_is_doc_1a').value);generate_what_is_doc_1_cloud()" style="width: 100%;">Save</button>
-            <button onclick="document.getElementById('what_is_doc_1a').value = localStorage.getItem('what_is_doc_1')" style="width: 100%;">Load</button>
-        </div>
-    </div>
-</div>
-+++
+include::13_tests_as_documentation.adoc[]
 
-[#what_is_doc_1_cloud,%notitle]
-=== Word Cloud
-
-== Antipatterns
-
-[quote,Gojko Adzic,Specification by Example: How Successful Teams Deliver the Right Software]
-Like cheap wine, paper documentation ages rapidly and leaves you with bad headache.
-
-== Antipatterns take away
-
-=== Activités séparées
-
-TODO trouver GIF
-
-=== Mais au fait, elle fait quoi notre application?
+== Mais au fait, elle fait quoi notre application?
 
 * Manuel utilisateur
 * OpenApi / Swagger
@@ -93,114 +43,8 @@ TODO trouver GIF
 * Readme.md
 * Demo site = documentation
 
-=== Pour qui ?
-
-=== Pourquoi?
-
-* Onboarding
-* Readme
-* Contribute
-* CodeTour
 
 == !
-
-=== Comment?
-
-* Ecrit?
-Non écrit?
-* Conversations (ex. pour onboarding)
-* Conversations over Documentation
-* Travailer ensemble
-* Pair programming / Mob programmgin
-* Interviews métier, immersion
-* Code
-* Commentaires -> refactor
-* Code = documentation
-* nommage : classes, packages, fonctions
-* annotations et métadonnées
-* DDD
-* tests
-* TDD
-* BDD
-
-== !
-
-== Plain text
-
-=== Markdown
-
-* primitive lightweight syntax
-* embed HTML
-* Github
-    * Repo
-    * Pages
-* Azure DevOps
-    * Wiki as code
-
-
-=== Markdown pros/cons
-
-Pros
-
-* primitive syntax
-* supported everywhere
-
-Cons
-
-* Flavour hell
-* not much advanced features
-    * embed HTML if
-
-=== Asciidoc
-
-* [Asciidoc](https://asciidoc-py.github.io/)
-* [Asciidoctor](https://docs.asciidoctor.org/)
-* Github
-    * Repo
-    * Pages
-
-=== Asciidoc pros/cons
-
-Pros
-
-* Converters
-    * Built-in
-        * Html
-        * XHTML
-        * DocBook
-        * Man page
-    * Add-on
-        * PDF
-        * EPUB3
-        * Reveal.js
-        * Bespoke
-* Supported in most serious IDEs
-* Actionable from code
-    * Asciidoclet
-    * Maven tools
-* much more capabilities out of the box (see https://docs.asciidoctor.org/asciidoc/latest/asciidoc-vs-markdown/[Compare AsciiDoc to Markdown])
-  * includes
-    * split your .adoc files
-    * include code snippets from your real code
-  * Links
-  * Admonitions
-  * Better tables (IMHO)
-  * Better quotes
-  * anchors
-  * collapsible blocks
-* extension system
-* multiple implementations
-  * Asciidoctor (Ruby)
-  * AsciidoctorJs (Js) (transpiled from Ruby)
-  * AsciidoctorJ (Java)
-* migration from markdown
-  * [some of markdown syntax is compatible](https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/#markdown-compatibility)
-
-Cons
-
-* much more syntax to learn (but you don't need to learn everything for simple document)
-* not supported everywhere yet
-    * Azure DevOps
 
 === Demo CodeTour
 
@@ -293,30 +137,6 @@ image:assets/one_source_of_truth_multiple_targets.png[A partir du code source de
 
 https://doc.rust-lang.org/rustdoc/documentation-tests.html
 
-=== Java 18 Javadoc Code Snippets
-
-https://openjdk.java.net/jeps/413:[JEP 413 : Code Snippets in Java API Documentation]
-
-https://www.morling.dev/blog/executable-javadoc-code-snippets/
-
-
-=== !
-
-[source,java]
-----
-include::exemples/executable-javadoc-code-snippets/src/main/java/fr/baldir/samples/hello/Hello.java[]
-----
-
-=== !
-
-[source,java]
-----
-include::exemples/executable-javadoc-code-snippets/src/test/java/snippets/SnippetTest.java[]
-----
-
-=== !
-
-image:exemples/executable-javadoc-code-snippets/docs/assets/101_generated_javadoc_result.png[]
 
 == Contributif
 

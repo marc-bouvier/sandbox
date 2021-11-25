@@ -1,0 +1,51 @@
+== Déconstruisons la documentation
+
+=== La documentation, c'est quoi pour vous ?
+
++++
+<div style="display: flex;">
+    <div style="margin: auto;display: flex;flex-flow: column;width: auto;flex-grow: 0.5;">
+        <textarea id="what_is_doc_1a" style="font-size: 1rem;height: 16rem;"></textarea>
+        <div style="display: flex;">
+            <button onclick="localStorage.setItem('what_is_doc_1', document.getElementById('what_is_doc_1a').value);generate_what_is_doc_1_cloud()" style="width: 100%;">Save</button>
+            <button onclick="document.getElementById('what_is_doc_1a').value = localStorage.getItem('what_is_doc_1')" style="width: 100%;">Load</button>
+        </div>
+    </div>
+</div>
++++
+
+[#what_is_doc_1_cloud,%notitle]
+=== Word Cloud
+
+===
+
+
+== Pour qui ?
+
+== Pourquoi?
+
+* Onboarding
+* Readme
+* Contribute
+* CodeTour
+
+== !
+
+=== Comment?
+
+* Ecrit?
+Non écrit?
+* Conversations (ex. pour onboarding)
+* Conversations over Documentation
+* Travailer ensemble
+* Pair programming / Mob programmgin
+* Interviews métier, immersion
+* Code
+* Commentaires -> refactor
+* Code = documentation
+* nommage : classes, packages, fonctions
+* annotations et métadonnées
+* DDD
+* tests
+* TDD
+* BDD

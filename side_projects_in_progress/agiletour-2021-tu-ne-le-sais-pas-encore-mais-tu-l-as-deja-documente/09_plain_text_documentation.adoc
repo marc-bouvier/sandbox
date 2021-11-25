@@ -1,0 +1,78 @@
+== Plain text
+
+* Versionnable
+* Lisible par un humain
+
+=== Markdown
+
+* primitive lightweight syntax
+* embed HTML
+* Github
+* Repo
+* Pages
+* Azure DevOps
+* Wiki as code
+
+=== Markdown pros/cons
+
+Pros
+
+* primitive syntax
+* supported everywhere
+
+Cons
+
+* Flavour hell
+* not much advanced features
+* embed HTML if
+
+=== Asciidoc
+
+* [Asciidoc](https://asciidoc-py.github.io/)
+* [Asciidoctor](https://docs.asciidoctor.org/)
+* Github
+* Repo
+* Pages
+
+=== Asciidoc pros/cons
+
+Pros
+
+* Converters
+* Built-in
+* Html
+* XHTML
+* DocBook
+* Man page
+* Add-on
+* PDF
+* EPUB3
+* Reveal.js
+* Bespoke
+* Supported in most serious IDEs
+* Actionable from code
+* Asciidoclet
+* Maven tools
+* much more capabilities out of the box (see https://docs.asciidoctor.org/asciidoc/latest/asciidoc-vs-markdown/[Compare AsciiDoc to Markdown])
+* includes
+* split your .adoc files
+* include code snippets from your real code
+* Links
+* Admonitions
+* Better tables (IMHO)
+* Better quotes
+* anchors
+* collapsible blocks
+* extension system
+* multiple implementations
+* Asciidoctor (Ruby)
+* AsciidoctorJs (Js) (transpiled from Ruby)
+* AsciidoctorJ (Java)
+* migration from markdown
+* [some of markdown syntax is compatible](https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/#markdown-compatibility)
+
+Cons
+
+* much more syntax to learn (but you don't need to learn everything for simple document)
+* not supported everywhere yet
+* Azure DevOps

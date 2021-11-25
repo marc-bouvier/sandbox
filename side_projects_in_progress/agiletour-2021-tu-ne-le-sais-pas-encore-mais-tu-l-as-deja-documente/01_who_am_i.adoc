@@ -1,0 +1,12 @@
+[.columns]
+== Qui suis-je ?
+
+[.column]
+--
+Marc Bouvier
+--
+
+[.column]
+--
+image::assets/marc-bouvier-rnd-25.png[]
+--

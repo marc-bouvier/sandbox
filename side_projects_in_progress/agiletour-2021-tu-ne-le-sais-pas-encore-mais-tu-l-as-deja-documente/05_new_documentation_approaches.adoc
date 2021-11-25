@@ -1,0 +1,19 @@
+== De nouvelles approches de la documentation
+
+
+
+=== En bref
+
+* NoDocumentation
+* Stable Documentation
+* Refactor-Friendly Documentation
+* Automated Documentation
+* Runtime Documentation
+* Beyond Documentation
+
+[.notes]
+--
+J'utilise ici volontairement des termes en anglais issus du livre "Living Documentation" de Cyrille Martraire car faisant selon moi référence en la matière, ils faciliteront vos recherches et la propagation cohérente des ces concepts.
+--
+
+TODO : Déconstruisons le concept de documentation
