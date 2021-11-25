@@ -65,6 +65,12 @@ include::18_declarative_infrastructure.adoc[]
 
 include::19_dsl.adoc[]
 
+include::20_hard_to_generate_diagram_is_a_signal.adoc[]
+
+[.notes]
+--
+* https://youtu.be/Tw-wcps7WqU?t=2291
+--
 
 == Mais au fait, elle fait quoi notre application?
 
