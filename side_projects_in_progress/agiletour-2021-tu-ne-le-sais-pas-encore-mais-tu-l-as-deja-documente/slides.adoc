@@ -55,6 +55,16 @@ include::16_strategy_for_devops.adoc[]
 
 include::17_notebooks.adoc[]
 
+include::18_declarative_infrastructure.adoc[]
+
+[.notes]
+--
+* docker-compose is a sort of documentation of infrastructure
+* Azure infra as code
+--
+
+include::19_dsl.adoc[]
+
 
 == Mais au fait, elle fait quoi notre application?
 
