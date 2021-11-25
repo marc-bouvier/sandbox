@@ -38,6 +38,8 @@ include::12_living_onboarding.adoc[]
 
 include::13_tests_as_documentation.adoc[]
 
+include::14_automated_release_notes.adoc[]
+
 == Mais au fait, elle fait quoi notre application?
 
 * Manuel utilisateur

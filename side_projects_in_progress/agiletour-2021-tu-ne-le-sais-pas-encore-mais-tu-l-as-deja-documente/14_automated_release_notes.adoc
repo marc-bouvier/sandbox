@@ -1,0 +1,9 @@
+== Automated Release notes
+
+[.notes]
+--
+* Useful metadate
+    * Commit message (surtout s'ils sont bien faits voire atomic / monorepo)
+* Conventional commit
+* pull request notes
+--
