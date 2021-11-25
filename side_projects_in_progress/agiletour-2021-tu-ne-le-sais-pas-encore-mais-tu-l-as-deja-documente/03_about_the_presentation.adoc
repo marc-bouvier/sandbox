@@ -13,6 +13,6 @@ image::assets/qrcode_u.baldir.fr_AT2021LD.png[QR Code vers le lien de la présen
 
 [.refs]
 --
-* link:u.baldir.fr/at-2021-ld[]
+* link:https://u.baldir.fr/at-2021-ld[]
 * Lien vers cette présentation
 --

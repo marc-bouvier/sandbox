@@ -1,6 +1,6 @@
 == Déconstruisons la documentation
 
-=== La documentation, c'est quoi pour vous ?
+=== La documentation, c'est quoi pour vous?
 
 +++
 <div style="display: flex;">
@@ -18,7 +18,7 @@
 === Word Cloud
 
 
-== Pour qui ?
+== Pour qui?
 
 * Métier
 * Utilisateurs (embedded tooltip)
@@ -32,8 +32,6 @@
 * Readme
 * Contribute
 * CodeTour
-
-== !
 
 === Comment?
 

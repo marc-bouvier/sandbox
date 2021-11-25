@@ -40,6 +40,38 @@ include::13_tests_as_documentation.adoc[]
 
 include::14_automated_release_notes.adoc[]
 
+include::15_specifications_as_code.adoc[]
+
+include::16_strategy_for_devops.adoc[]
+
+[.notes]
+--
+* First write it as text when you repeat it
+* Then automate parts of it when it's repetitive
+* Fill the gaps between inner scripts
+* next steps might be spzcialized tooling such as Ansible......
+--
+
+
+include::17_notebooks.adoc[]
+
+include::18_declarative_infrastructure.adoc[]
+
+[.notes]
+--
+* docker-compose is a sort of documentation of infrastructure
+* Azure infra as code
+--
+
+include::19_dsl.adoc[]
+
+include::20_hard_to_generate_diagram_is_a_signal.adoc[]
+
+[.notes]
+--
+* https://youtu.be/Tw-wcps7WqU?t=2291
+--
+
 == Mais au fait, elle fait quoi notre application?
 
 * Manuel utilisateur
@@ -136,9 +168,21 @@ image:assets/one_source_of_truth_multiple_targets.png[A partir du code source de
 
 == Des nouvelles façons de documenter
 
+=== Notebooks
+
+* https://jupyter.org/[Jupyter Notebooks]
+* https://livebook.dev/[Elixir Livebook]
+
+[.notes]
+--
+Very cool for learning & visual representations
+--
+
 == Tests as documentation
 
 === Elixir Doctest
+
+* https://hexdocs.pm/ex_unit/ExUnit.DocTest.html
 
 === Rust Documentation tests
 
@@ -195,14 +239,15 @@ image:assets/qrcode_u.baldir.fr_AT2021LD.png[]]
 
 == Ressources
 
+* https://github.com/LivingDocumentation/awesome-living-documentation
 * https://zenika.github.io/adoc-presentation-model/reveal/reveal-my-asciidoc.html[Reveal my Asciidoc - a deep dive into presentation as code] - 2020-01-09 - Benoit COUETIL
-    * https://github.com/zenika/adoc-presentation-model[AsciiDoctor Presentation Model]
+** https://github.com/zenika/adoc-presentation-model[AsciiDoctor Presentation Model]
 
 == !
 
-![Living Documentation - Cyrille Martraire](https://servimg.eyrolles.com/static/media/9326/9780134689326_internet_w290.jpg)
+image:https://servimg.eyrolles.com/static/media/9326/9780134689326_internet_w290.jpg[Living Documentation - Cyrille Martraire]
 
-[Living Documentation](https://www.eyrolles.com/Informatique/Livre/living-documentation-9780134689326/) - Cyrille Martraire ([@cyriux](https://twitter.com/cyriux))
+https://www.eyrolles.com/Informatique/Livre/living-documentation-9780134689326/[Living Documentation] - Cyrille Martraire ([@cyriux](https://twitter.com/cyriux))
 
 == !
 
