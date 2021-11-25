@@ -17,10 +17,14 @@
 [#what_is_doc_1_cloud,%notitle]
 === Word Cloud
 
-===
-
 
 == Pour qui ?
+
+* Métier
+* Utilisateurs (embedded tooltip)
+* Développeurs (internes)
+* Développeurs (externes)
+* Régulateur
 
 == Pourquoi?
 
