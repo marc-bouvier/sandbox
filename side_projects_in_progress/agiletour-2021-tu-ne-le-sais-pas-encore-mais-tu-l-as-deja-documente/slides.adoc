@@ -10,7 +10,11 @@ include::00_front_page.adoc[]
 
 include::01_who_am_i.adoc[]
 
+
+////
 include::02_toc.adoc[]
+////
+
 
 include::03_about_the_presentation.adoc[]
 
@@ -109,11 +113,13 @@ Cucumber / Specflow -> réconciliation entre scénarios et code
 
 == !
 
-![Désastre d'automatisation illustré par une usine automatique comportant des centaines de tapis roulant et des cheminées industrielles rejetant une épaisse fumée noire](== !automation_mess.gif)
+image:assets/automation_mess.gif[Désastre d'automatisation illustré par une usine automatique comportant des centaines de tapis roulant et des cheminées industrielles rejetant une épaisse fumée noire]
 
 Automatisation : ça tourne mal
 
-+++<p style="font-size: 1rem">Source : <a href="https://www.youtube.com/watch?v=t2X3wlvoShg">I Built a 600 Meter Human Cannon That Ends All Existence - Satisfactory</a> - Let's Game It Out - 2020</p>+++
+++++
+<p style="font-size: 1rem">Source : <a href="https://www.youtube.com/watch?v=t2X3wlvoShg">I Built a 600 Meter Human Cannon That Ends All Existence - Satisfactory</a> - Let's Game It Out - 2020</p>
+++++
 
 == !
 
@@ -198,7 +204,9 @@ image:assets/qrcode_u.baldir.fr_AT2021LD.png[]]
 
 == !
 
+++++
 <div style="text-align: center"> <iframe width="720" height="480" src="https://www.youtube.com/embed/Tw-wcps7WqU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </div>
+++++
 
 [Living Documentation : vous allez aimer la documentation !(Cyrille Martraire)](https://www.youtube.com/watch?v=Tw-wcps7WqU)
 
@@ -218,14 +226,19 @@ Gifs
 
 == !
 
+++++
 <div style="text-align: center"> <iframe src="https://giphy.com/embed/xUOxeZy7TXZYptBMSA" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe> <p> <a href="https://giphy.com/gifs/brooklynninenine-brooklyn-99-xUOxeZy7TXZYptBMSA"> via GIPHY</a> </p> </div>
+++++
 
 == !
 
+++++
 <iframe src="https://giphy.com/embed/iUR4qsCkrNHhe" width="480" height="452" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cat-iUR4qsCkrNHhe">via GIPHY</a></p>
+++++
 
 == !
 
+++++
 <iframe src="https://giphy.com/embed/HU6hWEApxYTgQ" width="461" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/jim-carrey-HU6hWEApxYTgQ">via GIPHY</a></p>
-
+++++
 == !
