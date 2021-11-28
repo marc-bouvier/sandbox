@@ -1,0 +1,16 @@
+== \___ as code
+
+[.notes]
+--
+* Executable documentation
+--
+
+=== Plain text
+
+image:assets/commit_strip_versionning_is_important.png[alt=,width=500]
+
+[.refs]
+--
+* https://www.commitstrip.com[Commit strip]
+* https://www.commitstrip.com/fr/2017/09/12/versioning-is-important[Le versioning, c’est important] - 12/09/2017
+--

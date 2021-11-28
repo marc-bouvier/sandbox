@@ -20,13 +20,18 @@ include::02_toc.adoc[]
 
 include::04_deconstruct_documentation.adoc[]
 
+include::04_the_problem_with_traditional_documentation.adoc[]
+
+include::07_documentation_smells.adoc[]
+
 include::04_for_who.adoc[]
 
 include::05_new_documentation_approaches.adoc[]
 
 include::06_core_principles_of_living_documentation.adoc[]
 
-//include::07_documentation_smells.adoc[]
+include::07_as_code.adoc[]
+
 
 //include::08_javadoc_code_snippets.adoc[]
 //
@@ -36,8 +41,8 @@ include::06_core_principles_of_living_documentation.adoc[]
 //** Use of ascii art to enhance textual documentation
 //--
 
-//include::09_plain_text_documentation.adoc[]
-//
+include::09_plain_text_documentation.adoc[]
+
 //include::10_living_diagram.adoc[]
 //
 //include::11_living_glossary.adoc[]
@@ -67,6 +72,9 @@ include::06_core_principles_of_living_documentation.adoc[]
 //include::19_dsl.adoc[]
 //
 //include::20_hard_to_generate_diagram_is_a_signal.adoc[]
+
+
+include::21_additional_resources.adoc[]
 //
 //[.notes]
 //--

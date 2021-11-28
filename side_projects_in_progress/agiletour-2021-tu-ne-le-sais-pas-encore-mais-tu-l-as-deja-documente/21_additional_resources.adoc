@@ -1,0 +1,7 @@
+== Additional resources
+
+* The pragmatic programmer
+* Clean code
+* Code complete
+* Living documentation
+* The Programmer's Brain

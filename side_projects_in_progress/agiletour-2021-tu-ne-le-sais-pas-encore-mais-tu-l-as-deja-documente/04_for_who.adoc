@@ -6,12 +6,47 @@
 * Développeurs (externes)
 * Régulateur
 
+=== Différentes audiences, différents formats
+
+[.notes]
+--
+* TODO : image ou Gif
+* Si le consommateur est technique (Dev back/front, Ops). Il préférera surement du code ou des fichiers pouvant être consommés par un ordinateur. ex. Json, Yaml, code, markup...
+* Un client ou product owner préférera un pdf ou fichier word ou document web
+* Des consommateurs techniques d'une lib ou API voudront avoir une documentation du code public (pouvant être importée dans l'IDE)/ des points d'entrée web (OpenApi, GraphQL)
+* Un régulateur : voudra consommer un rapport pdf, excel ou des fichiers à plat
+* L'utilisateur final sera plus à l'aise avec un PDF ou mieux une documentation intégrée à la GUI (Tooltips, page d'aide, site web)
+--
+
 == Pourquoi?
 
-* Onboarding
-* Readme
-* Contribute
+[.notes]
+--
+* Chaque consmmateur de documentation a des besoins différents
+--
+
+=== Onboarding de développeur/repreneur
+
+* Privilégier les conversations et interactions humaines!
+* Readme.md, Contribute.md
 * CodeTour
+* Wiki (as code)
+
+[.notes]
+--
+* Conversations/interactions
+** Synchrone
+** Pair/Mob programming
+** Revue de code
+** Immersion : vis ma vie
+** Hautement collaboratif
+* Traitez votre projet comme s'il était open-source
+--
+
+* Auditeur/régulateur
+* Utilisateur final
+* DevOps
+* Consommateur d'API
 
 === Comment?
 
