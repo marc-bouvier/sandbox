@@ -1,41 +1,39 @@
 package flashcards
 
 import java.io.File
+import java.io.IOException
 import java.util.*
 import kotlin.collections.ArrayList
 
 typealias Cards = MutableCollection<Card>
 
 fun main() {
-    // Dependency management:
-    // Externalize IO implementation as functions for better decouplage & CLI testability
+
+    // =========== Setup dependencies ===========
+    // Make implicit IO and randomness as explicit dependencies
     val scanner = Scanner(System.`in`)
     val collectInput: () -> String = scanner::nextLine
     val printOutput: (output: String) -> Unit = { output -> println(output) }
-    // Rendom stuff is externalized for testability
     val randomCardChooser: (cards: Cards) -> Card = { deck -> deck.random() }
 
-    //DeckBuilder(printOutput, collectInput).build()
     val deck = Deck(printOutput, collectInput)
-
     val cardGuesser = CardGuesser(deck, printOutput, collectInput, randomCardChooser)
-
     FlashCardsMenu(printOutput, collectInput, cardGuesser, deck).loop()
 }
 
 class FlashCardsMenu(
     val printOutput: (output: String) -> Unit,
     val collectInput: () -> String,
-    val cardGuesser: CardGuesser,
-    val deck: Deck
+    private val cardGuesser: CardGuesser,
+    private val deck: Deck
 ) {
 
-    enum class Option(val code: String) {
+    enum class MenuOption(val code: String) {
         ADD("add"), REMOVE("remove"), IMPORT("import"), EXPORT("export"), ASK("ask"), EXIT("exit"), UNSUPPORTED("");
 
         companion object {
-            fun fromCode(code: String): Option {
-                val find: Option? = values().find { options -> options.code == code }
+            fun fromCode(code: String): MenuOption {
+                val find: MenuOption? = values().find { options -> options.code == code }
                 if (find != null)
                     return find
                 return UNSUPPORTED
@@ -44,36 +42,57 @@ class FlashCardsMenu(
     }
 
     fun loop() {
-        var choice: Option
+        var choice: MenuOption
         do {
-            choice = prompt()
+            choice = promptAction()
             when (choice) {
-                Option.ADD -> {
-                    deck.add()
-                }
-                Option.EXPORT -> {
-                    printOutput("File name:")
-                    val fileName = collectInput()
-                    val serializedDeck: String = DeckSerializer(deck).serializeToString()
-                    TODO("Save to file")
-                    printOutput("${deck.numberOfCards()} cards have been saved.")
-                }
-                Option.IMPORT -> {
-                }
-                Option.REMOVE -> remove()
-                Option.ASK -> cardGuesser.guessRandomCard()
-                Option.EXIT -> printExitMessage()
-                Option.UNSUPPORTED -> printOutput("""The command "$choice" is not supported.""")
+                MenuOption.ADD -> addToDeck()
+                MenuOption.EXPORT -> exportDeck()
+                MenuOption.IMPORT -> importDeck()
+                MenuOption.REMOVE -> removeCard()
+                MenuOption.ASK -> askSeveralTimes()
+                MenuOption.EXIT -> printExitMessage()
+                MenuOption.UNSUPPORTED -> unsupportedChoice(choice)
             }
-        } while (Option.EXIT != choice)
-
+        } while (MenuOption.EXIT != choice)
     }
 
-    private fun printExitMessage() {
-        printOutput("Bye bye!")
+    private fun promptAction(): MenuOption {
+        printOutput("Input the action (add, remove, import, export, ask, exit):")
+        val input: String = collectInput()
+        return MenuOption.fromCode(input)
     }
 
-    private fun remove() {
+    private fun addToDeck() {
+        deck.add()
+    }
+
+    private fun exportDeck() {
+        printOutput("File name:")
+        val pathName = collectInput()
+        val serializedDeck: String = JsonDeckSerializer(deck).serializeToString()
+        val flashcardsFile = File(pathName)
+        flashcardsFile.writeText(serializedDeck)
+        printOutput("${deck.numberOfCards()} cards have been saved.")
+    }
+
+    private fun importDeck() {
+        printOutput("File name:")
+        val pathName = collectInput()
+        val deckFile = File(pathName)
+        if (!deckFile.exists()) {
+            printOutput("File not found.")
+        } else {
+            val rawDeck = deckFile.readText()
+            val loadedDeck = JsonDeckDeSerializer(rawDeck, printOutput, collectInput)
+                .deserialize()
+            printOutput("${loadedDeck.numberOfCards()} cards have been loaded.")
+            printOutput("${loadedDeck.cards}")
+            deck.mergeWith(loadedDeck)
+        }
+    }
+
+    private fun removeCard() {
         printOutput("Which card?")
         val termOfCard = collectInput()
         if (deck.remove(termOfCard)) {
@@ -83,27 +102,61 @@ class FlashCardsMenu(
         }
     }
 
-    private fun prompt(): Option {
-        printOutput("Input the action (add, remove, import, export, ask, exit):")
-        val input: String = collectInput()
-        return Option.fromCode(input)
+    private fun askSeveralTimes() {
+        printOutput("How many times to ask?")
+        val timesToAsk = collectInput().toInt()
+        repeat(timesToAsk) { cardGuesser.guessRandomCard() }
+    }
+
+    private fun printExitMessage() {
+        printOutput("Bye bye!")
+    }
+
+    private fun unsupportedChoice(choice: MenuOption) {
+        printOutput("""The command "$choice" is not supported.""")
     }
 }
 
-class DeckSerializer(val deck: Deck) {
+class JsonDeckSerializer(private val deck: Deck) {
     fun serializeToString(): String {
 
-        val jsonCards = deck.cards.map { it.toJson() }.joinToString(",\n")
+        val jsonCards = deck.cards.joinToString(",\n") { it.toJsonLine() }
         return """
-            {
+            [
             $jsonCards
-            }
+            ]
         """.trimIndent()
     }
 
-    private fun Card.toJson() = """{ "term":"$term", "definition"="$definition" }"""
+    private fun Card.toJsonLine() = """{ "term":"$term", "definition":"$definition" }"""
 }
 
+class JsonDeckDeSerializer(
+    private val rawDeck: String,
+    private val printOutput: (output: String) -> Unit,
+    private val collectInput: () -> String
+) {
+
+    private val cardLinePattern = """^.*\{ "term":"(.*)", "definition":"(.*)" }.*""".toRegex()
+
+    fun deserialize(): Deck {
+
+        val lines = rawDeck.split("\n")
+        val cards = lines.filter { "[" !in it && "]" !in it }
+            .map(this::fromJson)
+        return Deck(cards, printOutput, collectInput)
+    }
+
+    private fun fromJson(jsonLine: String): Card {
+        val groups = cardLinePattern.matchEntire(jsonLine.trim())
+            ?: throw IOException("Cannot match pattern $cardLinePattern with line $jsonLine")
+
+        val term = groups.groups[1]?.value ?: throw IOException("Missing 'term' value for line $jsonLine")
+        val definition =
+            groups.groups[2]?.value ?: throw IOException("Missing 'definition' value for line $jsonLine")
+        return Card(term, definition)
+    }
+}
 
 data class Card(val term: String, val definition: String)
 
@@ -112,6 +165,13 @@ class Deck(
     val collectInput: () -> String,
 ) {
     val cards: Cards = ArrayList()
+
+    constructor(
+        newCards: List<Card>, printOutput: (output: String) -> Unit,
+        collectInput: () -> String
+    ) : this(printOutput, collectInput) {
+        cards.addAll(newCards)
+    }
 
     fun add() {
         // We abort the input if any input is incorrect
@@ -123,19 +183,6 @@ class Deck(
         printOutput("""The pair ("${newCard.term}":"${newCard.definition}") has been added""")
 
     }
-
-    private fun inputDefinitionForNewCard(): String? {
-        printOutput("The definition of the card:")
-        val definition = collectInput()
-
-        if (definitionIsDuplicateInDeck(definition)) {
-            printOutput("""The definition "$definition" already exists. Try again: """)
-            return null
-        }
-        return definition
-    }
-
-    private fun definitionIsDuplicateInDeck(definition: String) = cards.any { card -> card.definition == definition }
 
     private fun inputTermForNewCard(): String? {
         printOutput("Card:")
@@ -151,6 +198,19 @@ class Deck(
     private fun termIsDuplicateInDeck(term: String) =
         cards.any { card -> card.term == term }
 
+    private fun inputDefinitionForNewCard(): String? {
+        printOutput("The definition of the card:")
+        val definition = collectInput()
+
+        if (definitionIsDuplicateInDeck(definition)) {
+            printOutput("""The definition "$definition" already exists. Try again: """)
+            return null
+        }
+        return definition
+    }
+
+    private fun definitionIsDuplicateInDeck(definition: String) = cards.any { card -> card.definition == definition }
+
     fun remove(termOfCardToRemove: String): Boolean {
         return cards.removeIf { it.term == termOfCardToRemove }
     }
@@ -158,13 +218,24 @@ class Deck(
     fun numberOfCards(): Int {
         return cards.size
     }
+
+    fun mergeWith(loadedDeck: Deck) {
+        loadedDeck.cards.forEach { card ->
+            this.merge(card)
+        }
+    }
+
+    private fun merge(card: Card) {
+        cards.removeIf { it.term == card.term }
+        cards.add(card)
+    }
 }
 
 class CardGuesser(
-    val deck: Deck,
+    private val deck: Deck,
     val printOutput: (output: String) -> Unit,
     val collectInput: () -> String,
-    val cardPicker: (cards: Cards) -> Card = { deck -> deck.random() }
+    val cardPicker: (cards: Cards) -> Card = { it.random() }
 ) {
 
     fun guessRandomCard() {
@@ -213,4 +284,3 @@ class CardGuesser(
             .any { cardWithMatchingDefinition -> cardWithMatchingDefinition.term == cardToGuess.term }
     }
 }
-
