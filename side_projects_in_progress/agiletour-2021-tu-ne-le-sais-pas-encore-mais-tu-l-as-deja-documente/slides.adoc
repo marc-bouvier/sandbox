@@ -28,6 +28,12 @@ include::07_documentation_smells.adoc[]
 
 include::08_javadoc_code_snippets.adoc[]
 
+[.notes]
+--
+* https://github.com/dkandalov/tab-shifter/blob/master/src/tabshifter/layout/Split.kt
+** Use of ascii art to enhance textual documentation
+--
+
 include::09_plain_text_documentation.adoc[]
 
 include::10_living_diagram.adoc[]
@@ -44,18 +50,11 @@ include::15_specifications_as_code.adoc[]
 
 include::16_strategy_for_devops.adoc[]
 
-[.notes]
---
-* First write it as text when you repeat it
-* Then automate parts of it when it's repetitive
-* Fill the gaps between inner scripts
-* next steps might be spzcialized tooling such as Ansible......
---
-
-
 include::17_notebooks.adoc[]
 
 include::18_declarative_infrastructure.adoc[]
+
+include::20_frontend_documentation.adoc[]
 
 [.notes]
 --
