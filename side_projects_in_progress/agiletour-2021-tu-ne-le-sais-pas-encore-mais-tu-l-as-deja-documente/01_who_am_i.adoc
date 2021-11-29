@@ -4,6 +4,7 @@
 [.column]
 --
 Marc Bouvier
+Développeur en quête de sens
 --
 
 [.column]
