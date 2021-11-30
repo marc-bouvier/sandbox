@@ -22,28 +22,38 @@ import java.io.ObjectOutputStream
 import java.io.Serializable
 import java.util.*
 
-// =============== Program boostraping ===============
+// =============== Program bootstrapping ===============
 // (glues all the parts together and runs a game)
 fun main() {
 
     // =========== Setup dependencies ===========
     // Make implicit IO and randomness as explicit dependencies
-    // TODO : also externalize File dependencies
-    val scanner = Scanner(System.`in`)
+    // Since those things are not deterministic, we don't want them in our
+    // domain logic
+    val stdInScanner = Scanner(System.`in`)
     val logger = Logger(mutableListOf())
-    val collectInput: () -> String = { scanner.nextLine().also { logger.append(it) } }
+    val collectInput: () -> String = { stdInScanner.nextLine().also { logger.append(it) } }
     val printOutput: (output: String) -> Unit = { output -> println(output).also { logger.append(output) } }
-
     val cardRandomizer: (deck: Deck) -> Card = { deck -> deck.cardsList().random() }
     val deckSerializer = ObjectDeckSerializer()
     val deckDeSerializer = ObjectDeckDeSerializer()
+    val dataPersistance = FilePersistence()
 
     // Create game state
     val deck = Deck(mutableListOf())
 
     // Bind dependencies to the application components
     val cardGuesser = CardGuesser(deck, printOutput, collectInput, cardRandomizer)
-    val menu = FlashCardsMenu(printOutput, collectInput, cardGuesser, deck, deckSerializer, deckDeSerializer, logger)
+    val menu = FlashCardsMenu(
+        printOutput,
+        collectInput,
+        cardGuesser,
+        deck,
+        deckSerializer,
+        deckDeSerializer,
+        logger,
+        dataPersistance
+    )
 
     menu.loop()
 }
@@ -58,7 +68,8 @@ class FlashCardsMenu(
     private val deck: Deck,
     private val deckSerializer: DeckSerializer,
     private val deckDeSerializer: DeckDeSerializer,
-    private val logger: Logger
+    private val logger: Logger,
+    private val dataPersistance: Persistance
 ) {
     private enum class MenuOption(val code: String) {
         ADD("add"),
@@ -153,9 +164,9 @@ class FlashCardsMenu(
         }
     }
 
-    private fun promptForFile(): File {
+    private fun promptForFile(): PersistanceHandle {
         printOutput("File name:")
-        return File(collectInput())
+        return dataPersistance.handleFor(collectInput())
     }
 
     private fun removeCard() {
@@ -214,13 +225,11 @@ class FlashCardsMenu(
 
 class CardGuesser(
     private val deck: Deck,
-    val printOutput: (output: String) -> Unit,
-    val collectInput: () -> String,
-    val cardRandomizer: (deck: Deck) -> Card
+    private val printOutput: (output: String) -> Unit,
+    private val collectInput: () -> String,
+    private val cardRandomizer: (deck: Deck) -> Card
 ) {
-    fun guessRandomCard() {
-        guess(cardRandomizer(deck))
-    }
+    fun guessRandomCard() = guess(cardRandomizer(deck))
 
     private fun guess(cardToGuess: Card) {
         printOutput("""Print the definition of "${cardToGuess.term}":""")
@@ -343,7 +352,31 @@ interface DeckDeSerializer {
     fun deserialize(rawDeck: ByteArray): Deck
 }
 
+interface Persistance {
+    fun handleFor(name: String): PersistanceHandle
+}
+
+interface PersistanceHandle {
+    fun exists(): Boolean
+    fun writeText(text: String)
+    fun writeBytes(bytes: ByteArray)
+    fun readBytes(): ByteArray
+}
+
 // =============== Adapters ===============
+
+class FilePersistence : Persistance {
+    override fun handleFor(name: String): PersistanceHandle {
+        return FilePersistanceHandle(File(name))
+    }
+
+    class FilePersistanceHandle(private val file: File) : PersistanceHandle {
+        override fun exists(): Boolean = file.exists()
+        override fun writeText(text: String) = file.writeText(text)
+        override fun writeBytes(bytes: ByteArray) = file.writeBytes(bytes)
+        override fun readBytes(): ByteArray = file.readBytes()
+    }
+}
 
 class ObjectDeckSerializer : DeckSerializer {
     override fun serialize(deck: Deck): ByteArray {
