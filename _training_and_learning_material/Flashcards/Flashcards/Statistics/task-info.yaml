@@ -1,15 +1,6 @@
 type: edu
 custom_name: stage6
 files:
-- name: src/flashcards/Main.kt
-  visible: true
-  text: |
-    package flashcards
-
-    fun main() {
-        println("Hello, World!")
-    }
-  learner_created: false
 - name: test/FlashcardsTest.java
   visible: false
   text: |+
@@ -1210,9 +1201,57 @@ files:
     { "term":"France", "definition"="Paris" }
                 }
   learner_created: true
+- name: src/flashcards/domain/core/Card.kt
+  visible: true
+  learner_created: true
+- name: src/flashcards/domain/core/Deck.kt
+  visible: true
+  learner_created: true
+- name: src/flashcards/domain/application/CardGuesser.kt
+  visible: true
+  learner_created: true
+- name: src/flashcards/domain/application/FlashCardsMenu.kt
+  visible: true
+  learner_created: true
+- name: src/flashcards/domain/ports/Persistance.kt
+  visible: true
+  learner_created: true
+- name: src/flashcards/domain/ports/Logger.kt
+  visible: true
+  learner_created: true
+- name: src/flashcards/domain/ports/DeckSerializer.kt
+  visible: true
+  learner_created: true
+- name: src/flashcards/domain/ports/DeckDeSerializer.kt
+  visible: true
+  learner_created: true
+- name: src/flashcards/domain/ports/PersistanceHandle.kt
+  visible: true
+  learner_created: true
+- name: src/flashcards/infrastructure/adapters/FilePersistence.kt
+  visible: true
+  learner_created: true
+- name: src/flashcards/infrastructure/adapters/MutableListLogger.kt
+  visible: true
+  learner_created: true
+- name: src/flashcards/infrastructure/adapters/ObjectDeckDeSerializer.kt
+  visible: true
+  learner_created: true
+- name: src/flashcards/infrastructure/adapters/ObjectDeckSerializer.kt
+  visible: true
+  learner_created: true
+- name: src/flashcards/infrastructure/Main.kt
+  visible: true
+  text: |
+    package flashcards
+
+    fun main() {
+        println("Hello, World!")
+    }
+  learner_created: false
 feedback_link: https://hyperskill.org/learn/step/7491#comment
 status: Solved
 feedback:
   message: Congratulations!
-  time: Tue, 30 Nov 2021 22:29:53 UTC
+  time: Tue, 30 Nov 2021 23:11:15 UTC
 record: -1
