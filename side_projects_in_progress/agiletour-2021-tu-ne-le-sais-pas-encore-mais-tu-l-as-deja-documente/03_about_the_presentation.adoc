@@ -16,3 +16,13 @@ image::assets/qrcode_u.baldir.fr_AT2021LD.png[QR Code vers le lien de la présen
 * link:https://u.baldir.fr/at-2021-ld[]
 * Lien vers cette présentation
 --
+
+=== Presentation as code
+
+image:assets/commit_strip_code_vs_powerpoint.png[alt=,width=500]
+
+[.refs]
+--
+* https://www.commitstrip.com[Commit strip]
+* https://www.commitstrip.com/fr/2018/12/07/code-vs-powerpoint[Code vs Powerpoint] - 07/12/2018
+--

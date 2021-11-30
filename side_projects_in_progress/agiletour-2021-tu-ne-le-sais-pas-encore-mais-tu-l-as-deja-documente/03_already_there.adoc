@@ -1,0 +1,10 @@
+== It's already there!
+
+=== Readme.md
+
+Github/Gitlab -> web page
+
+=== Javadoc
+
+Javadoc comments -> website
+-> contextual doc in IDE

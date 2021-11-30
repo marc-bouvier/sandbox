@@ -1,5 +1,20 @@
 == Déconstruisons la documentation
 
+[.notes]
+--
+* TODO : choisir une couleur d'arrière plan
+--
+
+=== Au préalable quelques questions
+
+=== Es-tu satisfait de la documentation que tu produis?
+
+=== Quand tu lis de la documentation, est-ce que tu as peur qu'elle soit obsolète?
+
+=== Quand tu utilises des composants tiers est-ce que tu aimerais que leur documentation soit meilleure?
+
+=== Est-ce que tu penses que le temps passé à écrire de la documentation pourrait être mieux utilisé?
+
 === La documentation, c'est quoi pour vous?
 
 +++
@@ -16,38 +31,3 @@
 
 [#what_is_doc_1_cloud,%notitle]
 === Word Cloud
-
-
-== Pour qui?
-
-* Métier
-* Utilisateurs (embedded tooltip)
-* Développeurs (internes)
-* Développeurs (externes)
-* Régulateur
-
-== Pourquoi?
-
-* Onboarding
-* Readme
-* Contribute
-* CodeTour
-
-=== Comment?
-
-* Ecrit?
-Non écrit?
-* Conversations (ex. pour onboarding)
-* Conversations over Documentation
-* Travailer ensemble
-* Pair programming / Mob programmgin
-* Interviews métier, immersion
-* Code
-* Commentaires -> refactor
-* Code = documentation
-* nommage : classes, packages, fonctions
-* annotations et métadonnées
-* DDD
-* tests
-* TDD
-* BDD

@@ -1,0 +1,49 @@
+== The problem with traditional documentation
+
+[quote,Gojko Adzic,Specification by Example: How Successful Teams Deliver the Right Software]
+Like cheap wine, paper documentation ages rapidly and leaves you with bad headache.
+
+[.columns]
+=== Separate activities
+
+[%step]
+[.column]
+--
+Specs
+--
+
+[%step]
+[.column]
+--
+Code
+--
+
+[%step]
+[.column]
+--
+Tests
+--
+
+[%step]
+[.column]
+--
+Doc
+--
+
+[.notes]
+--
+* Beaucoup de temps et d'opportunités perdues à séparer les activités
+* souvent la connaissance est dupliquée à plusieurs endroits pendant les différentes activités
+* Les connaissances peuvent évoluer durant ce processus et engengrer des incohérences
+--
+
+=== Manual transcription
+
+TODO : image or gif (téléphone arabe)
+
+[.notes]
+--
+* très souvent, quand il s'agit de documenter, les membres de l'équipent choisissent des éléments de connaissance et les transcrivent manuellement dans un format adapté à l'audience cible
+** En gros on prend la connaissance de ce qui a été fait dans le code et on l'écrit dans un autre document
+--
+
