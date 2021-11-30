@@ -23,43 +23,43 @@ import java.io.Serializable
 import java.util.*
 
 // =============== Program boostraping ===============
-// (glue all the parts together)
+// (glues all the parts together and runs a game)
 fun main() {
 
     // =========== Setup dependencies ===========
     // Make implicit IO and randomness as explicit dependencies
+    // TODO : also externalize File dependencies
     val scanner = Scanner(System.`in`)
-    val logs = mutableListOf<String>()
-    val collectInput: () -> String = { scanner.nextLine().also { logs.add(it.toString()) } }
-    val printOutput: (output: String) -> Unit = { output -> println(output).also { logs.add(output) } }
+    val logger = Logger(mutableListOf())
+    val collectInput: () -> String = { scanner.nextLine().also { logger.append(it) } }
+    val printOutput: (output: String) -> Unit = { output -> println(output).also { logger.append(output) } }
 
-    val cardRandomizer: (deck: FlashCardsDeck) -> Card = { deck -> deck.cardsList().random() }
+    val cardRandomizer: (deck: Deck) -> Card = { deck -> deck.cardsList().random() }
     val deckSerializer = ObjectDeckSerializer()
     val deckDeSerializer = ObjectDeckDeSerializer()
 
     // Create game state
-    val deck = FlashCardsDeck(mutableListOf())
+    val deck = Deck(mutableListOf())
 
     // Bind dependencies to the application components
     val cardGuesser = CardGuesser(deck, printOutput, collectInput, cardRandomizer)
-    val menu = FlashCardsMenu(printOutput, collectInput, cardGuesser, deck, deckSerializer, deckDeSerializer, logs)
+    val menu = FlashCardsMenu(printOutput, collectInput, cardGuesser, deck, deckSerializer, deckDeSerializer, logger)
 
     menu.loop()
 }
 
 // =============== Application ===============
-// (interaction logic)
+// (user interaction logic)
 
 class FlashCardsMenu(
     val printOutput: (output: String) -> Unit,
     val collectInput: () -> String,
     private val cardGuesser: CardGuesser,
-    private val deck: FlashCardsDeck,
+    private val deck: Deck,
     private val deckSerializer: DeckSerializer,
     private val deckDeSerializer: DeckDeSerializer,
-    private val logs: MutableList<String>
+    private val logger: Logger
 ) {
-
     private enum class MenuOption(val code: String) {
         ADD("add"),
         REMOVE("remove"),
@@ -74,10 +74,7 @@ class FlashCardsMenu(
 
         companion object {
             fun fromCode(code: String): MenuOption {
-                val find: MenuOption? = values().find { options -> options.code == code }
-                if (find != null)
-                    return find
-                return UNSUPPORTED
+                return values().find { options -> options.code == code } ?: UNSUPPORTED
             }
         }
     }
@@ -108,7 +105,7 @@ class FlashCardsMenu(
 
     private fun saveLogs() {
         val logFile = promptForFile()
-        logFile.writeText(logs.joinToString("\n"))
+        logFile.writeText(logger.asString())
         printOutput("The log has been saved.7")
     }
 
@@ -120,11 +117,11 @@ class FlashCardsMenu(
             }
             hardestCards.size == 1 -> {
                 val hardestCard = hardestCards.single()
-                printOutput("The hardest card is \"${hardestCard.term}\". You have ${hardestCard.timesGuessedWrong} errors answering it.")
+                printOutput("The hardest card is \"${hardestCard.term}\". You have ${hardestCard.timesGuessedWrong()} errors answering it.")
             }
             else -> {
                 val terms = hardestCards.joinToString(", ") { "\"${it.term}\"" }
-                val timesGuessedWrong = hardestCards.first().timesGuessedWrong
+                val timesGuessedWrong = hardestCards.first().timesGuessedWrong()
                 printOutput("The hardest cards are $terms. You have $timesGuessedWrong errors answering them.")
             }
         }
@@ -143,7 +140,7 @@ class FlashCardsMenu(
         printOutput("""The pair ("$term":"$definition") has been added""")
     }
 
-    private fun inputTermForNewCard(deck: FlashCardsDeck): String? {
+    private fun inputTermForNewCard(deck: Deck): String? {
         printOutput("Card:")
         val term = collectInput()
 
@@ -154,7 +151,7 @@ class FlashCardsMenu(
         return term
     }
 
-    private fun inputDefinitionForNewCard(deck: FlashCardsDeck): String? {
+    private fun inputDefinitionForNewCard(deck: Deck): String? {
         printOutput("The definition of the card:")
         val definition = collectInput()
 
@@ -181,7 +178,6 @@ class FlashCardsMenu(
             val loadedDeck = deckDeSerializer
                 .deserialize(rawDeck)
             printOutput("${loadedDeck.numberOfCards()} cards have been loaded.")
-//            printOutput("${loadedDeck.cards}")
             deck.merge(loadedDeck)
         }
     }
@@ -217,10 +213,10 @@ class FlashCardsMenu(
 }
 
 class CardGuesser(
-    private val deck: FlashCardsDeck,
+    private val deck: Deck,
     val printOutput: (output: String) -> Unit,
     val collectInput: () -> String,
-    val cardRandomizer: (deck: FlashCardsDeck) -> Card
+    val cardRandomizer: (deck: Deck) -> Card
 ) {
     fun guessRandomCard() {
         guess(cardRandomizer(deck))
@@ -232,34 +228,53 @@ class CardGuesser(
         printOutput(formatAnswerGuessing(guess, cardToGuess))
     }
 
-    private fun formatAnswerGuessing(
-        guess: String,
-        cardToGuess: Card
-    ): String {
-
-        val result = deck.guess(cardToGuess.term, guess)
-
-        return when (result.type) {
+    private fun formatAnswerGuessing(guess: String, cardToGuess: Card): String {
+        val guessResult = deck.attemptGuess(cardToGuess.term, guess)
+        return when (guessResult.type) {
             RIGHT -> "Correct!"
             WRONG -> """Wrong. The right answer is "${cardToGuess.definition}"."""
-            RIGHT_BUT_WRONG_CARD -> """Wrong. The right answer is "${cardToGuess.definition}". but your definition is correct for "${result.rightButForWrongTerm?.term}" """
+            RIGHT_BUT_WRONG_CARD -> """Wrong. The right answer is "${cardToGuess.definition}". but your definition is correct for "${guessResult.rightButForWrongTerm?.term}" """
             CARD_NOT_FOUND -> "Card not found!"
         }
     }
 }
 
+class Logger(private val logs: MutableList<String>) {
+    fun append(logLine: String) {
+        logs.add(logLine)
+    }
+
+    fun asString() = logs.joinToString("\n")
+}
+
 // =============== Domain ===============
 
-data class Card(val term: String, val definition: String, var timesGuessedWrong: Int = 0) : Serializable {
+class Card(val term: String, val definition: String, private var timesGuessedWrong: Int = 0) : Serializable {
+
+    // Accessor for times guessed wrong
+    // because it should not be changed from outside
+    fun timesGuessedWrong(): Int {
+        return timesGuessedWrong
+    }
+
     fun resetStats() {
         timesGuessedWrong = 0
+    }
+
+    fun attemptGuess(guess: String): Boolean {
+        return if (guess != definition) {
+            timesGuessedWrong++
+            false
+        } else {
+            true
+        }
     }
 }
 
 /**
  * @see <a href="https://williamdurand.fr/2013/06/03/object-calisthenics/#4-first-class-collections">Object Calisthenics - First Class Collections</a>
  */
-class FlashCardsDeck(private val cards: MutableCollection<Card>) : Serializable {
+class Deck(private val cards: MutableCollection<Card>) : Serializable {
     fun cardsList(): List<Card> = cards.toList()
     fun add(card: Card): Card {
         cards.add(card)
@@ -271,7 +286,7 @@ class FlashCardsDeck(private val cards: MutableCollection<Card>) : Serializable 
     }
 
     fun numberOfCards(): Int = cards.size
-    fun merge(deck: FlashCardsDeck) {
+    fun merge(deck: Deck) {
         deck.cardsList().forEach { card ->
             this.merge(card)
         }
@@ -286,20 +301,19 @@ class FlashCardsDeck(private val cards: MutableCollection<Card>) : Serializable 
     fun containsDefinition(definition: String) = cards.any { card -> card.definition == definition }
 
     fun hardestCards(): List<Card> {
-        return cards.filter { it.timesGuessedWrong > 0 }
-            .groupBy { it.timesGuessedWrong }
+        return cards.filter { it.timesGuessedWrong() > 0 }
+            .groupBy { it.timesGuessedWrong() }
             .maxByOrNull { it.key }
             ?.value ?: listOf()
     }
 
-    fun guess(term: String, guess: String): GuessResult {
+    fun attemptGuess(term: String, guess: String): GuessResult {
         val cardToGuess: Card = cards.firstOrNull { it.term == term }
             ?: return GuessResult(CARD_NOT_FOUND)
 
-        if (cardToGuess.definition == guess)
+        if (cardToGuess.attemptGuess(guess))
             return GuessResult(RIGHT)
 
-        cardToGuess.timesGuessedWrong++
         val rightGuessButWrongTerm: Card? =
             cardsList().firstOrNull { it.definition == guess }
         if (rightGuessButWrongTerm != null) {
@@ -322,17 +336,17 @@ class GuessResult(val type: Type, val rightButForWrongTerm: Card? = null) {
 // =============== Ports ===============
 
 interface DeckSerializer {
-    fun serialize(deck: FlashCardsDeck): ByteArray
+    fun serialize(deck: Deck): ByteArray
 }
 
 interface DeckDeSerializer {
-    fun deserialize(rawDeck: ByteArray): FlashCardsDeck
+    fun deserialize(rawDeck: ByteArray): Deck
 }
 
 // =============== Adapters ===============
 
 class ObjectDeckSerializer : DeckSerializer {
-    override fun serialize(deck: FlashCardsDeck): ByteArray {
+    override fun serialize(deck: Deck): ByteArray {
         val byteArrayOutputStream = ByteArrayOutputStream()
         ObjectOutputStream(byteArrayOutputStream).writeObject(deck)
         return byteArrayOutputStream.toByteArray()
@@ -340,7 +354,7 @@ class ObjectDeckSerializer : DeckSerializer {
 }
 
 class ObjectDeckDeSerializer : DeckDeSerializer {
-    override fun deserialize(rawDeck: ByteArray): FlashCardsDeck {
-        return ObjectInputStream(ByteArrayInputStream(rawDeck)).readObject() as FlashCardsDeck
+    override fun deserialize(rawDeck: ByteArray): Deck {
+        return ObjectInputStream(ByteArrayInputStream(rawDeck)).readObject() as Deck
     }
 }
