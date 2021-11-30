@@ -1,5 +1,15 @@
 package flashcards
 
+import flashcards.FlashCardsMenu.MenuOption.ADD
+import flashcards.FlashCardsMenu.MenuOption.ASK
+import flashcards.FlashCardsMenu.MenuOption.EXIT
+import flashcards.FlashCardsMenu.MenuOption.EXPORT
+import flashcards.FlashCardsMenu.MenuOption.HARDEST_CARD
+import flashcards.FlashCardsMenu.MenuOption.IMPORT
+import flashcards.FlashCardsMenu.MenuOption.LOG
+import flashcards.FlashCardsMenu.MenuOption.REMOVE
+import flashcards.FlashCardsMenu.MenuOption.RESET_STATS
+import flashcards.FlashCardsMenu.MenuOption.UNSUPPORTED
 import flashcards.GuessResult.Type.CARD_NOT_FOUND
 import flashcards.GuessResult.Type.RIGHT
 import flashcards.GuessResult.Type.RIGHT_BUT_WRONG_CARD
@@ -11,7 +21,6 @@ import java.io.ObjectInputStream
 import java.io.ObjectOutputStream
 import java.io.Serializable
 import java.util.*
-import kotlin.collections.ArrayList
 
 // =============== Program boostraping ===============
 // (glue all the parts together)
@@ -20,9 +29,9 @@ fun main() {
     // =========== Setup dependencies ===========
     // Make implicit IO and randomness as explicit dependencies
     val scanner = Scanner(System.`in`)
-    val logger = ArrayList<String>()
-    val collectInput: () -> String = scanner::nextLine.also { logger.add(it.toString()) }
-    val printOutput: (output: String) -> Unit = { output -> println(output).also { logger.add(output) } }
+    val logs = mutableListOf<String>()
+    val collectInput: () -> String = { scanner.nextLine().also { logs.add(it.toString()) } }
+    val printOutput: (output: String) -> Unit = { output -> println(output).also { logs.add(output) } }
 
     val cardRandomizer: (deck: FlashCardsDeck) -> Card = { deck -> deck.cardsList().random() }
     val deckSerializer = ObjectDeckSerializer()
@@ -33,7 +42,7 @@ fun main() {
 
     // Bind dependencies to the application components
     val cardGuesser = CardGuesser(deck, printOutput, collectInput, cardRandomizer)
-    val menu = FlashCardsMenu(printOutput, collectInput, cardGuesser, deck, deckSerializer, deckDeSerializer, logger)
+    val menu = FlashCardsMenu(printOutput, collectInput, cardGuesser, deck, deckSerializer, deckDeSerializer, logs)
 
     menu.loop()
 }
@@ -48,7 +57,7 @@ class FlashCardsMenu(
     private val deck: FlashCardsDeck,
     private val deckSerializer: DeckSerializer,
     private val deckDeSerializer: DeckDeSerializer,
-    private val logger: ArrayList<String>
+    private val logs: MutableList<String>
 ) {
 
     private enum class MenuOption(val code: String) {
@@ -78,32 +87,47 @@ class FlashCardsMenu(
         do {
             choice = promptAction()
             when (choice) {
-                MenuOption.ADD -> promptNewCardToDeck()
-                MenuOption.EXPORT -> exportDeck()
-                MenuOption.IMPORT -> importDeck()
-                MenuOption.REMOVE -> removeCard()
-                MenuOption.ASK -> askSeveralTimes()
-                MenuOption.EXIT -> printExitMessage()
-                MenuOption.LOG -> {
-                    println("*** LOGS ***")
-                    println("************")
-                    println(logger)
-                    println("************")
-                }
-                MenuOption.HARDEST_CARD -> {
-                    when (val hardestCard = deck.hardestCard()) {
-                        null -> printOutput("There are no cards with errors.")
-                        else -> printOutput("The hardest card is \"${hardestCard.term}\". You have ${hardestCard.timesGuessedWrong} errors answering it.")
-                    }
-                }
-                MenuOption.RESET_STATS -> {
-                    TODO()
-                }
-                MenuOption.UNSUPPORTED -> {
-                    unsupportedChoice(choice)
-                }
+                ADD -> addCardToDeck()
+                EXPORT -> exportDeck()
+                IMPORT -> importDeck()
+                REMOVE -> removeCard()
+                ASK -> askSeveralTimes()
+                EXIT -> showExitMessage()
+                LOG -> saveLogs()
+                HARDEST_CARD -> hardestCard()
+                RESET_STATS -> resetStats()
+                UNSUPPORTED -> notifyUnsupportedChoice(choice)
             }
-        } while (MenuOption.EXIT != choice)
+        } while (EXIT != choice)
+    }
+
+    private fun resetStats() {
+        deck.resetStats()
+        printOutput("Card statistics have been reset.")
+    }
+
+    private fun saveLogs() {
+        val logFile = promptForFile()
+        logFile.writeText(logs.joinToString("\n"))
+        printOutput("The log has been saved.7")
+    }
+
+    private fun hardestCard() {
+        val hardestCards = deck.hardestCards()
+        when {
+            hardestCards.isEmpty() -> {
+                printOutput("There are no cards with errors.")
+            }
+            hardestCards.size == 1 -> {
+                val hardestCard = hardestCards.single()
+                printOutput("The hardest card is \"${hardestCard.term}\". You have ${hardestCard.timesGuessedWrong} errors answering it.")
+            }
+            else -> {
+                val terms = hardestCards.joinToString(", ") { "\"${it.term}\"" }
+                val timesGuessedWrong = hardestCards.first().timesGuessedWrong
+                printOutput("The hardest cards are $terms. You have $timesGuessedWrong errors answering them.")
+            }
+        }
     }
 
     private fun promptAction(): MenuOption {
@@ -112,7 +136,7 @@ class FlashCardsMenu(
         return MenuOption.fromCode(input)
     }
 
-    private fun promptNewCardToDeck() {
+    private fun addCardToDeck() {
         val term = inputTermForNewCard(deck) ?: return
         val definition = inputDefinitionForNewCard(deck) ?: return
         deck.add(Card(term, definition))
@@ -183,11 +207,11 @@ class FlashCardsMenu(
         repeat(timesToAsk) { cardGuesser.guessRandomCard() }
     }
 
-    private fun printExitMessage() {
+    private fun showExitMessage() {
         printOutput("Bye bye!")
     }
 
-    private fun unsupportedChoice(choice: MenuOption) {
+    private fun notifyUnsupportedChoice(choice: MenuOption) {
         printOutput("""The command "$choice" is not supported.""")
     }
 }
@@ -218,7 +242,7 @@ class CardGuesser(
         return when (result.type) {
             RIGHT -> "Correct!"
             WRONG -> """Wrong. The right answer is "${cardToGuess.definition}"."""
-            RIGHT_BUT_WRONG_CARD -> """Wrong. The right answer is "${cardToGuess.definition}". but your definition is correct for "${result.cardGuessedRightButForWrongTerm?.term}" """
+            RIGHT_BUT_WRONG_CARD -> """Wrong. The right answer is "${cardToGuess.definition}". but your definition is correct for "${result.rightButForWrongTerm?.term}" """
             CARD_NOT_FOUND -> "Card not found!"
         }
     }
@@ -226,7 +250,11 @@ class CardGuesser(
 
 // =============== Domain ===============
 
-data class Card(val term: String, val definition: String, var timesGuessedWrong: Int = 0) : Serializable
+data class Card(val term: String, val definition: String, var timesGuessedWrong: Int = 0) : Serializable {
+    fun resetStats() {
+        timesGuessedWrong = 0
+    }
+}
 
 /**
  * @see <a href="https://williamdurand.fr/2013/06/03/object-calisthenics/#4-first-class-collections">Object Calisthenics - First Class Collections</a>
@@ -257,27 +285,35 @@ class FlashCardsDeck(private val cards: MutableCollection<Card>) : Serializable 
     fun containsTerm(term: String): Boolean = cards.any { card -> card.term == term }
     fun containsDefinition(definition: String) = cards.any { card -> card.definition == definition }
 
-    fun hardestCard(): Card? {
-        return cards.maxByOrNull { card: Card -> card.timesGuessedWrong }
+    fun hardestCards(): List<Card> {
+        return cards.filter { it.timesGuessedWrong > 0 }
+            .groupBy { it.timesGuessedWrong }
+            .maxByOrNull { it.key }
+            ?.value ?: listOf()
     }
 
     fun guess(term: String, guess: String): GuessResult {
         val cardToGuess: Card = cards.firstOrNull { it.term == term }
             ?: return GuessResult(CARD_NOT_FOUND)
 
-        if (cardToGuess.definition == guess) return GuessResult(RIGHT)
+        if (cardToGuess.definition == guess)
+            return GuessResult(RIGHT)
 
         cardToGuess.timesGuessedWrong++
-        val cardWithRightDefinitionButWrongTerm: Card? =
-            cardsList().firstOrNull { cardFromDeck -> cardFromDeck.definition == guess }
-        if (cardWithRightDefinitionButWrongTerm != null) {
-            return GuessResult(RIGHT_BUT_WRONG_CARD, cardWithRightDefinitionButWrongTerm)
+        val rightGuessButWrongTerm: Card? =
+            cardsList().firstOrNull { it.definition == guess }
+        if (rightGuessButWrongTerm != null) {
+            return GuessResult(RIGHT_BUT_WRONG_CARD, rightGuessButWrongTerm)
         }
         return GuessResult(WRONG)
     }
+
+    fun resetStats() {
+        cards.forEach { it.resetStats() }
+    }
 }
 
-class GuessResult(val type: Type, val cardGuessedRightButForWrongTerm: Card? = null) {
+class GuessResult(val type: Type, val rightButForWrongTerm: Card? = null) {
     enum class Type {
         RIGHT, WRONG, RIGHT_BUT_WRONG_CARD, CARD_NOT_FOUND
     }
