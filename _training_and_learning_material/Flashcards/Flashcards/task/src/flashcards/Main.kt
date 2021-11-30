@@ -22,6 +22,9 @@ import java.io.ObjectOutputStream
 import java.io.Serializable
 import java.util.*
 
+// In this project I try to follow most Software Craftsmanship guidelines
+// short methods, separation of concerns, decouplage, rich OOP, S.O.L.I.D
+
 // =============== Program bootstrapping ===============
 // (glues all the parts together and runs a game)
 fun main() {
