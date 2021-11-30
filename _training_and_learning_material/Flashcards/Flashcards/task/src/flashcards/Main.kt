@@ -22,8 +22,17 @@ import java.io.ObjectOutputStream
 import java.io.Serializable
 import java.util.*
 
-// In this project I try to follow most Software Craftsmanship guidelines
-// short methods, separation of concerns, decouplage, rich OOP, S.O.L.I.D
+// In this project I try to follow some Software Craftsmanship guidelines
+// short methods, separation of concerns, decouplage, rich OOP, S.O.L.I.D,
+// Some rules from Object Calisthenics I try to follow :
+// - 1 level of indentation
+// - First class collections
+// - Don't abbreviate
+// - No getters/setters/Properties (I'm more flexible with this rule, but I enforce it when an attribute is mutable)
+//
+// Domain logic should rely on abstractions
+// This way we keep it clean from I/O, randomness and nondeterministic dependencies
+// Ex. Even simple println() is abstracted so this side effect (print to some output) is moved away from core domain logic
 
 // =============== Program bootstrapping ===============
 // (glues all the parts together and runs a game)
@@ -97,19 +106,23 @@ class FlashCardsMenu(
         var choice: MenuOption
         do {
             choice = promptAction()
-            when (choice) {
-                ADD -> addCardToDeck()
-                EXPORT -> exportDeck()
-                IMPORT -> importDeck()
-                REMOVE -> removeCard()
-                ASK -> askSeveralTimes()
-                EXIT -> showExitMessage()
-                LOG -> saveLogs()
-                HARDEST_CARD -> hardestCard()
-                RESET_STATS -> resetStats()
-                UNSUPPORTED -> notifyUnsupportedChoice(choice)
-            }
+            runAction(choice)
         } while (EXIT != choice)
+    }
+
+    private fun runAction(choice: MenuOption) {
+        when (choice) {
+            ADD -> addCardToDeck()
+            EXPORT -> exportDeck()
+            IMPORT -> importDeck()
+            REMOVE -> removeCard()
+            ASK -> askSeveralTimes()
+            EXIT -> showExitMessage()
+            LOG -> saveLogs()
+            HARDEST_CARD -> hardestCard()
+            RESET_STATS -> resetStats()
+            UNSUPPORTED -> notifyUnsupportedChoice(choice)
+        }
     }
 
     private fun addCardToDeck() {
@@ -261,7 +274,11 @@ class Logger(private val logs: MutableList<String>) {
 
 // =============== Domain ===============
 
-class Card(val term: String, val definition: String, private var timesGuessedWrong: Int = 0) : Serializable {
+class Card(
+    val term: String,
+    val definition: String,
+    private var timesGuessedWrong: Int = 0
+) : Serializable {
 
     // Accessor for times guessed wrong
     // because it should not be changed from outside
