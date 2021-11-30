@@ -11,7 +11,7 @@ import flashcards.infrastructure.adapters.ObjectDeckSerializer
 import java.util.*
 
 // In this project I try to follow some Software Craftsmanship guidelines
-// short methods, separation of concerns, decouplage, rich OOP, S.O.L.I.D, Clean Architecture
+// short methods, separation of concerns, decouplage, rich OOP, S.O.L.I.D, Ports & Adapters
 //
 // Some rules from Object Calisthenics I try to follow :
 // - 1 level of indentation

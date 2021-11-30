@@ -1,5 +1,6 @@
 package flashcards.domain.core
 
+// Only dependencies from core domain
 import java.io.Serializable
 
 class Card(

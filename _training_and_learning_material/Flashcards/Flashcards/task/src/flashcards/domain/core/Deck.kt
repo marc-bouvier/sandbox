@@ -1,6 +1,6 @@
 package flashcards.domain.core
 
-// Only dependencies from domain (Card)
+// Only dependencies from core domain
 import java.io.Serializable
 
 /**
