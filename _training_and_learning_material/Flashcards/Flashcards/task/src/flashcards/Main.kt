@@ -98,46 +98,17 @@ class FlashCardsMenu(
         } while (EXIT != choice)
     }
 
-    private fun resetStats() {
-        deck.resetStats()
-        printOutput("Card statistics have been reset.")
-    }
-
-    private fun saveLogs() {
-        val logFile = promptForFile()
-        logFile.writeText(logger.asString())
-        printOutput("The log has been saved.7")
-    }
-
-    private fun hardestCard() {
-        val hardestCards = deck.hardestCards()
-        when {
-            hardestCards.isEmpty() -> {
-                printOutput("There are no cards with errors.")
-            }
-            hardestCards.size == 1 -> {
-                val hardestCard = hardestCards.single()
-                printOutput("The hardest card is \"${hardestCard.term}\". You have ${hardestCard.timesGuessedWrong()} errors answering it.")
-            }
-            else -> {
-                val terms = hardestCards.joinToString(", ") { "\"${it.term}\"" }
-                val timesGuessedWrong = hardestCards.first().timesGuessedWrong()
-                printOutput("The hardest cards are $terms. You have $timesGuessedWrong errors answering them.")
-            }
-        }
+    private fun addCardToDeck() {
+        val term = inputTermForNewCard(deck) ?: return
+        val definition = inputDefinitionForNewCard(deck) ?: return
+        deck.add(Card(term, definition))
+        printOutput("""The pair ("$term":"$definition") has been added""")
     }
 
     private fun promptAction(): MenuOption {
         printOutput("Input the action (add, remove, import, export, ask, exit):")
         val input: String = collectInput()
         return MenuOption.fromCode(input)
-    }
-
-    private fun addCardToDeck() {
-        val term = inputTermForNewCard(deck) ?: return
-        val definition = inputDefinitionForNewCard(deck) ?: return
-        deck.add(Card(term, definition))
-        printOutput("""The pair ("$term":"$definition") has been added""")
     }
 
     private fun inputTermForNewCard(deck: Deck): String? {
@@ -205,6 +176,35 @@ class FlashCardsMenu(
 
     private fun showExitMessage() {
         printOutput("Bye bye!")
+    }
+
+    private fun saveLogs() {
+        val logFile = promptForFile()
+        logFile.writeText(logger.asString())
+        printOutput("The log has been saved.7")
+    }
+
+    private fun hardestCard() {
+        val hardestCards = deck.hardestCards()
+        when {
+            hardestCards.isEmpty() -> {
+                printOutput("There are no cards with errors.")
+            }
+            hardestCards.size == 1 -> {
+                val hardestCard = hardestCards.single()
+                printOutput("The hardest card is \"${hardestCard.term}\". You have ${hardestCard.timesGuessedWrong()} errors answering it.")
+            }
+            else -> {
+                val terms = hardestCards.joinToString(", ") { "\"${it.term}\"" }
+                val timesGuessedWrong = hardestCards.first().timesGuessedWrong()
+                printOutput("The hardest cards are $terms. You have $timesGuessedWrong errors answering them.")
+            }
+        }
+    }
+
+    private fun resetStats() {
+        deck.resetStats()
+        printOutput("Card statistics have been reset.")
     }
 
     private fun notifyUnsupportedChoice(choice: MenuOption) {
