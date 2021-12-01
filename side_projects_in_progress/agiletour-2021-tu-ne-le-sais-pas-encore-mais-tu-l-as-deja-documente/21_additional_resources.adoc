@@ -5,3 +5,4 @@
 * Code complete
 * Living documentation
 * The Programmer's Brain
+* https://www.youtube.com/watch?v=Uyx7AVg2dQw[Comment Asciidoctor peut vous aider pour votre doc (Jérémie Bresson)]

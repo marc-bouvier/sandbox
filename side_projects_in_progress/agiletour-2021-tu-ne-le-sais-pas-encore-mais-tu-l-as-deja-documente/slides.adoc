@@ -73,6 +73,7 @@ include::09_plain_text_documentation.adoc[]
 //
 //include::20_hard_to_generate_diagram_is_a_signal.adoc[]
 
+include::21_conclusion.adoc[]
 
 include::21_additional_resources.adoc[]
 //

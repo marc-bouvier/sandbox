@@ -1,0 +1,18 @@
+== Conclusion
+
+* Do you need documentation?
+** Do you need traditional documentation?
+** Favour Conversations & working together
+** Know your audience
+* Knowledge is already there
+** Minimize extra work
+** It just need to be augmented a little
+* Single source
+* Plain text helps
+** Can be read and edited with not much tooling
+** can be automated
+** versioned
+** choose markup depending on your need and maturity of tools
+* Thinking about documentation helps to question the rationale of your work
+
+

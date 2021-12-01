@@ -9,6 +9,17 @@ As Pragmatic Programmers, our base material isn't wood or iron, it's knowledge. 
 * Lisible par un humain
 --
 
+=== Why Plain Text
+
+* Standard version control
+* greppable
+* automation
+* Souveraineté numérique
+** Own your data AND your tooling (you can use open source)
+** Not bound to MS Office
+* But, not everyone is technical and cannot write code & push to git
+** Headless CMS
+
 === Markdown
 
 * primitive lightweight syntax
@@ -39,6 +50,8 @@ Cons
 * Github
 * Repo
 * Pages
+* https://antora.org/
+** Multi repository doc site generator
 
 === Asciidoc pros/cons
 
@@ -82,3 +95,4 @@ Cons
 * much more syntax to learn (but you don't need to learn everything for simple document)
 * not supported everywhere yet
 * Azure DevOps
+* At the moment, there is no rich text editor for Asciidoc supported, which limits non-technical writing with headless CMS
