@@ -3,7 +3,10 @@ package flashcards.domain.application
 // Only inner dependencies & dependencies to ports & domain
 import flashcards.domain.core.Card
 import flashcards.domain.core.Deck
-import  flashcards.domain.core.Deck.GuessResult.Type.*
+import flashcards.domain.core.Deck.GuessResult.Type.CARD_NOT_FOUND
+import flashcards.domain.core.Deck.GuessResult.Type.RIGHT
+import flashcards.domain.core.Deck.GuessResult.Type.RIGHT_BUT_WRONG_CARD
+import flashcards.domain.core.Deck.GuessResult.Type.WRONG
 
 class CardGuesser(
     private val deck: Deck,

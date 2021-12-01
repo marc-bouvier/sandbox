@@ -1193,14 +1193,6 @@ files:
 
 
   learner_created: false
-- name: flashcards.json
-  visible: true
-  text: |2-
-                {
-                { "term":"Japan", "definition"="Tokyo" },
-    { "term":"France", "definition"="Paris" }
-                }
-  learner_created: true
 - name: src/flashcards/domain/core/Card.kt
   visible: true
   learner_created: true
@@ -1253,5 +1245,5 @@ feedback_link: https://hyperskill.org/learn/step/7491#comment
 status: Solved
 feedback:
   message: Congratulations!
-  time: Tue, 30 Nov 2021 23:13:24 UTC
-record: -1
+  time: Tue, 30 Nov 2021 23:24:24 UTC
+record: 6

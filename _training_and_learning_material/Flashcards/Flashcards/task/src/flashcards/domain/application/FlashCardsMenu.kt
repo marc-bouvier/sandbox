@@ -1,11 +1,18 @@
 package flashcards.domain.application
 
-// Only inner dependencies & dependencies to ports & domain
-import flashcards.domain.application.FlashCardsMenu.MenuOption.*
+// Only inner dependencies & dependencies to ports & domain*
+import flashcards.domain.application.FlashCardsMenu.MenuOption.ADD
+import flashcards.domain.application.FlashCardsMenu.MenuOption.ASK
+import flashcards.domain.application.FlashCardsMenu.MenuOption.EXIT
+import flashcards.domain.application.FlashCardsMenu.MenuOption.EXPORT
+import flashcards.domain.application.FlashCardsMenu.MenuOption.HARDEST_CARD
+import flashcards.domain.application.FlashCardsMenu.MenuOption.IMPORT
+import flashcards.domain.application.FlashCardsMenu.MenuOption.LOG
+import flashcards.domain.application.FlashCardsMenu.MenuOption.REMOVE
+import flashcards.domain.application.FlashCardsMenu.MenuOption.RESET_STATS
+import flashcards.domain.application.FlashCardsMenu.MenuOption.UNSUPPORTED
 import flashcards.domain.core.Card
 import flashcards.domain.core.Deck
-import flashcards.domain.ports.DeckDeSerializer
-import flashcards.domain.ports.DeckSerializer
 import flashcards.domain.ports.Logger
 import flashcards.domain.ports.Persistance
 import flashcards.domain.ports.PersistanceHandle
@@ -15,8 +22,8 @@ class FlashCardsMenu(
     private val collectInput: () -> String,
     private val cardGuesser: CardGuesser,
     private val deck: Deck,
-    private val deckSerializer: DeckSerializer,
-    private val deckDeSerializer: DeckDeSerializer,
+    private val deckExporter: DeckExporter,
+    private val deckImporter: DeckImporter,
     private val logger: Logger,
     private val dataPersistance: Persistance
 ) {
@@ -99,22 +106,12 @@ class FlashCardsMenu(
 
     private fun exportDeck() {
         val flashcardsFile = promptForFile()
-        val serializedDeck = deckSerializer.serialize(deck)
-        flashcardsFile.writeBytes(serializedDeck)
-        printOutput("${deck.numberOfCards()} cards have been saved.")
+        deckExporter.export(flashcardsFile, deck)
     }
 
     private fun importDeck() {
         val deckFile = promptForFile()
-        if (!deckFile.exists()) {
-            printOutput("File not found.")
-        } else {
-            val rawDeck = deckFile.readBytes()
-            val loadedDeck = deckDeSerializer
-                .deserialize(rawDeck)
-            printOutput("${loadedDeck.numberOfCards()} cards have been loaded.")
-            deck.merge(loadedDeck)
-        }
+        deckImporter.import(deckFile, deck)
     }
 
     private fun promptForFile(): PersistanceHandle {

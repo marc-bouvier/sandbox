@@ -1,6 +1,8 @@
 package flashcards.infrastructure
 
 import flashcards.domain.application.CardGuesser
+import flashcards.domain.application.DeckExporter
+import flashcards.domain.application.DeckImporter
 import flashcards.domain.application.FlashCardsMenu
 import flashcards.domain.core.Card
 import flashcards.domain.core.Deck
@@ -22,10 +24,40 @@ import java.util.*
 // Domain logic should rely on abstractions
 // This way we keep it clean from I/O, randomness and nondeterministic dependencies
 // Ex. Even simple println() is abstracted so this side effect (print to some output) is moved away from core domain logic
+class Configuration(
+    val import: Boolean = false,
+    val importPath: String?,
+    val export: Boolean = false,
+    val exportPath: String?
+) {
+    companion object {
+        fun fromArgs(args: Array<String>): Configuration {
+
+            val importIndex = args.indexOf("-import")
+            val (import: Boolean, importPath: String?) = if (importIndex != -1) {
+                val importPathIndex = importIndex + 1
+                Pair(true, args[importPathIndex])
+            } else {
+                Pair(false, null)
+            }
+
+            val exportIndex = args.indexOf("-export")
+            val (export, exportPath: String?) = if (exportIndex != -1) {
+                val exportPathIndex = exportIndex + 1
+                Pair(true, args[exportPathIndex])
+            } else {
+                Pair(false, null)
+            }
+
+            return Configuration(import, importPath, export, exportPath)
+        }
+    }
+}
 
 // =============== Program bootstrapping ===============
 // (glues all the parts together and runs a game)
-fun main() {
+fun main(args: Array<String>) {
+    val configuration = Configuration.fromArgs(args)
 
     // =========== Setup dependencies ===========
     // Make implicit IO and randomness as explicit dependencies
@@ -36,12 +68,15 @@ fun main() {
     val collectInput: () -> String = { stdInScanner.nextLine().also { logger.append(it) } }
     val printOutput: (output: String) -> Unit = { output -> println(output).also { logger.append(output) } }
     val cardRandomizer: (deck: Deck) -> Card = { deck -> deck.cardsList().random() }
-    val deckSerializer = ObjectDeckSerializer()
-    val deckDeSerializer = ObjectDeckDeSerializer()
     val dataPersistance = FilePersistence()
+    val deckExporter = DeckExporter(ObjectDeckSerializer(), printOutput)
+    val deckImporter = DeckImporter(ObjectDeckDeSerializer(), printOutput)
 
     // Create game state
     val deck = Deck()
+    if (configuration.import) {
+        deckImporter.import(dataPersistance.handleFor(configuration.importPath!!), deck)
+    }
 
     // Bind dependencies to the application components
     val cardGuesser = CardGuesser(deck, printOutput, collectInput, cardRandomizer)
@@ -50,11 +85,15 @@ fun main() {
         collectInput,
         cardGuesser,
         deck,
-        deckSerializer,
-        deckDeSerializer,
+        deckExporter,
+        deckImporter,
         logger,
         dataPersistance
     )
 
     menu.loop()
+
+    if (configuration.export) {
+        deckExporter.export(dataPersistance.handleFor(configuration.exportPath!!), deck)
+    }
 }
