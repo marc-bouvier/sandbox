@@ -3,6 +3,7 @@
 
 [.notes]
 --
+* TODO : title is not well contrasted
 * Ouvrir un Vs Code vierge dans WSL
 * Vérifier les plan backups
 --

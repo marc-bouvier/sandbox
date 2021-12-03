@@ -1,0 +1,29 @@
+== Comment?
+
+* Ecrit?
+Non écrit?
+* Conversations (ex. pour onboarding)
+* Conversations over Documentation
+* Travailer ensemble
+* Pair programming / Mob programmgin
+* Interviews métier, immersion
+* Code
+* Commentaires -> refactor
+* Code = documentation
+* nommage : classes, packages, fonctions
+* annotations et métadonnées
+* DDD
+* tests
+* TDD
+* BDD
+
+[.notes]
+--
+Turnover, voir pire rétention d'information -> perte de connaissance peut être dommageable à l'organisation, voire dans des cas extremes entrainer sa perte
+
+Certes on aime pas le turnover, c'est le meme probleme que le truck factor. C'est inévitable
+- Pair programming
+- Mob programming
+- Event storming
+
+--

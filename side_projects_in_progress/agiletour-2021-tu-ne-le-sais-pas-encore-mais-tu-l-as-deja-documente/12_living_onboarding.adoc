@@ -1,4 +1,53 @@
-== Living onboarding
+== Living [on/off]boarding
+
+[.notes]
+--
+* Illustrer
+--
+
+=== Enjeux
+
+* Comprendre le fonctionnement du système
+* Faire fonctionner le système
+* Ajouter maintenir des fonctionalités
+
+[.notes]
+--
+* Git Good first Issue
+* Conversations et interactions humaines à privilégier
+* Readme.md, Contribute.md
+* CodeTour / Visite guidée
+* Wiki (as code)
+* Pourquoi cette décision a été prise (ex. décision d'architecture)
+** messages de commit : expliquent le pourquoi
+** ADR
+--
+
+[.notes]
+--
+* Traitez votre projet comme s'il était open-source
+* linter
+** Attention tu sors des conventions qu'on a adopté
+*** Standards génériques
+*** Standards d'équipe
+*** Frameworks et conventions de nommage (ex. suffixes de noms de choses)
+--
+
+=== Favour conversations
+
+[%step]
+* Live my life (immersion with/as business)
+* Pair programming
+* Mob programming
+
+[.notes]
+--
+* Synchrone
+* Bande passante importante
+* interactif
+* Pair/Mob programming
+* Revue de code
+--
 
 === Wiki
 
@@ -18,9 +67,43 @@ https://www.youtube.com/watch?v=lvs7VEsQzKY&t=1620s[Patterns of Effective Teams 
     * https://www.youtube.com/watch?v=lvs7VEsQzKY&t=1620s[Patterns of Effective Teams • Dan North • GOTO 2017] 27m00s - 30m30s
 --
 
+=== Warm welcome
+
+++++
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lvs7VEsQzKY?start=1624" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+++++
+
+=== Standards (ready-made documentation)
+
+[%step]
+* Linters
+* Team conventions
+* Point to the standard and it's done!
+
+[.notes]
+--
+* idiomatic knowledge
+* least astonishment
+* Generic & largely documented extrenally
+--
+
+=== Code metadata
+
+* Annotation
+*
+*
+
+[.notes]
+--
+** Easily searchable Grepable by tools
+** Embedded knowledge
+** Conversation starter (better than preaching)
+--
+
 === Code Driven Guided tour
 
-* Git Good first Issue
+
+* Annotation
 * CodeTour
     * Augmented CodeTour
 * With Asciidoc include preprocessor directive
@@ -31,8 +114,3 @@ https://www.youtube.com/watch?v=lvs7VEsQzKY&t=1620s[Patterns of Effective Teams 
 
 * With High level automated GUI tests
 
-=== Collaboration driven
-
-* Live my life (immersion with/as business)
-* pair programming
-* mob programming

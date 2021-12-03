@@ -6,15 +6,30 @@
 :source-highlighter: highlightjs
 :docinfo: private
 
-include::00_front_page.adoc[]
+== Today's goals
 
-include::01_who_am_i.adoc[]
+* [ ] cleanup duplicated content
+* [ ] reorganize titles h2
+* [ ] rehearse
 
-include::02_toc.adoc[]
+//include::00_front_page.adoc[]
 
-include::03_about_the_presentation.adoc[]
+//include::01_who_am_i.adoc[]
 
-include::04_deconstruct_documentation.adoc[]
+//include::02_toc.adoc[]
+
+//include::03_about_the_presentation.adoc[]
+
+//include::04_deconstruct_documentation.adoc[]
+
+
+=== Pourquoi?
+
+[.notes]
+--
+* Chaque consmmateur de documentation a des besoins différents
+--
+
 
 include::04_the_problem_with_traditional_documentation.adoc[]
 
@@ -22,27 +37,25 @@ include::07_documentation_smells.adoc[]
 
 include::04_for_who.adoc[]
 
+include::12_living_onboarding.adoc[]
+
 include::05_new_documentation_approaches.adoc[]
 
 include::06_core_principles_of_living_documentation.adoc[]
 
+include::07_how.adoc[]
+
 include::07_as_code.adoc[]
 
-include::08_javadoc_code_snippets.adoc[]
-//
-//[.notes]
-//--
-//* https://github.com/dkandalov/tab-shifter/blob/master/src/tabshifter/layout/Split.kt
-//** Use of ascii art to enhance textual documentation
-//--
+include::08_ex_javadoc_code_snippets.adoc[]
+
+include::11_ex_living_glossary.adoc[]
 
 include::09_plain_text_documentation.adoc[]
 
-include::10_living_diagram.adoc[]
+include::10_ex_living_diagram.adoc[]
 
-include::11_living_glossary.adoc[]
-
-include::12_living_onboarding.adoc[]
+include::12_tools_history.adoc[]
 
 include::13_tests_as_documentation.adoc[]
 

@@ -1,79 +1,80 @@
 == Pour qui?
 
-* Métier
-* Utilisateurs (embedded tooltip)
-* Développeurs (internes)
-* Développeurs (externes)
-* Régulateur
-
 === Différentes audiences, différents formats
 
 [.notes]
 --
 * TODO : image ou Gif
-* Si le consommateur est technique (Dev back/front, Ops). Il préférera surement du code ou des fichiers pouvant être consommés par un ordinateur. ex. Json, Yaml, code, markup...
 * Un client ou product owner préférera un pdf ou fichier word ou document web
 * Des consommateurs techniques d'une lib ou API voudront avoir une documentation du code public (pouvant être importée dans l'IDE)/ des points d'entrée web (OpenApi, GraphQL)
 * Un régulateur : voudra consommer un rapport pdf, excel ou des fichiers à plat
 * L'utilisateur final sera plus à l'aise avec un PDF ou mieux une documentation intégrée à la GUI (Tooltips, page d'aide, site web)
 --
 
-== Pourquoi?
+
+=== Non technique
 
 [.notes]
 --
-* Chaque consmmateur de documentation a des besoins différents
+Les arguments classiques
+
+* encore un autre outil à maintenir/apprendre
+* Ms Word / Sharepoint c'est facile
 --
 
-=== Onboarding de développeur/repreneur
+=== Public technique
 
-* Privilégier les conversations et interactions humaines!
-* Readme.md, Contribute.md
-* CodeTour
-* Wiki (as code)
+* Developpeur
+* DevOps/Exploitation
 
 [.notes]
 --
-* Conversations/interactions
-** Synchrone
-** Pair/Mob programming
-** Revue de code
-** Immersion : vis ma vie
-** Hautement collaboratif
-* Traitez votre projet comme s'il était open-source
+* Si le consommateur est technique (Dev back/front, Ops). Il préférera surement du code ou des fichiers pouvant être consommés par un ordinateur. ex. Json, Yaml, code, markup...
 --
 
-* Auditeur/régulateur
-* Utilisateur final
-* DevOps
+
+=== Auditeur/régulateur
+
+[.notes]
+--
+* point de vue externe sur le travail
+* interviews
+* revue de documents
+** ITIL
+** Reglementaire
+*** RGPD : regitre des traitements, cookies policy
+** Performances
+*** APIS
+*** Urls
+--
+
+=== Utilisateur final
+
+* Manuel Utilisateur
+* Infobulles
+* UX
+
+[.notes]
+--
+* UX
+** Parcours utilisateur intiuitif : documation par l'usage
+** Concepts et signifiants habituels
+*** Saisie d'une date dans une page en Français : `JJ/MM/YYYY`
+*** Validation de formulaire avec explications
+*** Messages d'erreur
+--
+
+=== DevOps / Exploiation
+
+* executable
+* configurations
+* plain/text
+* metrics
+** Logs bien formattés
+** Alertes quand quelquechose se passe mal
+
+=== Autres audiences ...
+
 * Consommateur d'API
-
-=== Comment?
-
-* Ecrit?
-Non écrit?
-* Conversations (ex. pour onboarding)
-* Conversations over Documentation
-* Travailer ensemble
-* Pair programming / Mob programmgin
-* Interviews métier, immersion
-* Code
-* Commentaires -> refactor
-* Code = documentation
-* nommage : classes, packages, fonctions
-* annotations et métadonnées
-* DDD
-* tests
-* TDD
-* BDD
-
-[.notes]
---
-Turnover, voir pire rétention d'information -> perte de connaissance peut être dommageable à l'organisation, voire dans des cas extremes entrainer sa perte
-
-Certes on aime pas le turnover, c'est le meme probleme que le truck factor. C'est inévitable
-- Pair programming
-- Mob programming
-- Event storming
-
---
+* Product Owner
+* Testeur ...

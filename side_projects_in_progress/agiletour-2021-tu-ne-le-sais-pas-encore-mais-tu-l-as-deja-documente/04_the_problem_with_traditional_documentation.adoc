@@ -1,7 +1,9 @@
 == The problem with traditional documentation
 
-[quote,Gojko Adzic,Specification by Example: How Successful Teams Deliver the Right Software]
-Like cheap wine, paper documentation ages rapidly and leaves you with bad headache.
+[.notes]
+--
+* Demander à l'audience
+--
 
 [.columns]
 === Separate activities
@@ -47,3 +49,11 @@ TODO : image or gif (téléphone arabe)
 ** En gros on prend la connaissance de ce qui a été fait dans le code et on l'écrit dans un autre document
 --
 
+=== It's not cool
+
+[.notes]
+--
+* static
+* text in Ms Word
+*
+--

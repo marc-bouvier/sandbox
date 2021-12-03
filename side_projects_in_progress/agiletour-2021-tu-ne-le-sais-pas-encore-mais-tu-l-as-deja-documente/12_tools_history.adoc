@@ -1,0 +1,10 @@
+== Tools history
+
+* Git
+* Internal chats (Slack ...)
+* TODO : voir dans LDCM
+
+[.notes]
+--
+* Who changed what, when, commit comment & PR discussions
+--
