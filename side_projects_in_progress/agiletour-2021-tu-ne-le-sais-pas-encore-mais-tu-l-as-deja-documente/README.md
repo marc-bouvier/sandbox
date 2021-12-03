@@ -3,6 +3,9 @@
 Proposition de talk pour l'Agile tour 2021 à Strasbourg.
 Au sujet de la documentation vivante.
 
+- https://www.meetup.com/fr-FR/MugStrasbourg/events/281350303/
+- https://u.baldir.fr/at-2012-ld
+
 ## Generation des slides
 
 ### Asciidoctor-revealjs

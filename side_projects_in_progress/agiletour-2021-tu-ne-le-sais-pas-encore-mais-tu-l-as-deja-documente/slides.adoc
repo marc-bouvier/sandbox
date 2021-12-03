@@ -6,17 +6,13 @@
 :source-highlighter: highlightjs
 :docinfo: private
 
-//include::00_front_page.adoc[]
+include::00_front_page.adoc[]
 
-//include::01_who_am_i.adoc[]
+include::01_who_am_i.adoc[]
 
-
-////
 include::02_toc.adoc[]
-////
 
-
-//include::03_about_the_presentation.adoc[]
+include::03_about_the_presentation.adoc[]
 
 include::04_deconstruct_documentation.adoc[]
 
@@ -32,8 +28,7 @@ include::06_core_principles_of_living_documentation.adoc[]
 
 include::07_as_code.adoc[]
 
-
-//include::08_javadoc_code_snippets.adoc[]
+include::08_javadoc_code_snippets.adoc[]
 //
 //[.notes]
 //--
@@ -43,25 +38,25 @@ include::07_as_code.adoc[]
 
 include::09_plain_text_documentation.adoc[]
 
-//include::10_living_diagram.adoc[]
-//
-//include::11_living_glossary.adoc[]
-//
-//include::12_living_onboarding.adoc[]
-//
-//include::13_tests_as_documentation.adoc[]
-//
-//include::14_automated_release_notes.adoc[]
-//
-//include::15_specifications_as_code.adoc[]
-//
-//include::16_strategy_for_devops.adoc[]
-//
-//include::17_notebooks.adoc[]
-//
-//include::18_declarative_infrastructure.adoc[]
-//
-//include::20_frontend_documentation.adoc[]
+include::10_living_diagram.adoc[]
+
+include::11_living_glossary.adoc[]
+
+include::12_living_onboarding.adoc[]
+
+include::13_tests_as_documentation.adoc[]
+
+include::14_automated_release_notes.adoc[]
+
+include::15_specifications_as_code.adoc[]
+
+include::16_strategy_for_devops.adoc[]
+
+include::17_notebooks.adoc[]
+
+include::18_declarative_infrastructure.adoc[]
+
+include::20_frontend_documentation.adoc[]
 //
 //[.notes]
 //--

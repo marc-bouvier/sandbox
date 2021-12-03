@@ -5,5 +5,4 @@
 --
 * Ouvrir un Vs Code vierge dans WSL
 * Vérifier les plan backups
-*
 --

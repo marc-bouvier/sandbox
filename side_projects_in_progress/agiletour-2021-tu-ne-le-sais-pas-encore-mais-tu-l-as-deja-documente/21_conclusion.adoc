@@ -15,4 +15,7 @@
 ** choose markup depending on your need and maturity of tools
 * Thinking about documentation helps to question the rationale of your work
 
+AUjourd'hui il y a des enjeux majeurs portés par les acteurs de la tech
+Il ont plus de pouvoir qu'ils ne l'imaginent
+Utilisons et produisons la technologie en conscience
 
