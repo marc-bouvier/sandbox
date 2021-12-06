@@ -39,54 +39,6 @@ include::6_conclusion.adoc[]
 
 include::7_additional_resources.adoc[]
 
-== Des nouvelles façons de documenter
-
-
-== Contributif
-
-Wiki as code
-
-image:assets/vuejs_fix_documentation_as_PR.png[VueJs propose de mettre à jour sa documentation par PR] <p style="font-size: 1rem">Source : <a href="https://vuejs.org/v2/guide">https://vuejs.org/v2/guide</a></p>
-
-== Documenter pendant
-
-* TDD
-* Documenter l'intention, le comportement
-
-[.colums]
-== Conclusion
-
-[.colum]
---
-Les slides
---
-
-[.colum]
---
-image:assets/qrcode_u.baldir.fr_AT2021LD.png[]]
---
-
-=== La documentation c'est quoi pour vous?
-
-+++
-<div style="display: flex;">
-    <div style="margin: auto;display: flex;flex-flow: column;width: auto;flex-grow: 0.5;">
-        <textarea id="what_is_doc_1b" style="font-size: 1rem;height: 16rem;"></textarea>
-        <div style="display: flex;">
-            <button onclick="localStorage.setItem('what_is_doc_1', document.getElementById('what_is_doc_1b').value)" style="width: 100%;">Save</button>
-            <button onclick="document.getElementById('what_is_doc_1b').value = localStorage.getItem('what_is_doc_1')"  style="width: 100%;">Load</button>
-        </div>
-    </div>
-    <div style="margin: auto;display: flex;flex-flow: column;width: auto;flex-grow: 0.5;">
-        <textarea id="what_is_doc_2" style="font-size: 1rem;height: 16rem;"></textarea>
-        <div style="display: flex;">
-            <button onclick="localStorage.setItem('what_is_doc_2', document.getElementById('what_is_doc_2').value)" style="width: 100%;">Save</button>
-            <button onclick="document.getElementById('what_is_doc_2').value = localStorage.getItem('what_is_doc_2')" style="width: 100%;">Load</button>
-        </div>
-    </div>
-</div>
-+++
-
 == !
 
 == Ressources

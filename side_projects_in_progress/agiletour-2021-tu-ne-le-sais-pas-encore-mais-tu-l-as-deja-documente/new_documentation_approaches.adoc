@@ -8,6 +8,17 @@
 
 === Collaborative
 
+=== Wiki (as code)
+
+Wiki as code
+
+image:assets/vuejs_fix_documentation_as_PR.png[VueJs propose de mettre à jour sa documentation par PR] <p style="font-size: 1rem">Source : <a href="https://vuejs.org/v2/guide">https://vuejs.org/v2/guide</a></p>
+
+=== Stigmery
+
+Knowledge is transfered through the work itself
+
+[.colums]
 === Insightful
 
 == Qualities of living documentation
