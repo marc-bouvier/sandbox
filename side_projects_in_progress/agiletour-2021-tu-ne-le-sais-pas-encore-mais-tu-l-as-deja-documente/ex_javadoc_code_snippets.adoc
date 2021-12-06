@@ -12,19 +12,19 @@ https://openjdk.java.net/jeps/413:[JEP 413 : Code Snippets in Java API Documenta
 
 [source,java]
 ----
-include::exemples/executable-javadoc-code-snippets/src/main/java/fr/baldir/samples/hello/Hello.java[]
+include::examples/executable-javadoc-code-snippets/src/main/java/fr/baldir/samples/hello/Hello.java[]
 ----
 
 === Tests
 
 [source,java]
 ----
-include::exemples/executable-javadoc-code-snippets/src/test/java/snippets/SnippetTest.java[]
+include::examples/executable-javadoc-code-snippets/src/test/java/snippets/SnippetTest.java[]
 ----
 
 === Résultat généré
 
-image:exemples/executable-javadoc-code-snippets/docs/assets/101_generated_javadoc_result.png[]
+image:examples/executable-javadoc-code-snippets/docs/assets/101_generated_javadoc_result.png[]
 
 [.columns]
 === Qualités
