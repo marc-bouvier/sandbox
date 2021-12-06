@@ -102,18 +102,6 @@ image:assets/one_source_of_truth_multiple_targets.png[A partir du code source de
 Very cool for learning & visual representations
 --
 
-== Tests as documentation
-
-=== Elixir Doctest
-
-* https://hexdocs.pm/ex_unit/ExUnit.DocTest.html
-
-=== Rust Documentation tests
-
-
-https://doc.rust-lang.org/rustdoc/documentation-tests.html
-
-
 == Contributif
 
 Wiki as code
