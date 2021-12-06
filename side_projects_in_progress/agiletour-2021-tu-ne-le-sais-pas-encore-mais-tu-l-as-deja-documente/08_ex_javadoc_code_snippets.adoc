@@ -2,15 +2,12 @@
 
 https://openjdk.java.net/jeps/413:[JEP 413 : Code Snippets in Java API Documentation]
 
-- Reliable
-- Low-Effort
-- Collaborative
-- Insightful
+[%step]
+- ✔️ Reliable
+- ✔️ Low-Effort
+- ❗ Collaborative
+- ✔️ Insightful
 
-✔️
-❌
-❗
-‼️
 === Code de prod : tag @snippet
 
 [source,java]
