@@ -5,6 +5,11 @@
 --
 Marc Bouvier
 Développeur en quête de sens
+ 
+En exploration :
+
+* Web frugal
+* Accessibilité numérique
 --
 
 [.column]
