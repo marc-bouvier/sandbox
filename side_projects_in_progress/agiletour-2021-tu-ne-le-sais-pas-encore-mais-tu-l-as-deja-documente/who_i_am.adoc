@@ -1,18 +1,31 @@
-[.columns]
-== Qui suis-je ?
+[#about_me.columns]
+== Qui suis-je?
 
-[.column]
---
-Marc Bouvier
-Développeur en quête de sens
- 
-En exploration :
-
-* Web frugal
-* Accessibilité numérique
---
-
-[.column]
+[.column.is-one-third]
 --
 image::assets/marc-bouvier-rnd-25.png[]
+
+*Marc Bouvier*
+https://baldir.fr[baldir.fr]
+--
+
+[.column]
+--
+[%step]
+* Software Craftsmanship
+* Éducation à la programmation
+* Web frugal
+* Accessibilité numérique
+* Live coding: https://u.baldir.fr/baldir_tv[u.baldir.fr/baldir_tv]
+--
+
+[.refs]
+--
+* https://joelhellenbrand.wordpress.com/[joelhellenbrand.wordpress.com]
+* Crédit photo : Joël Hellenbrand
+--
+
+[.notes]
+--
+✅
 --

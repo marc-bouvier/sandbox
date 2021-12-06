@@ -1,10 +1,21 @@
 = Living Documentation
-:author: Marc Bouvier @marcbouvier_ <m.bouvier.dev@gmail.com>
+:author: Marc Bouvier
 :date: {localdate}
 :revealjsdir: reveal.js
 :customcss: css/presentation.css
 :source-highlighter: highlightjs
 :docinfo: private
+:title-slide-background-image: assets/hoken-landing_dark.png
+:title-slide-transition: zoom
+:title-slide-transition-speed: fast
+
+Tu ne le sais pas encore, mais tu l'as deja documenté!
+
+[.notes]
+--
+* Ouvrir les exemples
+* Vérifier leur fonctionnement
+--
 
 == Today's goals
 
@@ -12,9 +23,7 @@
 * [ ] reorganize titles h2
 * [ ] rehearse
 
-include::00_front_page.adoc[]
-
-include::01_who_am_i.adoc[]
+include::who_i_am.adoc[]
 
 include::02_toc.adoc[]
 
@@ -37,19 +46,23 @@ include::04_for_who.adoc[]
 
 include::12_living_onboarding.adoc[]
 
-include::05_new_documentation_approaches.adoc[]
+include::new_documentation_approaches.adoc[]
 
-include::06_core_principles_of_living_documentation.adoc[]
+include::core_principles_of_living_documentation.adoc[]
 
-include::07_how.adoc[]
+include::qualities_of_living_documentation.adoc[]
 
-include::07_as_code.adoc[]
+include::how.adoc[]
 
-include::08_ex_javadoc_code_snippets.adoc[]
+include::as_code.adoc[]
 
-include::11_ex_living_glossary.adoc[]
+include::ex_javadoc_code_snippets.adoc[]
 
-include::09_plain_text_documentation.adoc[]
+include::ex_living_glossary.adoc[]
+
+include::interlude_cat_01.adoc[]
+
+include::plain_text_documentation.adoc[]
 
 include::10_ex_living_diagram.adoc[]
 
