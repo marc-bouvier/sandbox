@@ -13,3 +13,56 @@
 * Cyrille Martraire Living glossary:  https://youtu.be/Tw-wcps7WqU?t=2291
 --
 
+
+== Ressources
+
+* https://github.com/LivingDocumentation/awesome-living-documentation
+* https://zenika.github.io/adoc-presentation-model/reveal/reveal-my-asciidoc.html[Reveal my Asciidoc - a deep dive into presentation as code] - 2020-01-09 - Benoit COUETIL
+** https://github.com/zenika/adoc-presentation-model[AsciiDoctor Presentation Model]
+
+== !
+
+image:https://servimg.eyrolles.com/static/media/9326/9780134689326_internet_w290.jpg[Living Documentation - Cyrille Martraire]
+
+https://www.eyrolles.com/Informatique/Livre/living-documentation-9780134689326/[Living Documentation] - Cyrille Martraire ([@cyriux](https://twitter.com/cyriux))
+
+== !
+
+++++
+<div style="text-align: center"> <iframe width="720" height="480" src="https://www.youtube.com/embed/Tw-wcps7WqU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </div>
+++++
+
+[Living Documentation : vous allez aimer la documentation !(Cyrille Martraire)](https://www.youtube.com/watch?v=Tw-wcps7WqU)
+
+== !
+
+![Quelques livres de Gojko Adzic dont : "Impact Mapping", "Specification By Example", "Fifty Quick Ideas to Improve Your User Stories", "Bridging the Communication Gap: Specification by Example and Agile Acceptance Testing", "Fifty Quick Ideas To Improve Your Tests"](assets/Gojko_Adzic.png)
+
+[Gojko Adzic](https://www.goodreads.com/author/show/1407215.Gojko_Adzic) ([@gojkoadzic](https://twitter.com/gojkoadzic=))
+
+== !
+
+[Awesome Living Documentation](https://github.com/LivingDocumentation/awesome-living-documentation)
+
+== !
+
+Gifs
+
+== !
+
+++++
+<div style="text-align: center"> <iframe src="https://giphy.com/embed/xUOxeZy7TXZYptBMSA" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe> <p> <a href="https://giphy.com/gifs/brooklynninenine-brooklyn-99-xUOxeZy7TXZYptBMSA"> via GIPHY</a> </p> </div>
+++++
+
+== !
+
+++++
+<iframe src="https://giphy.com/embed/iUR4qsCkrNHhe" width="480" height="452" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cat-iUR4qsCkrNHhe">via GIPHY</a></p>
+++++
+
+== !
+
+++++
+<iframe src="https://giphy.com/embed/HU6hWEApxYTgQ" width="461" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/jim-carrey-HU6hWEApxYTgQ">via GIPHY</a></p>
+++++
+== !
