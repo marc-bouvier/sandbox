@@ -1,9 +1,0 @@
-[background-image="assets/hoken-landing.png"]
-== Tu ne le sais pas encore, mais tu l'as deja documenté !
-
-[.notes]
---
-* TODO : title is not well contrasted
-* Ouvrir un Vs Code vierge dans WSL
-* Vérifier les plan backups
---
