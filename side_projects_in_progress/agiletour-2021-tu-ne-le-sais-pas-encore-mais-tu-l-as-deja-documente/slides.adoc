@@ -12,24 +12,22 @@
 * [ ] reorganize titles h2
 * [ ] rehearse
 
-//include::00_front_page.adoc[]
+include::00_front_page.adoc[]
 
-//include::01_who_am_i.adoc[]
+include::01_who_am_i.adoc[]
 
-//include::02_toc.adoc[]
+include::02_toc.adoc[]
 
-//include::03_about_the_presentation.adoc[]
+include::03_about_the_presentation.adoc[]
 
-//include::04_deconstruct_documentation.adoc[]
-
+include::04_deconstruct_documentation.adoc[]
 
 === Pourquoi?
 
 [.notes]
 --
-* Chaque consmmateur de documentation a des besoins différents
+* Chaque consommateur de documentation a des besoins différents
 --
-
 
 include::04_the_problem_with_traditional_documentation.adoc[]
 
@@ -70,240 +68,240 @@ include::17_notebooks.adoc[]
 include::18_declarative_infrastructure.adoc[]
 
 include::20_frontend_documentation.adoc[]
-//
-//[.notes]
-//--
-//* docker-compose is a sort of documentation of infrastructure
-//* Azure infra as code
-//--
-//
-//include::19_dsl.adoc[]
-//
-//include::20_hard_to_generate_diagram_is_a_signal.adoc[]
+
+[.notes]
+--
+* docker-compose is a sort of documentation of infrastructure
+* Azure infra as code
+--
+
+include::19_dsl.adoc[]
+
+include::20_hard_to_generate_diagram_is_a_signal.adoc[]
 
 include::21_conclusion.adoc[]
 
 include::21_additional_resources.adoc[]
-//
-//[.notes]
-//--
-//* https://youtu.be/Tw-wcps7WqU?t=2291
-//--
-//
-//== Mais au fait, elle fait quoi notre application?
-//
-//* Manuel utilisateur
-//* OpenApi / Swagger
-//* Javadoc
-//* Site web
-//* Readme.md
-//* Demo site = documentation
-//
-//
-//== !
-//
-//=== Demo CodeTour
-//
-//* Versionné
-//* Peut être validé quand le code change
-//* Json
-//* Peut servir de base pour d'autres automatisations
-//* Exemple
-//
-//== !
-//
-//== Doctest
-//
-//Python Elixir
-//
-//== !
-//
-//== import in markup
-//
-//- AsciiDoc
-//- LateX
-//
-//La doc s'appuie sur votre code (ex. .env sample)
-//
-//== !
-//
-//=== Différentes caractéristiques
-//
-//* Stable
-//
-//TODO : tableau
-//
-//* Statique, immuable, standard
-//* Dynamique, change souvent
-//
-//== !
-//
-//Evergreen document Ce qui est stable = ce qui est toujours vrai
-//
-//tout ce qui bouge ailleurs
-//
-//* marketing
-//* noms de sociétés
-//* les dates
-//* les gens
-//
-//== !
-//
-//Les comportements métiers
-//
-//BDD
-//
-//Documentation exécutable
-//
-//== !
-//
-//Redondance
-//
-//Quelle est la source de vérité?
-//
-//Cucumber / Specflow -> réconciliation entre scénarios et code
-//
-//== !
-//
-//image:assets/automation_mess.gif[Désastre d'automatisation illustré par une usine automatique comportant des centaines de tapis roulant et des cheminées industrielles rejetant une épaisse fumée noire]
-//
-//Automatisation : ça tourne mal
-//
-//++++
-//<p style="font-size: 1rem">Source : <a href="https://www.youtube.com/watch?v=t2X3wlvoShg">I Built a 600 Meter Human Cannon That Ends All Existence - Satisfactory</a> - Let's Game It Out - 2020</p>
-//++++
-//
-//== !
-//
-//== DRY - Aussi pour la documentation
-//
-//* Single source of source
-//* Plusieurs cibles de documentation possibles
-//
-//== !
-//
-//image:assets/one_source_of_truth_multiple_targets.png[A partir du code source de la classe Intr en Kotlin, la documentation interactive de l'IDE et l'API reference sur un site web sont générées]
-//
-//== Des nouvelles façons de documenter
-//
-//=== Notebooks
-//
-//* https://jupyter.org/[Jupyter Notebooks]
-//* https://livebook.dev/[Elixir Livebook]
-//
-//[.notes]
-//--
-//Very cool for learning & visual representations
-//--
-//
-//== Tests as documentation
-//
-//=== Elixir Doctest
-//
-//* https://hexdocs.pm/ex_unit/ExUnit.DocTest.html
-//
-//=== Rust Documentation tests
-//
-//
-//https://doc.rust-lang.org/rustdoc/documentation-tests.html
-//
-//
-//== Contributif
-//
-//Wiki as code
-//
-//image:assets/vuejs_fix_documentation_as_PR.png[VueJs propose de mettre à jour sa documentation par PR] <p style="font-size: 1rem">Source : <a href="https://vuejs.org/v2/guide">https://vuejs.org/v2/guide</a></p>
-//
-//== Documenter pendant
-//
-//* TDD
-//* Documenter l'intention, le comportement
-//
-//[.colums]
-//== Conclusion
-//
-//[.colum]
-//--
-//Les slides
-//--
-//
-//[.colum]
-//--
-//image:assets/qrcode_u.baldir.fr_AT2021LD.png[]]
-//--
-//
-//=== La documentation c'est quoi pour vous?
-//
-//+++
-//<div style="display: flex;">
-//    <div style="margin: auto;display: flex;flex-flow: column;width: auto;flex-grow: 0.5;">
-//        <textarea id="what_is_doc_1b" style="font-size: 1rem;height: 16rem;"></textarea>
-//        <div style="display: flex;">
-//            <button onclick="localStorage.setItem('what_is_doc_1', document.getElementById('what_is_doc_1b').value)" style="width: 100%;">Save</button>
-//            <button onclick="document.getElementById('what_is_doc_1b').value = localStorage.getItem('what_is_doc_1')"  style="width: 100%;">Load</button>
-//        </div>
-//    </div>
-//    <div style="margin: auto;display: flex;flex-flow: column;width: auto;flex-grow: 0.5;">
-//        <textarea id="what_is_doc_2" style="font-size: 1rem;height: 16rem;"></textarea>
-//        <div style="display: flex;">
-//            <button onclick="localStorage.setItem('what_is_doc_2', document.getElementById('what_is_doc_2').value)" style="width: 100%;">Save</button>
-//            <button onclick="document.getElementById('what_is_doc_2').value = localStorage.getItem('what_is_doc_2')" style="width: 100%;">Load</button>
-//        </div>
-//    </div>
-//</div>
-//+++
-//
-//== !
-//
-//== Ressources
-//
-//* https://github.com/LivingDocumentation/awesome-living-documentation
-//* https://zenika.github.io/adoc-presentation-model/reveal/reveal-my-asciidoc.html[Reveal my Asciidoc - a deep dive into presentation as code] - 2020-01-09 - Benoit COUETIL
-//** https://github.com/zenika/adoc-presentation-model[AsciiDoctor Presentation Model]
-//
-//== !
-//
-//image:https://servimg.eyrolles.com/static/media/9326/9780134689326_internet_w290.jpg[Living Documentation - Cyrille Martraire]
-//
-//https://www.eyrolles.com/Informatique/Livre/living-documentation-9780134689326/[Living Documentation] - Cyrille Martraire ([@cyriux](https://twitter.com/cyriux))
-//
-//== !
-//
-//++++
-//<div style="text-align: center"> <iframe width="720" height="480" src="https://www.youtube.com/embed/Tw-wcps7WqU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </div>
-//++++
-//
-//[Living Documentation : vous allez aimer la documentation !(Cyrille Martraire)](https://www.youtube.com/watch?v=Tw-wcps7WqU)
-//
-//== !
-//
-//![Quelques livres de Gojko Adzic dont : "Impact Mapping", "Specification By Example", "Fifty Quick Ideas to Improve Your User Stories", "Bridging the Communication Gap: Specification by Example and Agile Acceptance Testing", "Fifty Quick Ideas To Improve Your Tests"](assets/Gojko_Adzic.png)
-//
-//[Gojko Adzic](https://www.goodreads.com/author/show/1407215.Gojko_Adzic) ([@gojkoadzic](https://twitter.com/gojkoadzic=))
-//
-//== !
-//
-//[Awesome Living Documentation](https://github.com/LivingDocumentation/awesome-living-documentation)
-//
-//== !
-//
-//Gifs
-//
-//== !
-//
-//++++
-//<div style="text-align: center"> <iframe src="https://giphy.com/embed/xUOxeZy7TXZYptBMSA" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe> <p> <a href="https://giphy.com/gifs/brooklynninenine-brooklyn-99-xUOxeZy7TXZYptBMSA"> via GIPHY</a> </p> </div>
-//++++
-//
-//== !
-//
-//++++
-//<iframe src="https://giphy.com/embed/iUR4qsCkrNHhe" width="480" height="452" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cat-iUR4qsCkrNHhe">via GIPHY</a></p>
-//++++
-//
-//== !
-//
-//++++
-//<iframe src="https://giphy.com/embed/HU6hWEApxYTgQ" width="461" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/jim-carrey-HU6hWEApxYTgQ">via GIPHY</a></p>
-//++++
-//== !
+
+[.notes]
+--
+* https://youtu.be/Tw-wcps7WqU?t=2291
+--
+
+== Mais au fait, elle fait quoi notre application?
+
+* Manuel utilisateur
+* OpenApi / Swagger
+* Javadoc
+* Site web
+* Readme.md
+* Demo site = documentation
+
+
+== !
+
+=== Demo CodeTour
+
+* Versionné
+* Peut être validé quand le code change
+* Json
+* Peut servir de base pour d'autres automatisations
+* Exemple
+
+== !
+
+== Doctest
+
+Python Elixir
+
+== !
+
+== import in markup
+
+- AsciiDoc
+- LateX
+
+La doc s'appuie sur votre code (ex. .env sample)
+
+== !
+
+=== Différentes caractéristiques
+
+* Stable
+
+TODO : tableau
+
+* Statique, immuable, standard
+* Dynamique, change souvent
+
+== !
+
+Evergreen document Ce qui est stable = ce qui est toujours vrai
+
+tout ce qui bouge ailleurs
+
+* marketing
+* noms de sociétés
+* les dates
+* les gens
+
+== !
+
+Les comportements métiers
+
+BDD
+
+Documentation exécutable
+
+== !
+
+Redondance
+
+Quelle est la source de vérité?
+
+Cucumber / Specflow -> réconciliation entre scénarios et code
+
+== !
+
+image:assets/automation_mess.gif[Désastre d'automatisation illustré par une usine automatique comportant des centaines de tapis roulant et des cheminées industrielles rejetant une épaisse fumée noire]
+
+Automatisation : ça tourne mal
+
+++++
+<p style="font-size: 1rem">Source : <a href="https://www.youtube.com/watch?v=t2X3wlvoShg">I Built a 600 Meter Human Cannon That Ends All Existence - Satisfactory</a> - Let's Game It Out - 2020</p>
+++++
+
+== !
+
+== DRY - Aussi pour la documentation
+
+* Single source of source
+* Plusieurs cibles de documentation possibles
+
+== !
+
+image:assets/one_source_of_truth_multiple_targets.png[A partir du code source de la classe Intr en Kotlin, la documentation interactive de l'IDE et l'API reference sur un site web sont générées]
+
+== Des nouvelles façons de documenter
+
+=== Notebooks
+
+* https://jupyter.org/[Jupyter Notebooks]
+* https://livebook.dev/[Elixir Livebook]
+
+[.notes]
+--
+Very cool for learning & visual representations
+--
+
+== Tests as documentation
+
+=== Elixir Doctest
+
+* https://hexdocs.pm/ex_unit/ExUnit.DocTest.html
+
+=== Rust Documentation tests
+
+
+https://doc.rust-lang.org/rustdoc/documentation-tests.html
+
+
+== Contributif
+
+Wiki as code
+
+image:assets/vuejs_fix_documentation_as_PR.png[VueJs propose de mettre à jour sa documentation par PR] <p style="font-size: 1rem">Source : <a href="https://vuejs.org/v2/guide">https://vuejs.org/v2/guide</a></p>
+
+== Documenter pendant
+
+* TDD
+* Documenter l'intention, le comportement
+
+[.colums]
+== Conclusion
+
+[.colum]
+--
+Les slides
+--
+
+[.colum]
+--
+image:assets/qrcode_u.baldir.fr_AT2021LD.png[]]
+--
+
+=== La documentation c'est quoi pour vous?
+
++++
+<div style="display: flex;">
+    <div style="margin: auto;display: flex;flex-flow: column;width: auto;flex-grow: 0.5;">
+        <textarea id="what_is_doc_1b" style="font-size: 1rem;height: 16rem;"></textarea>
+        <div style="display: flex;">
+            <button onclick="localStorage.setItem('what_is_doc_1', document.getElementById('what_is_doc_1b').value)" style="width: 100%;">Save</button>
+            <button onclick="document.getElementById('what_is_doc_1b').value = localStorage.getItem('what_is_doc_1')"  style="width: 100%;">Load</button>
+        </div>
+    </div>
+    <div style="margin: auto;display: flex;flex-flow: column;width: auto;flex-grow: 0.5;">
+        <textarea id="what_is_doc_2" style="font-size: 1rem;height: 16rem;"></textarea>
+        <div style="display: flex;">
+            <button onclick="localStorage.setItem('what_is_doc_2', document.getElementById('what_is_doc_2').value)" style="width: 100%;">Save</button>
+            <button onclick="document.getElementById('what_is_doc_2').value = localStorage.getItem('what_is_doc_2')" style="width: 100%;">Load</button>
+        </div>
+    </div>
+</div>
++++
+
+== !
+
+== Ressources
+
+* https://github.com/LivingDocumentation/awesome-living-documentation
+* https://zenika.github.io/adoc-presentation-model/reveal/reveal-my-asciidoc.html[Reveal my Asciidoc - a deep dive into presentation as code] - 2020-01-09 - Benoit COUETIL
+** https://github.com/zenika/adoc-presentation-model[AsciiDoctor Presentation Model]
+
+== !
+
+image:https://servimg.eyrolles.com/static/media/9326/9780134689326_internet_w290.jpg[Living Documentation - Cyrille Martraire]
+
+https://www.eyrolles.com/Informatique/Livre/living-documentation-9780134689326/[Living Documentation] - Cyrille Martraire ([@cyriux](https://twitter.com/cyriux))
+
+== !
+
+++++
+<div style="text-align: center"> <iframe width="720" height="480" src="https://www.youtube.com/embed/Tw-wcps7WqU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </div>
+++++
+
+[Living Documentation : vous allez aimer la documentation !(Cyrille Martraire)](https://www.youtube.com/watch?v=Tw-wcps7WqU)
+
+== !
+
+![Quelques livres de Gojko Adzic dont : "Impact Mapping", "Specification By Example", "Fifty Quick Ideas to Improve Your User Stories", "Bridging the Communication Gap: Specification by Example and Agile Acceptance Testing", "Fifty Quick Ideas To Improve Your Tests"](assets/Gojko_Adzic.png)
+
+[Gojko Adzic](https://www.goodreads.com/author/show/1407215.Gojko_Adzic) ([@gojkoadzic](https://twitter.com/gojkoadzic=))
+
+== !
+
+[Awesome Living Documentation](https://github.com/LivingDocumentation/awesome-living-documentation)
+
+== !
+
+Gifs
+
+== !
+
+++++
+<div style="text-align: center"> <iframe src="https://giphy.com/embed/xUOxeZy7TXZYptBMSA" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe> <p> <a href="https://giphy.com/gifs/brooklynninenine-brooklyn-99-xUOxeZy7TXZYptBMSA"> via GIPHY</a> </p> </div>
+++++
+
+== !
+
+++++
+<iframe src="https://giphy.com/embed/iUR4qsCkrNHhe" width="480" height="452" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cat-iUR4qsCkrNHhe">via GIPHY</a></p>
+++++
+
+== !
+
+++++
+<iframe src="https://giphy.com/embed/HU6hWEApxYTgQ" width="461" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/jim-carrey-HU6hWEApxYTgQ">via GIPHY</a></p>
+++++
+== !

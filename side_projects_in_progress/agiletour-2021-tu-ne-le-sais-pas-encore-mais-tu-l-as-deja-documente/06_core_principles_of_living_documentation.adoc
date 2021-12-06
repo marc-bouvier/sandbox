@@ -16,6 +16,8 @@
 * Refactor-friendly
 * Collaborative
 
+== Qualities of living documentation
+
 [.notes]
 --
 * Ces qualités
@@ -45,19 +47,40 @@
 * privilégier interne à externe (avec mécanisme de réconciliation)
 --
 
-=== Refactor-friendly
+[.columns]
+=== Refactor Friendly
 
-* Correspondance nom entité -> Nom table
-* Solution pour réduire la friction entre le modèle de base de données et l'entité dans le code : annotation de correspondance
+[.column]
+--
+* Put together things that change together (including documentation)
+* Use code or language features to enable refactoring tooling
+--
 
-[.notes]
+[.column]
 --
-* Refactor-friendly
-*** Ex. ORM : Changement de nom d'entité => changement de nom de table?
-**** Migration de nom de table
-**** Mécanisme de réconciliation : un correspondance entre le nom de la table et l'entité (annotation @Table Jpa)
-*** Ex. un commentaire dans le code % un nom de méthode
+++++
+<iframe src='https://gfycat.com/ifr/PlushFeistyCondor' frameborder='0' scrolling='no' allowfullscreen width='250' height='450'></iframe>
+++++
 --
+
+[.refs]
+--
+https://gfycat.com/ifr/PlushFeistyCondor
+--
+
+//=== Refactor-friendly
+//
+//* Correspondance nom entité -> Nom table
+//* Solution pour réduire la friction entre le modèle de base de données et l'entité dans le code : annotation de correspondance
+//
+//[.notes]
+//--
+//* Refactor-friendly
+//*** Ex. ORM : Changement de nom d'entité => changement de nom de table?
+//**** Migration de nom de table
+//**** Mécanisme de réconciliation : un correspondance entre le nom de la table et l'entité (annotation @Table Jpa)
+//*** Ex. un commentaire dans le code % un nom de méthode
+//--
 
 === Before refactoring
 
