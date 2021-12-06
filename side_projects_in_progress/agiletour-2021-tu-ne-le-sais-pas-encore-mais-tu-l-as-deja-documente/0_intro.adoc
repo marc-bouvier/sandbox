@@ -5,7 +5,7 @@ include::who_i_am.adoc[]
 
 [.column]
 --
-* Présentation et sources en ligne
+* Slides and sources are online
 --
 
 [.column]
@@ -15,11 +15,11 @@ image::assets/qrcode_u.baldir.fr_AT2021LD.png[QR Code vers le lien de la présen
 
 [.refs]
 --
-* link:https://u.baldir.fr/at-2021-ld[]
-* Lien vers cette présentation
+* link:https://u.baldir.fr/at-2021-ld[Slides : u.baldir.fr/at-2021-ld]
+* link:https://u.baldir.fr/at-2021-ld-src[Sources : u.baldir.fr/at-2021-ld-src]
 --
 
-=== Presentation as code
+=== Presentation as code 1/2
 
 image:assets/commit_strip_code_vs_powerpoint.png[alt=,width=500]
 
@@ -28,6 +28,17 @@ image:assets/commit_strip_code_vs_powerpoint.png[alt=,width=500]
 * https://www.commitstrip.com[Commit strip]
 * https://www.commitstrip.com/fr/2018/12/07/code-vs-powerpoint[Code vs Powerpoint] - 07/12/2018
 --
+
+=== Presentation as code 2/2
+
+* Code snippets are included from real sources
+* AsciiDoctor
+* RevealJs
+
+[source,asciidoc]
+----
+include::examples/python_doctest/sum.py
+----
 
 === Content
 

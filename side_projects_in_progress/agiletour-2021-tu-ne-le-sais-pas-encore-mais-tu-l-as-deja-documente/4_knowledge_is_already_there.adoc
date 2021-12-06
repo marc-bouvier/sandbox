@@ -1,3 +1,4 @@
 include::code_as_knowledge_source.adoc[]
 include::vcs_as_knowledge_source.adoc[]
 include::tools_history_as_knowledge_source.adoc[]
+include::your_tools_and_ide_features.adoc[]

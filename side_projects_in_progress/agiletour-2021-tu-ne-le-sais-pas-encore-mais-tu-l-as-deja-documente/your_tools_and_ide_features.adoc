@@ -1,0 +1,8 @@
+== Your tools & IDE features
+
+image:assets/one_source_of_truth_multiple_targets.png[Sample from Int class in kotlin source code, interactive documentation can be shown interactively in an IDE, but also generated as a weeb site]
+
+[.notes]
+--
+* Sometimes you need to explicitely download documentation from your dependencies
+--

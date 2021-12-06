@@ -1,0 +1,14 @@
+=== Notebooks
+
+[NOTE]
+====
+Mix markup and code and you obtain interactive notebooks
+====
+
+* https://jupyter.org/[Jupyter Notebooks]
+* https://livebook.dev/[Elixir Livebook]
+
+[.notes]
+--
+Very cool for learning & visual representations
+--

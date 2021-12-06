@@ -23,3 +23,23 @@ include::ex_living_diagram.adoc[]
 include::ex_tools_history.adoc[]
 
 include::ex_tests_as_documentation.adoc[]
+
+include::ex_specifications_as_code.adoc[]
+
+include::ex_strategy_for_devops.adoc[]
+
+include::ex_declarative_infrastructure.adoc[]
+
+include::ex_notebooks.adoc[]
+
+include::ex_frontend_documentation.adoc[]
+
+include::ex_dsl.adoc[]
+
+include::ex_hard_to_generate_diagram_is_a_signal.adoc[]
+
+include::ex_code_tour.adoc[]
+
+include::ex_doctest.adoc[]
+
+include::automation_has_a_cost.adoc[]
