@@ -1,4 +1,7 @@
-== Automated Release notes
+== VCS as a source of Knowledge
+
+Did you know the time machine exists?
+GIF : Dr. Who, Back to the future
 
 [.notes]
 --

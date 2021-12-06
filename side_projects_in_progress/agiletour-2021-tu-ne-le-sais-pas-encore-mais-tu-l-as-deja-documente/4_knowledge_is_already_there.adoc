@@ -1,0 +1,3 @@
+include::code_as_knowledge_source.adoc[]
+include::vcs_as_knowledge_source.adoc[]
+include::tools_history_as_knowledge_source.adoc[]

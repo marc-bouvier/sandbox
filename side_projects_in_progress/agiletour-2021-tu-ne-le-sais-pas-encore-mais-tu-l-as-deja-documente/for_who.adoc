@@ -2,6 +2,16 @@
 
 === Différentes audiences, différents formats
 
+
+
+=== Pourquoi?
+
+[.notes]
+--
+* Chaque consommateur de documentation a des besoins différents
+--
+
+
 [.notes]
 --
 * TODO : image ou Gif
@@ -10,6 +20,17 @@
 * Un régulateur : voudra consommer un rapport pdf, excel ou des fichiers à plat
 * L'utilisateur final sera plus à l'aise avec un PDF ou mieux une documentation intégrée à la GUI (Tooltips, page d'aide, site web)
 --
+
+
+== Mais au fait, elle fait quoi notre application?
+
+* Manuel utilisateur
+* OpenApi / Swagger
+* Javadoc
+* Site web
+* Readme.md
+* Demo site = documentation
+
 
 
 === Non technique

@@ -1,0 +1,3 @@
+include::the_problem_with_traditional_documentation.adoc[]
+
+include::documentation_smells.adoc[]

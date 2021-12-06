@@ -1,3 +1,5 @@
+include::who_i_am.adoc[]
+
 [.columns]
 == About this presentation
 
@@ -26,3 +28,11 @@ image:assets/commit_strip_code_vs_powerpoint.png[alt=,width=500]
 * https://www.commitstrip.com[Commit strip]
 * https://www.commitstrip.com/fr/2018/12/07/code-vs-powerpoint[Code vs Powerpoint] - 07/12/2018
 --
+
+=== Content
+
+. What is documentation?
+. The problem with traditional documentation
+. Do you need documentation?
+. Knowledge is already there
+. New ways to write documentation

@@ -1,0 +1,16 @@
+== Doctest
+
+Python::
+* https://docs.python.org/3/library/doctest.html[doctest]
+Elixir::
+* https://hexdocs.pm/ex_unit/ExUnit.DocTest.html[ExUnit DocTest]
+* https://elixir-lang.org/getting-started/mix-otp/docs-tests-and-with.html#doctests[DocTest Guide]
+Rust::
+* https://doc.rust-lang.org/rustdoc/documentation-tests.html[Documentation Tests]
+Go::
+* https://pkg.go.dev/testing#hdr-Examples[Test Examples]
+
+[.notes]
+--
+* Sometimes your language proposes living documentation features out of the box
+--

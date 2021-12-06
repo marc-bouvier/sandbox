@@ -46,15 +46,24 @@ image::assets/commit_strip_new_api_version.png[alt=,width=500]
 * Not appropriate medium
 * Not stable contract
 
-=== Static documentation
+=== Static documentation 1/2
 
 image:assets/commit_strip_coders_bookshelf.png[alt=,width=500]
-
 
 [.refs]
 --
 * https://www.commitstrip.com[Commit strip]
 * https://www.commitstrip.com/fr/2017/01/23/coders-bookshelf[Bibliothèque de codeur] - 23/01/2017
+--
+
+=== Static documentation 2/2
+
+image:assets/katie_yellow_pages.jpg[An opened Yellow Pages book]
+
+[.refs]
+--
+* yellow pages - Katie - 2010 - CC BY 2.0
+* https://www.flickr.com/photos/allergictowork/26387486391
 --
 
 === Anti-patterns

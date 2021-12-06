@@ -1,0 +1,25 @@
+
+include::new_documentation_approaches.adoc[]
+
+
+include::qualities_of_living_documentation.adoc[
+
+
+
+Authoritative source of knowledge
+
+include::as_code.adoc[]
+
+include::ex_javadoc_code_snippets.adoc[]
+
+include::ex_living_glossary.adoc[]
+
+include::interlude_cat_01.adoc[]
+
+include::ex_vcs_based_documentation.adoc[]
+
+include::ex_living_diagram.adoc[]
+
+include::ex_tools_history.adoc[]
+
+include::ex_tests_as_documentation.adoc[]

@@ -1,0 +1,68 @@
+include::deconstruct_documentation.adoc[]
+
+include::kinds_of_knowledge_transfer.adoc[]
+
+
+include::plain_text_documentation.adoc[]
+
+
+
+=== Différentes caractéristiques
+
+* Stable
+
+TODO : tableau
+
+* Statique, immuable, standard
+* Dynamique, change souvent
+
+== Stable
+
+Evergreen document Ce qui est stable = ce qui est toujours vrai
+
+* Standards
+* Most of parts of common industry
+
+tout ce qui bouge ailleurs
+
+* marketing
+* noms de sociétés
+* les dates
+* les gens
+
+== What is unstable?
+
+Les comportements métiers
+
+BDD
+
+Documentation exécutable
+
+== !
+
+Redondance
+
+Quelle est la source de vérité?
+
+Cucumber / Specflow -> réconciliation entre scénarios et code
+
+=== How to deal with Stable/Unstable?
+
+Stable:: Learn & refer to it
+Unstable:: Automate it as much as possible when it is useful
+
+=== En bref
+
+* NoDocumentation
+* Stable Documentation
+* Refactor-Friendly Documentation
+* Automated Documentation
+* Runtime Documentation
+* Beyond Documentation
+
+[.notes]
+--
+J'utilise ici volontairement des termes en anglais issus du livre "Living Documentation" de Cyrille Martraire car faisant selon moi référence en la matière, ils faciliteront vos recherches et la propagation cohérente des ces concepts.
+--
+
+
