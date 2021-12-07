@@ -2,6 +2,7 @@
 :author: Marc Bouvier
 :date: {localdate}
 :revealjsdir: reveal.js
+:revealjs_totalTime: 2700
 :customcss: css/presentation.css
 :source-highlighter: highlightjs
 :docinfo: private
@@ -15,6 +16,17 @@ Tu ne le sais pas encore, mais tu l'as deja documenté!
 --
 * Ouvrir les exemples
 * Vérifier leur fonctionnement
+* RevealJs shortcuts
+** Alt+clic : Zoom in/ Zoom out
+** O/Esc : Slide overview
+** M : Menu
+** ? : show keyboard shortcuts
+** C : charkboard overlay
+** B : chalkboard modal
+** D : Download chalkboard
+** S : presenter mode
+** V : Fade to black
+** F: fullscreen -> Esc : exit fullscreen
 --
 
 == Today's goals
