@@ -10,6 +10,7 @@ https://openjdk.java.net/jeps/413:[JEP 413 : Code Snippets in Java API Documenta
 
 === Code de prod : tag @snippet
 
+[.medium]
 [source,java]
 ----
 include::examples/executable-javadoc-code-snippets/src/main/java/fr/baldir/samples/hello/Hello.java[]
@@ -17,10 +18,12 @@ include::examples/executable-javadoc-code-snippets/src/main/java/fr/baldir/sampl
 
 === Tests
 
-[source,java]
+[.small]
+[source,java,class=.small]
 ----
 include::examples/executable-javadoc-code-snippets/src/test/java/snippets/SnippetTest.java[]
 ----
+
 
 === Résultat généré
 

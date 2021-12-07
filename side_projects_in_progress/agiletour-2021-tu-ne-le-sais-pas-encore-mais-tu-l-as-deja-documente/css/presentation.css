@@ -67,3 +67,12 @@ DIV.refs LI:hover P A {
 .quoteblock.small blockquote {
     font-size: 1.75rem;
 }
+
+/* for some code listings, small font size to fit the listing in the screen */
+.listingblock.small {
+    font-size: 1.75rem;
+}
+/* for some code listings, sligthly smaller font size to fit the listing in the screen */
+.listingblock.medium {
+    font-size: 2.5rem;
+}

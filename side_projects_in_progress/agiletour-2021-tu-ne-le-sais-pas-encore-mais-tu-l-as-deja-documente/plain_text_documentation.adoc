@@ -2,7 +2,8 @@
 
 [.small]
 [quote,"Andrew Hunt, David Thomas","The Pragmatic Programmer: from journeyman to master"]
-As Pragmatic Programmers, our base material isn't wood or iron, it's knowledge. We gather requirements as knowledge, and then express that knowledge in our designs, iplementations, tests, and documents. And we believe that the best format for storing knowledge persistently is plain text. With plain text, we giec ourselves the ability to manipulate knowledge, both manually and programmatically, using virtually every tool at our disposal.
+As Pragmatic Programmers, our base material isn't wood or iron, it's knowledge. We gather requirements as knowledge, and then express that knowledge in our designs, implementations, tests, and documents. And we believe that the best format for storing knowledge persistently is plain text. With plain text, we giec ourselves the ability to manipulate knowledge, both manually and programmatically, using virtually every tool at our disposal.
+
 [.notes]
 --
 * Versionnable
