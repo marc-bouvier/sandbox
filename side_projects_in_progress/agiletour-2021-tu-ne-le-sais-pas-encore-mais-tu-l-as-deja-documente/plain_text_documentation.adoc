@@ -1,8 +1,16 @@
+[background-color="#05463c"]
 == Plain text
+
+
+[background-color="#05463c"]
+=== A quote
 
 [.small]
 [quote,"Andrew Hunt, David Thomas","The Pragmatic Programmer: from journeyman to master"]
-As Pragmatic Programmers, our base material isn't wood or iron, it's knowledge. We gather requirements as knowledge, and then express that knowledge in our designs, implementations, tests, and documents. And we believe that the best format for storing knowledge persistently is plain text. With plain text, we giec ourselves the ability to manipulate knowledge, both manually and programmatically, using virtually every tool at our disposal.
+As Pragmatic Programmers, our base material isn't wood or iron, it's knowledge.
+We gather requirements as knowledge, and then express that knowledge in our designs, implementations, tests, and documents.
+And we believe that the best format for storing knowledge persistently is plain text.
+With plain text, we give ourselves the ability to manipulate knowledge, both manually and programmatically, using virtually every tool at our disposal.
 
 [.notes]
 --
@@ -10,90 +18,239 @@ As Pragmatic Programmers, our base material isn't wood or iron, it's knowledge. 
 * Lisible par un humain
 --
 
-=== Why Plain Text
+[background-color="#05463c"]
+=== Why Plain Text?
 
+* Readable without specific tooling
 * Standard version control
-* greppable
-* automation
-* Souveraineté numérique
-** Own your data AND your tooling (you can use open source)
-** Not bound to MS Office
-* But, not everyone is technical and cannot write code & push to git
-** Headless CMS
+* Greppable
+* Automation
+* Digital sovereignty
+* Developer's raw material
 
+[.notes]
+--
+* Digital sovereignty
+** Own your data AND your tooling (you can use open source)
+** Not vendor locked to MS Office
+* But, not everyone is technical and cannot write code & push to git
+** Headless CMSes
+--
+
+[background-color="#05463c"]
+=== Some Plain-Text markups
+
+* "Vanilla" Plain-Text .txt
+* Markdown
+* Asciidoc(tor)
+* LateX
+
+[background-color="#05463c"]
+=== "Vanilla" Plain-Text .txt
+
+* You just need content and that's all
+* LICENCE.txt
+* Supported universally (even on real paper!)
+* Lightweight
+* https://plaintextproject.online/[plaintextproject.online]
+
+[background-color="#05463c"]
 === Markdown
 
-* primitive lightweight syntax
-* embed HTML
+* Primitive lightweight & easy syntax
+* Embed HTML
 * Github
-* Repo
-* Pages
-* Azure DevOps
-* Wiki as code
+** Repo
+** Pages
+** Azure DevOps
+*** Wiki as code
 
+[background-color="#05463c"]
+=== Markdown is good for
+
+* Simple concise documents
+** Readme.md
+** Contribute.md
+* Quick & Simple Jamstack static sites
+** Jekyll
+** 11ty.io
+* Being everywhere and largely supported
+* Notes taking
+
+[.notes]
+--
+* Notes taking
+** Joplin
+--
+
+[background-color="#05463c"]
+=== Markdown is not so good for
+
+* Complex structured technical documentation
+* Targetting different mediums
+* Writing a book
+* Multi-repo / multi-versions documentation
+* Advanced writing features
+* Maintaining Tables
+
+[.notes]
+--
+* Advanced writing features
+** Footnotes
+** Table of content
+** Figures
+** Quotes
+--
+
+[background-color="#05463c"]
+[.columns]
 === Markdown pros/cons
 
+[.column]
+--
 Pros
 
-* primitive syntax
-* supported everywhere
+* Primitive & easy syntax
+* Supported everywhere
+* Intuitive
+--
 
+[.column]
+--
 Cons
 
 * Flavour hell
-* not much advanced features
-* embed HTML if
+* Not much advanced features out of the box
+* Often need to fallback to HTML
+* Not extensible
+* Limited tables
+--
 
+[.notes]
+--
+* Flavour hell
+** Inconsistent
+--
+
+[background-color="#05463c"]
 === Asciidoc
 
-* [Asciidoc](https://asciidoc-py.github.io/)
-* [Asciidoctor](https://docs.asciidoctor.org/)
-* Github
-* Repo
-* Pages
-* https://antora.org/
-** Multi repository doc site generator
+* https://asciidoc-py.github.io/[Asciidoc]
+* https://docs.asciidoctor.org/[Asciidoctor]
+* Github full support in Repos/Pages/Wikis
+* Cross Repos Documentation (https://antora.org/[Antora])
+* https://asciidoctor.org/docs/asciidoc-recommended-practices/[Recommended practices]
 
+[background-color="#05463c"]
+=== Asciidoc is good for
+
+* Complex structured technical documentation
+* Writing books
+* Embedding other sources graciously
+* Targetting multiple medium from the same source
+* Extending it in a standard way
+* Its polyglot automation ecosystem
+* Its centralized documentation
+
+[background-color="#05463c"]
+=== Asciidoc is not so good for
+
+* Being integrated in some popular tools
+* Its learning curve is not as easy than Markdown
+
+[background-color="#05463c"]
+[.columns]
 === Asciidoc pros/cons
 
-Pros
+WARNING: I might be a little opinionated with this one.
+
+[background-color="#05463c"]
+[.columns]
+=== Asciidoc pros/cons
+
+[.small]
+[.column]
+--
+Pros 1/3
 
 * Converters
-* Built-in
-* Html
-* XHTML
-* DocBook
-* Man page
-* Add-on
-* PDF
-* EPUB3
-* Reveal.js
-* Bespoke
+** Built-in
+*** Html
+*** XHTML
+*** DocBook
+*** Man page
+** Add-on
+*** PDF
+*** EPUB3
+*** Reveal.js
+*** Bespoke
 * Supported in most serious IDEs
+--
+
+[.small]
+[.column]
+--
+Pros 2/3
+
+* Much more capabilities out of the box (see https://docs.asciidoctor.org/asciidoc/latest/asciidoc-vs-markdown/[Compare AsciiDoc to Markdown])
+** includes
+*** split your .adoc files
+*** include code snippets from your real code
+** Admonitions
+** Better tables (IMHO)
+** Better quotes
+** Anchors
+** Collapsible blocks
+--
+
+[.small]
+[.column]
+--
+Pros 3/3
+
+* Multiple implementations
+** Asciidoctor (Ruby)
+** AsciidoctorJs (Js) (transpiled from Ruby)
+** AsciidoctorJ (Java)
 * Actionable from code
-* Asciidoclet
-* Maven tools
-* much more capabilities out of the box (see https://docs.asciidoctor.org/asciidoc/latest/asciidoc-vs-markdown/[Compare AsciiDoc to Markdown])
-* includes
-* split your .adoc files
-* include code snippets from your real code
-* Links
-* Admonitions
-* Better tables (IMHO)
-* Better quotes
-* anchors
-* collapsible blocks
-* extension system
-* multiple implementations
-* Asciidoctor (Ruby)
-* AsciidoctorJs (Js) (transpiled from Ruby)
-* AsciidoctorJ (Java)
-* migration from markdown
-* [some of markdown syntax is compatible](https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/#markdown-compatibility)
-* migrate form/to ms word with pandoc (https://docs.asciidoctor.org/asciidoctor/latest/migrate/ms-word/)
+** Asciidoclet
+** Maven tools
+** npm/npx
+* Extension system
+--
+
+[.small]
+[.column]
+--
 Cons
 
-* much more syntax to learn (but you don't need to learn everything for simple document)
-* not supported everywhere yet
-* Azure DevOps
-* At the moment, there is no rich text editor for Asciidoc supported, which limits non-technical writing with headless CMS
+* Much more syntax to learn (but you don't need to learn everything for simple document)
+* Not supported everywhere yet
+** Azure DevOps
+* At the moment, there is no rich text editor for Asciidoc supported, which limits usage for non-technical writers with headless CMS
+--
+
+[background-color="#05463c"]
+=== Migration from Markdown to Asciidoc
+
+* [some of markdown syntax is compatible](https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/#markdown-compatibility)
+* convert form/to ms word (and others) with pandoc (https://docs.asciidoctor.org/asciidoctor/latest/migrate/ms-word/)
+
+[background-color="#05463c"]
+=== LateX
+
+* Widely used in the scientific community
+* Optimized for paper print
+* Battle tested for years (1984)
+* Needs quite heavy tooling
+* A lot of similar features with Asciidoc
+** includes
+** macros
+** templating
+** multiple mediums targets
+* Has a dedicated https://tex.stackexchange.com/[StackExchange] community
+
+[.notes]
+--
+* If you collaborate with scientists, you may opt for this markup since you may benefit from team experience and existing content
+--

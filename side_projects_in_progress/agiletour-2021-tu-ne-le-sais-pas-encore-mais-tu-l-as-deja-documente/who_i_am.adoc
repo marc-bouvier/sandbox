@@ -1,3 +1,4 @@
+[background-color="#1d0546"]
 [#about_me.columns]
 == Qui suis-je?
 
@@ -16,7 +17,7 @@ https://baldir.fr[baldir.fr]
 * Éducation à la programmation
 * Web frugal
 * Accessibilité numérique
-* Live coding: https://u.baldir.fr/baldir_tv[u.baldir.fr/baldir_tv]
+* Live coding: https://u.baldir.fr/baldir-tv[u.baldir.fr/baldir-tv]
 --
 
 [.refs]

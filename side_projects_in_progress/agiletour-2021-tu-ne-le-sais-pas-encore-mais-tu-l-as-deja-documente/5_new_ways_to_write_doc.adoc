@@ -1,12 +1,7 @@
 
 include::new_documentation_approaches.adoc[]
 
-
-include::qualities_of_living_documentation.adoc[
-
-
-
-Authoritative source of knowledge
+include::ex_presentation_as_code.adoc[]
 
 include::as_code.adoc[]
 

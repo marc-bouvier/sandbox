@@ -76,3 +76,6 @@ DIV.refs LI:hover P A {
 .listingblock.medium {
     font-size: 2.5rem;
 }
+.openblock.small.column {
+    font-size: 1rem;
+}

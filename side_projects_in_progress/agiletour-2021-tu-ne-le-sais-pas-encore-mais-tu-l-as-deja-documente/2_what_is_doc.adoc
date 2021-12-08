@@ -1,7 +1,53 @@
 include::deconstruct_documentation.adoc[]
 
-include::kinds_of_knowledge_transfer.adoc[]
+When?
 
+* Knowledge needed for a long period of time -> Documented
+* Knowledge needed by a large number of people -> Documented
+* Knowledge valuable or critical -> Documented
+* Default -> Don't
+
+
+Generic Knowledge
+
+
+* Programming languages
+* Developer tools
+* Software practices
+*** DDD
+*** patterns
+*** CI
+*** Git tuto
+*** ...
+* Mature sector of the business industries
+** Pricing in finance
+** Supply Chain Optimization in e-commerce
+** -> Industry standard books
+
+Good news! The Generic Knowledge is already documented in the industry literature.
+
+* Training
+* Conferences
+* Books
+* Blog posts
+* Standard Vocabulary
+* ...
+
+-> Learn Generic Knowledge
+
+Focus on specific knowledge
+
+* Knowledge your organization has and is not (yet) shared with other peers in the same industry.
+* more expensive to learn
+* takes practice, making mistakes to earn
+* Deserves more attention
+* Only you can take care about it
+
+
+
+As a professional, you should know enough of the generic, industry standard knowledge, in order to be able to focus on growing the knowledge that's specific to you particular ambitions.
+
+include::kinds_of_knowledge_transfer.adoc[]
 
 include::plain_text_documentation.adoc[]
 

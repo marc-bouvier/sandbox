@@ -19,6 +19,20 @@
 </div>
 +++
 
+[.columns]
+[background-color="#05463c"]
+=== Word Clouds
+
+[.column]
+[#what_is_doc_1b_cloud]
+--
+--
+
+[.column]
+[#what_is_doc_2_cloud]
+--
+--
+
 == Conclusion 1/2
 
 * Do you need documentation?

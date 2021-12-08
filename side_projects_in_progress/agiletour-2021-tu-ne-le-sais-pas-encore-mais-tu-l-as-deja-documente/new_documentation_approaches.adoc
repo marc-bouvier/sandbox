@@ -1,5 +1,7 @@
 == Living Documentation!
 
+Authoritative source of knowledge
+
 === Core Principles of Living Documentation
 
 === Reliable

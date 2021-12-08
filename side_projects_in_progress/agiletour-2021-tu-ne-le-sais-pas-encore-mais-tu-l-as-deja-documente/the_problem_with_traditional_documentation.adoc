@@ -1,34 +1,53 @@
+[background-color="#051746"]
 == The problem with traditional documentation
 
 [.notes]
 --
-* Demander à l'audience
+* Not cool
+* flawed
+** Separate activities
+** Manual transcription
+** Redundant Knowledge
+** Boring time sink
+** Brain dump
+** Polished diagrams
+** Notation Obsession
+** No Notation
+** Information Graveyard
+*** Often fail : too hard to find the right info, hard work to keep up to date, "Write-only doc" or "Write-once doc"
+** Misleading help
+** Ther's always something more interesting right now
 --
 
+[background-color="#051746"]
 [.columns]
 === Separate activities
 
 [%step]
 [.column]
 --
+👨‍💼
 Specs
 --
 
 [%step]
 [.column]
 --
+👩‍💻
 Code
 --
 
 [%step]
 [.column]
 --
+🕵️‍♂️
 Tests
 --
 
 [%step]
 [.column]
 --
+👩‍🏫
 Doc
 --
 
@@ -39,9 +58,18 @@ Doc
 * Les connaissances peuvent évoluer durant ce processus et engengrer des incohérences
 --
 
-=== Manual transcription
+[background-color="#051746"]
+=== Separate activities
 
-TODO : image or gif (téléphone arabe)
+--
+[WARNING]
+====
+Even in Agile teams!
+====
+--
+
+[background-color="#051746"]
+=== Manual transcription
 
 [.notes]
 --
@@ -49,11 +77,23 @@ TODO : image or gif (téléphone arabe)
 ** En gros on prend la connaissance de ce qui a été fait dans le code et on l'écrit dans un autre document
 --
 
+[background-color="#051746"]
 === It's not cool
+
+.Developer trying to layout code in MS Office
+[.stretch]
+--
+image:assets/UNKNOWN_ORIGIN_crying_girl_doing_homework.jpeg[alt=Meme of a crying girl doing her homework.,width=500]
+--
 
 [.notes]
 --
+* refs unknown source
 * static
 * text in Ms Word
-*
+--
+
+[.refs]
+--
+// Source not found
 --

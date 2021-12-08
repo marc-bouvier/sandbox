@@ -1,0 +1,33 @@
+[background-color="#05463c"]
+== Au préalable quelques questions
+
+[background-color="#05463c"]
+=== Es-tu satisfait de la documentation que tu produis?
+
+[background-color="#05463c"]
+=== Quand tu lis de la documentation, est-ce que tu as peur qu'elle soit obsolète?
+
+[background-color="#05463c"]
+=== Quand tu utilises des composants tiers est-ce que tu aimerais que leur documentation soit meilleure?
+
+[background-color="#05463c"]
+=== Est-ce que tu penses que le temps passé à écrire de la documentation pourrait être mieux utilisé?
+
+[background-color="#05463c"]
+=== La documentation, c'est quoi pour vous?
+
++++
+<div style="display: flex;">
+    <div style="margin: auto;display: flex;flex-flow: column;width: auto;flex-grow: 0.5;">
+        <textarea id="what_is_doc_1a" style="font-size: 1rem;height: 16rem;"></textarea>
+        <div style="display: flex;">
+            <button onclick="localStorage.setItem('what_is_doc_1', document.getElementById('what_is_doc_1a').value);generate_what_is_doc_1_cloud()" style="width: 100%;">Save</button>
+            <button onclick="document.getElementById('what_is_doc_1a').value = localStorage.getItem('what_is_doc_1')" style="width: 100%;">Load</button>
+        </div>
+    </div>
+</div>
++++
+
+[background-color="#05463c"]
+[#what_is_doc_1_cloud,%notitle]
+=== Word Cloud

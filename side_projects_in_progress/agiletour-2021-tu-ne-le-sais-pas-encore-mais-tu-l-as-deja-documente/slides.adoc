@@ -1,6 +1,9 @@
 = Living Documentation
 :author: Marc Bouvier
+:description: description
+:version-label: v0.1
 :date: {localdate}
+:copyright: CC-BY-4.0
 :revealjsdir: reveal.js
 :revealjs_totalTime: 2700
 :customcss: css/presentation.css
@@ -29,11 +32,14 @@ Tu ne le sais pas encore, mais tu l'as deja documenté!
 ** F: fullscreen -> Esc : exit fullscreen
 --
 
+
+
 == Today's goals
 
 * [ ] cleanup duplicated content
 * [ ] reorganize titles h2
 * [ ] rehearse
+* [ ] translate to english
 
 include::0_intro.adoc[]
 

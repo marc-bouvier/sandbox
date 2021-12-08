@@ -1,1 +1,34 @@
 == Living Diagram
+
+=== Mermaid
+
+[mermaid, target=diagrams/mermaid, format=svg]
+....
+graph TD;
+    A-->B;
+    D-->B;
+    A-->C;
+    C-->D;
+....
+
+=== PlantUml
+
+[plantuml,target=diagrams/plantuml, format=svg]
+....
+@startuml
+
+[*] --> State1
+State1 --> [*]
+State1 : this is a string
+State1 : this is another string
+
+State1 -> State2
+State2 --> [*]
+
+@enduml
+....
+
+[.notes]
+--
+* https://docs.asciidoctor.org/diagram-extension/latest/#creating-a-diagram
+--
