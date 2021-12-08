@@ -1,6 +1,7 @@
 # sandbox
+[Source in Github](https://github.com/marc-bouvier/sandbox), [🙋‍♂️me](https://github.com/marc-bouvier)
 
-Ideas
+## Ideas
 
 - [ ] Facebook event scrapper
 - [ ] Calendrier agenda concentrique
@@ -12,6 +13,4 @@ Ideas
 ## Demos
 
 - [CodeTour to blogpost generated site](generators_and_CLIs/codeTour-2-markdown_mvp_ok/dist/posts/tours/mobilizon-frontend.tour)
-- [baldir-fr organization](https://github.com/baldir-fr)
-- [marc-bouvier-katas organization](https://github.com/marc-bouvier-katas)
 - [Code reuse & clean architecture with Kotlin Multiplatform](showcases/kotlin-multiplatform-domain-lib)
