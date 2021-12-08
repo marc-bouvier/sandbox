@@ -1,4 +1,0 @@
-== Specification as code
-
-* Mécanisme de réconciliation (ex. cucumber)
-

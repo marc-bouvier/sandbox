@@ -1,7 +1,0 @@
-== Declarative infrastructure
-
-[.notes]
---
-* docker-compose is a sort of documentation of infrastructure
-* Azure infra as code
---

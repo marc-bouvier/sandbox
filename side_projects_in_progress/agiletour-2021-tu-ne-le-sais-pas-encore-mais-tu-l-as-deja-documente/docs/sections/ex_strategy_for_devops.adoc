@@ -1,9 +1,0 @@
-== Une stratégie pour documenter les scripts DevOps
-
-[.notes]
---
-* First write it as text when you repeat it
-* Then automate parts of it when it's repetitive
-* Fill the gaps between inner scripts
-* next steps might be spzcialized tooling such as Ansible......
---

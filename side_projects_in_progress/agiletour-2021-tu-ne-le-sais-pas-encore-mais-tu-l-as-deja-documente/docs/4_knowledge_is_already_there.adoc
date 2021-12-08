@@ -1,4 +1,0 @@
-include::sections/code_as_knowledge_source.adoc[]
-include::sections/vcs_as_knowledge_source.adoc[]
-include::sections/tools_history_as_knowledge_source.adoc[]
-include::sections/your_tools_and_ide_features.adoc[]

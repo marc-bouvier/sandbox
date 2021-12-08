@@ -12,5 +12,6 @@ Ideas
 ## Demos
 
 - [CodeTour to blogpost generated site](generators_and_CLIs/codeTour-2-markdown_mvp_ok/dist/posts/tours/mobilizon-frontend.tour)
-- [Interactive slideshow with AsciiDoc & RevealJs](side_projects_in_progress/agiletour-2021-tu-ne-le-sais-pas-encore-mais-tu-l-as-deja-documente)
+- [baldir-fr organization](https://github.com/baldir-fr)
+- [marc-bouvier-katas organization](https://github.com/marc-bouvier-katas)
 - [Code reuse & clean architecture with Kotlin Multiplatform](showcases/kotlin-multiplatform-domain-lib)

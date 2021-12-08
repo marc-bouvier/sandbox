@@ -1,7 +1,0 @@
-[background-color="#05463c"]
-== Déconstruisons la documentation
-
-[.notes]
---
-* TODO : choisir une couleur d'arrière plan
---

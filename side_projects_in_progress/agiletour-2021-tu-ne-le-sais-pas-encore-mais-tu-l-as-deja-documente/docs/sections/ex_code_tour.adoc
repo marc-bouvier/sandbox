@@ -1,7 +1,0 @@
-=== Demo CodeTour
-
-* Versionné
-* Peut être validé quand le code change
-* Json
-* Peut servir de base pour d'autres automatisations
-* Exemple
