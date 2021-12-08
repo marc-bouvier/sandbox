@@ -13,6 +13,9 @@
 * Cyrille Martraire Living glossary:  https://youtu.be/Tw-wcps7WqU?t=2291
 --
 
+== BddBooks
+
+https://bddbooks.com/
 
 == Ressources
 
