@@ -1,0 +1,50 @@
+@options
+@packages
+@argfile
+-classpath
+'C:/Users/marco/.m2/repository/org/assertj/assertj-core/3.21.0/assertj-core-3.21.0.jar'
+-encoding
+'UTF-8'
+-protected
+-source
+'18'
+-sourcepath
+'C:/learn/sandbox/side_projects_in_progress/agiletour-2021-tu-ne-le-sais-pas-encore-mais-tu-l-as-deja-documente/exemples/executable-javadoc-code-snippets/src/main/java;C:/learn/sandbox/side_projects_in_progress/agiletour-2021-tu-ne-le-sais-pas-encore-mais-tu-l-as-deja-documente/exemples/executable-javadoc-code-snippets/target/generated-sources/annotations'
+--snippet-path=C:\learn\sandbox\side_projects_in_progress\agiletour-2021-tu-ne-le-sais-pas-encore-mais-tu-l-as-deja-documente\exemples\executable-javadoc-code-snippets/src/test/java
+-author
+-bottom
+'Copyright &#169; 2021. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/learn/sandbox/side_projects_in_progress/agiletour-2021-tu-ne-le-sais-pas-encore-mais-tu-l-as-deja-documente/exemples/executable-javadoc-code-snippets/docs/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'javadoc-code-snippets 1.0-SNAPSHOT API'
+-use
+-version
+-windowtitle
+'javadoc-code-snippets 1.0-SNAPSHOT API'
+fr.baldir.samples.hello
+'C:/learn/sandbox/side_projects_in_progress/agiletour-2021-tu-ne-le-sais-pas-encore-mais-tu-l-as-deja-documente/exemples/executable-javadoc-code-snippets/src/main/java/fr/baldir/samples/hello/Hello.java'
+C:\Users\marco\.m2\repository\org\assertj\assertj-core\3.21.0\assertj-core-3.21.0.jar = 1635181258935
+C:\learn\sandbox\side_projects_in_progress\agiletour-2021-tu-ne-le-sais-pas-encore-mais-tu-l-as-deja-documente\exemples\executable-javadoc-code-snippets\src\main\java = 1637318159884
+C:\learn\sandbox\side_projects_in_progress\agiletour-2021-tu-ne-le-sais-pas-encore-mais-tu-l-as-deja-documente\exemples\executable-javadoc-code-snippets\target\generated-sources\annotations = 1637323979719
+C:\learn\sandbox\side_projects_in_progress\agiletour-2021-tu-ne-le-sais-pas-encore-mais-tu-l-as-deja-documente\exemples\executable-javadoc-code-snippets\docs\apidocs\allclasses-index.html = 1637323984914
+C:\learn\sandbox\side_projects_in_progress\agiletour-2021-tu-ne-le-sais-pas-encore-mais-tu-l-as-deja-documente\exemples\executable-javadoc-code-snippets\docs\apidocs\allpackages-index.html = 1637323984917
+C:\learn\sandbox\side_projects_in_progress\agiletour-2021-tu-ne-le-sais-pas-encore-mais-tu-l-as-deja-documente\exemples\executable-javadoc-code-snippets\docs\apidocs\copy.svg = 1637323984949
+C:\learn\sandbox\side_projects_in_progress\agiletour-2021-tu-ne-le-sais-pas-encore-mais-tu-l-as-deja-documente\exemples\executable-javadoc-code-snippets\docs\apidocs\element-list = 1637323984865
+C:\learn\sandbox\side_projects_in_progress\agiletour-2021-tu-ne-le-sais-pas-encore-mais-tu-l-as-deja-documente\exemples\executable-javadoc-code-snippets\docs\apidocs\help-doc.html = 1637323984941
+C:\learn\sandbox\side_projects_in_progress\agiletour-2021-tu-ne-le-sais-pas-encore-mais-tu-l-as-deja-documente\exemples\executable-javadoc-code-snippets\docs\apidocs\index-all.html = 1637323984932
+C:\learn\sandbox\side_projects_in_progress\agiletour-2021-tu-ne-le-sais-pas-encore-mais-tu-l-as-deja-documente\exemples\executable-javadoc-code-snippets\docs\apidocs\index.html = 1637323984935
+C:\learn\sandbox\side_projects_in_progress\agiletour-2021-tu-ne-le-sais-pas-encore-mais-tu-l-as-deja-documente\exemples\executable-javadoc-code-snippets\docs\apidocs\jquery-ui.overrides.css = 1637323984983
+C:\learn\sandbox\side_projects_in_progress\agiletour-2021-tu-ne-le-sais-pas-encore-mais-tu-l-as-deja-documente\exemples\executable-javadoc-code-snippets\docs\apidocs\member-search-index.js = 1637323984923
+C:\learn\sandbox\side_projects_in_progress\agiletour-2021-tu-ne-le-sais-pas-encore-mais-tu-l-as-deja-documente\exemples\executable-javadoc-code-snippets\docs\apidocs\module-search-index.js = 1637323984919
+C:\learn\sandbox\side_projects_in_progress\agiletour-2021-tu-ne-le-sais-pas-encore-mais-tu-l-as-deja-documente\exemples\executable-javadoc-code-snippets\docs\apidocs\overview-tree.html = 1637323984903
+C:\learn\sandbox\side_projects_in_progress\agiletour-2021-tu-ne-le-sais-pas-encore-mais-tu-l-as-deja-documente\exemples\executable-javadoc-code-snippets\docs\apidocs\package-search-index.js = 1637323984920
+C:\learn\sandbox\side_projects_in_progress\agiletour-2021-tu-ne-le-sais-pas-encore-mais-tu-l-as-deja-documente\exemples\executable-javadoc-code-snippets\docs\apidocs\script.js = 1637323984946
+C:\learn\sandbox\side_projects_in_progress\agiletour-2021-tu-ne-le-sais-pas-encore-mais-tu-l-as-deja-documente\exemples\executable-javadoc-code-snippets\docs\apidocs\search.js = 1637323984951
+C:\learn\sandbox\side_projects_in_progress\agiletour-2021-tu-ne-le-sais-pas-encore-mais-tu-l-as-deja-documente\exemples\executable-javadoc-code-snippets\docs\apidocs\stylesheet.css = 1637323984944
+C:\learn\sandbox\side_projects_in_progress\agiletour-2021-tu-ne-le-sais-pas-encore-mais-tu-l-as-deja-documente\exemples\executable-javadoc-code-snippets\docs\apidocs\tag-search-index.js = 1637323984924
+C:\learn\sandbox\side_projects_in_progress\agiletour-2021-tu-ne-le-sais-pas-encore-mais-tu-l-as-deja-documente\exemples\executable-javadoc-code-snippets\docs\apidocs\type-search-index.js = 1637323984922

@@ -1,121 +1,59 @@
-Faire beaucoup plus court
-- L'essentiel
-- Pas tout détailler
-
-Première partie avec le sondage est OK
-
-Section Plain text trop long
-- Garder que la version courte
-- Arrive pas au bon endroit
-- A distiller au fur et à mesure?
-
-Dernière partie pas trop mal
-
-Les exemples
-
-## Trop d'infos
-
-- Trop de détails
-  - Gray slides: Not colored background means optional for the talk.
-  
-## Pas assez de pauses
-
-- Lolcatz pour pause et boire un coup
-
-## Virer les comics
-
-- trop de texte : je dois le lire
-
-## Je me répète souvent
-
-
-## Trop dense
-
-Diustiller dans la prez
-
-## Livre Living documùentation
-
-Présenter le livre bien plus tôt
-
-## Conclusion
-
-vous avez les source et plein de pistes et outils
-
-## section  self doc pas claire
-
-A supprimer? mettre dans un exeple plutot
-
-## plain text
-
-A supprimer distiller dans des exemples.
-A la limite evoquer en conclusion
-
-## Word cloud à déplacer apres questionnaire
-
-
-## Fil rouge
-
-Garder ce fil rouge: C'est de la connaissance, elle est deja là, elle est exploitable (ou il manque pas grand chose pour la rendre exploitable)
-
-Running gag!
-
-It's already there!
-
-## Proposer à Ada Tech school
-
-## Demo - Living Diagram "Wow effect"
-
-Montrer en live comment on peut prévisualiser un diagramme as code en direct
-
-## Parler de doc ephemere
-
-- diagramme sur un coin de table et on jette
-
-## Illustrer tous les exemples visuellement et/ou démo
-
-## Evoquer les conventions
-
-ex. nommage yyyy_mm_dd_...
-
-## Exemple emergence static to executable
-
-DevOps
-
-Wiki
-Full text -> Text + snippets -> complete script -> ansible
-
-Gif : it's alive!
-
-## Essayer de scorer les exemples
-
-- ⭐⭐⭐ Reliable
-- ⭐⭐⭐ Low-Effort
-- ⭐⭐⭐ Collaborative
-- ⭐⭐⭐ Insightful
-
-## ex DSL
-
-## Doctest
-
-> Vos outils ont peut-être deja des fonctionalités de doc vivante!
-
-## Changements de contexte -> IDE
-
-Demo tout intégré : cette prez + preview diagrammes
-
-## Exemple de VueJs 
-
-Le mettre à la fin plutôt
-- collaboratif
-- documentation plus tradi a toujours sa place
-- single sourced (git)
-- low effort : manage merge request from community helps offload the team
-
-
-## Exemple de stripe
-
-Api executable + generation de snippets
-Démo et/ou Gif
-Proche des notebooks
-
-## 
+- Intro
+  - [ ] Evoquer Livre Living documentation plus tot
+  - [ ] "on passera très vite sur certains trucs"
+    - Vous pourrez revenir dessus en consultant les slides et les sources
+- Fil rouge
+  - [ ] Marteler : "Devinez quoi? C'est déjà là!"
+- Théorie
+  - [ ] Déplacer Questions puis Word cloud avant les anti-patterns
+  - Anti-patterns
+    - [ ] Supprimer les comics et raccourcir à 2 exemples (3 max)
+    - [ ] Documenter ce qui n'a pas besoin de l'être
+      - Doc ephemere
+      - Conversations
+      - Critères pour documenter
+- Trop d'infos
+  - [ ] Gray slides: Not colored background means optional for the talk.
+  - [ ] Virer les comics
+  - [ ] Passer les plain text en annexe
+- Pas assez de pauses
+  - [ ] Lolcatz pour pause et boire un coup
+- Je me repete souvent
+  - [ ] Distiller plain text au fur et a mesure au lieu du début
+- Exemples
+  - [ ] For each example format the slide the same way
+    - Name + illustration
+    - Attributes : ⭐⭐⭐ Reliable, ⭐⭐⭐ Low-Effort, ⭐⭐⭐ Collaborative, ⭐⭐⭐ Insightful, authoritative kw source, reconciliation mechanism, internal/external, generic/specific
+    - resources pointers
+  - [ ] Conventions
+    - Linters (generic Kw)
+    - yyyy_mm_dd
+  - [ ] Illustrer tous les exemples (Image, Gif , snippet ou live)
+  - [ ] Convertir la section "self-doc" en exemple
+  - [ ] Démo Live : living diagam "wow effect"
+  - [ ] DSL
+  - [ ] Ex. Javadoc
+    - Changements de contexte -> IDE
+  - [ ] Living diagrams
+    - [ ] Demo tout intégré : cette prez + preview diagrammes
+  - [ ] Code forensics
+  - [ ] Doctest
+    - > Vos outils ont peut-être deja des fonctionalités de doc vivante!
+  - [ ] Exemple de stripe
+    - Api executable + generation de snippets
+    - Démo et/ou Gif
+    - Proche de l'exemple des notebooks
+  - [ ] Emergence doc vivante : from wiki to automated script
+    1. Write doc while doing (ex. deployment procedure) (Write everything!)
+        - Criteria : it's critical, done several times, error prone
+    2. Just wiki
+    3. Wiki with some snippets
+    4. GIF : it's alive!
+  - [ ] crowd sourced doc - ex vueJs
+    - Le mettre à la fin plutôt
+    - collaboratif
+    - documentation plus tradi a toujours sa place
+    - single sourced (git)
+    - low effort : manage merge request from community helps offload the team
+- Conclusion
+  - [ ] "Vous avez les source et plein de pistes et outils"
