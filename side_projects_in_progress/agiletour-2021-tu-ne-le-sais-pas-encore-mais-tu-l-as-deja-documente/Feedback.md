@@ -13,10 +13,18 @@ Dernière partie pas trop mal
 
 Les exemples
 
-## Gray slide
+## Trop d'infos
 
-Not colored background means optional for the talk.
+- Trop de détails
+  - Gray slides: Not colored background means optional for the talk.
+  
+## Pas assez de pauses
 
+- Lolcatz pour pause et boire un coup
+
+## Virer les comics
+
+- trop de texte : je dois le lire
 
 ## Je me répète souvent
 
