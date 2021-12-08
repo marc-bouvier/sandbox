@@ -1,4 +1,4 @@
 
-include::for_who.adoc[]
+include::sections/for_who.adoc[]
 
-include::living_onboarding.adoc[]
+include::sections/living_onboarding.adoc[]

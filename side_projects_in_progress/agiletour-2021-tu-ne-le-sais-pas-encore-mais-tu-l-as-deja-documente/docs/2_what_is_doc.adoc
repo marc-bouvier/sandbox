@@ -1,4 +1,4 @@
-include::deconstruct_documentation.adoc[]
+include::sections/deconstruct_documentation.adoc[]
 
 When?
 
@@ -47,9 +47,9 @@ Focus on specific knowledge
 
 As a professional, you should know enough of the generic, industry standard knowledge, in order to be able to focus on growing the knowledge that's specific to you particular ambitions.
 
-include::kinds_of_knowledge_transfer.adoc[]
+include::sections/kinds_of_knowledge_transfer.adoc[]
 
-include::plain_text_documentation.adoc[]
+include::sections/plain_text_documentation.adoc[]
 
 
 

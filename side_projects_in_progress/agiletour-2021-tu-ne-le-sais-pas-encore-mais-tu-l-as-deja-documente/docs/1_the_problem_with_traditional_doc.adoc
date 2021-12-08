@@ -1,5 +1,5 @@
-include::first_some_questions.adoc[]
+include::sections/first_some_questions.adoc[]
 
-include::the_problem_with_traditional_documentation.adoc[]
+include::sections/the_problem_with_traditional_documentation.adoc[]
 
-include::documentation_smells.adoc[]
+include::sections/documentation_smells.adoc[]

@@ -9,9 +9,12 @@
 :customcss: css/presentation.css
 :source-highlighter: highlightjs
 :docinfo: private
+:assetsdir: {docdir}/assets
+:sectionsdir: {docdir}/sections
 :title-slide-background-image: assets/hoken-landing_dark.png
 :title-slide-transition: zoom
 :title-slide-transition-speed: fast
+
 
 Tu ne le sais pas encore, mais tu l'as deja documenté!
 
