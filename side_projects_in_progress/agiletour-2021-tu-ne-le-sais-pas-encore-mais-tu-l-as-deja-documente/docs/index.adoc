@@ -32,8 +32,6 @@ Tu ne le sais pas encore, mais tu l'as deja documenté!
 ** F: fullscreen -> Esc : exit fullscreen
 --
 
-
-
 == Today's goals
 
 * [ ] cleanup duplicated content

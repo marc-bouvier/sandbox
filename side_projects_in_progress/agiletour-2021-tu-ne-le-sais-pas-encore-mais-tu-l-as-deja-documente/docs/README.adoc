@@ -24,7 +24,7 @@ npx asciidoctor-revealjs --version
 Génération
 
 ```bash
-npx asciidoctor-revealjs slides.adoc -o index.html
+npx asciidoctor-revealjs index.adoc -o index.html
 ```
 
 ```pwsh

@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-npx asciidoctor-revealjs slides.adoc -o index.html
+npx asciidoctor-revealjs docs/index.adoc -o docs/index.html

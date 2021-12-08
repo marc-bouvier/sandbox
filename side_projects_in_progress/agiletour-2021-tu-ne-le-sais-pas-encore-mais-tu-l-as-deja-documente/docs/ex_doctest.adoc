@@ -18,12 +18,12 @@ Go::
 
 [source,python]
 ----
-include::examples/python_doctest/sum.py[]
+include::../examples/python_doctest/sum.py[]
 ----
 
 === Python doctest output
 
 [source,text]
 ----
-include::examples/python_doctest/sum_doctest_output.txt[]
+include::../examples/python_doctest/sum_doctest_output.txt[]
 ----
